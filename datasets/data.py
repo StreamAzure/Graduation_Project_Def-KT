@@ -225,8 +225,8 @@ def construct_datasets(root,
 
     # CIFAR datasets are simulated.
     test_simulated = True
-    if dataset_name == CIFAR10 or dataset_name == CIFAR100:
-        test_simulated = False
+    # if dataset_name == CIFAR10 or dataset_name == CIFAR100:
+        # test_simulated = False
 
     train_data = FederatedTensorDataset(train_data,
                                         simulated=True,

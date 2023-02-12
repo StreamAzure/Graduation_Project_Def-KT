@@ -80,9 +80,17 @@ class Cifar10(BaseDataset):
                                         self.alpha,
                                         self.min_size,
                                         self.class_per_client)
+        _, test_data = data_simulation( self.test_data['x'],
+                                        self.test_data['y'],
+                                        self.num_of_client,
+                                        self.split_type,
+                                        self.weights,
+                                        self.alpha,
+                                        self.min_size,
+                                        self.class_per_client)
         logger.info("Complete CIFAR10 data simulation")
         save_dict(train_data, train_data_path)
-        save_dict(self.test_data, test_data_path)
+        save_dict(test_data, test_data_path)
 
     def convert_data_to_json(self):
         pass
