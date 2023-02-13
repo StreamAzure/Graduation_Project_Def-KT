@@ -26,10 +26,12 @@ class CustomizedServer(BaseServer):
         # self.set_model(model, load_dict=True)
        
         vaild_clients=  random.sample(list(set(self._clients)-set(self.selected_clients)), len(self.selected_clients))
+        # 从未选中的客户端（已去重）中随机挑选len(self.selected_clients)个客户端
         vaild_votes=[]
+
         weights=[]
         for c in vaild_clients:
-            vaild_votes.append(c.run_vaildmodel(self.modellist,self.conf.device))
+            vaild_votes.append(c.run_vaildmodel(self.modellist,self.conf.device)) 
         for i in range(len(self.modellist)):
             weights.append(0.5+vaild_votes.count(i)/len(self.modellist))
 

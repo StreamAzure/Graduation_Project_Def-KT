@@ -22,7 +22,7 @@ test_method: "average"
 
 server:
   track: False
-  rounds: 5
+  rounds: 10
   clients_per_round: 5
   test_every: 1
   save_model_every: 10
