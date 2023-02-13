@@ -206,7 +206,7 @@ class CustomizedClient(BaseClient):
             val_loss=0
             val_acc=0.0
             correct=0
-            with torch.no_grad():
+            with torch.no_grad(): # 好像是用来省内存的
                 for batched_x, batched_y in  self.train_loader:
                     size=size+self.train_loader.batch_size
                     x = batched_x.to(device)

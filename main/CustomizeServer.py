@@ -14,32 +14,39 @@ class CustomizedServer(BaseServer):
         self.modellist=[]
         pass  # more initialization of attributes.
     
-    def aggregation(self):
-        uploaded_content = self.get_client_uploads()
-        self.modellist = list(uploaded_content[MODEL].values())
-        random.shuffle(self.modellist)
-        # Original implementation of aggregation weights
-        # weights = list(uploaded_content[DATA_SIZE].values())
-        # We can assign the manipulated customized weights in aggregation.   
-        # customized_weights = list(range(len(models)))
-        # model = self.aggregate(models, customized_weights)
-        # self.set_model(model, load_dict=True)
-       
-        vaild_clients=  random.sample(list(set(self._clients)-set(self.selected_clients)), len(self.selected_clients))
-        # 从未选中的客户端（已去重）中随机挑选len(self.selected_clients)个客户端
-        vaild_votes=[]
-
-        weights=[]
-        for c in vaild_clients:
-            vaild_votes.append(c.run_vaildmodel(self.modellist,self.conf.device)) 
-        for i in range(len(self.modellist)):
-            weights.append(0.5+vaild_votes.count(i)/len(self.modellist))
-
-        print(vaild_votes)
-        model = self.aggregate(self.modellist, weights)
-        self.set_model(model, load_dict=True)
-
         
+    
+    
+    # 师兄写的，根据模型在各个客户端的loss情况给权重
+    
+    # def aggregation(self):
+    #     uploaded_content = self.get_client_uploads()
+    #     self.modellist = list(uploaded_content[MODEL].values())
+    #     random.shuffle(self.modellist)
+    #     # Original implementation of aggregation weights
+    #     # weights = list(uploaded_content[DATA_SIZE].values())
+    #     # We can assign the manipulated customized weights in aggregation.   
+    #     # customized_weights = list(range(len(models)))
+    #     # model = self.aggregate(models, customized_weights)
+    #     # self.set_model(model, load_dict=True)
+       
+    #     vaild_clients=  random.sample(list(set(self._clients)-set(self.selected_clients)), len(self.selected_clients))
+    #     # 从未选中的客户端（已去重）中随机挑选len(self.selected_clients)个客户端
+    #     vaild_votes=[]
+
+    #     weights=[]
+    #     for c in vaild_clients:
+    #         vaild_votes.append(c.run_vaildmodel(self.modellist,self.conf.device)) 
+            # 对于每一个客户端，从modellist中选出对它而言Loss最小的model，下标加入到valid_votes中
+    #     for i in range(len(self.modellist)):
+    #         weights.append(0.5+vaild_votes.count(i)/len(self.modellist))
+            # valid_votes.count(i)统计i出现的次数
+            # 如共5个客户端，下标为2的模型出现次数为3，表明该模型在3个客户端中都是Loss最小的
+            # 以这个出现次数与总模型数量的比值作为该模型的权重
+
+    #     print(vaild_votes)
+    #     model = self.aggregate(self.modellist, weights)
+    #     self.set_model(model, load_dict=True)
 
             
     # 下面这段代码是各个客户端不聚合，直接送到下一个客户端进行训练，完全参照论文的算法Def-KT 
