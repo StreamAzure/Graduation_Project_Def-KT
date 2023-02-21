@@ -11,14 +11,40 @@ class CustomizedServer(BaseServer):
 
     def __init__(self, conf, **kwargs):
         super(CustomizedServer, self).__init__(conf, **kwargs)
-        self.modellist=[]
+        self.modellist=[] # 自定义的modellist，用于存储每一轮的客户端模型
         pass  # more initialization of attributes.
-    
-        
+
+    def distribution_to_train_locally(self):
+        uploaded_models = {}
+        uploaded_weights = {}
+        uploaded_metrics = []
+        for client in self.grouped_clients:
+            # Update client config before training
+            self.conf.client.task_id = self.conf.task_id
+            self.conf.client.round_id = self._current_round
+
+            # 默认：uploaded_request = client.run_train(self._compressed_model, self.conf.client)
+            # 默认：使用服务器分发的模型进行训练
+            
+            ### 自定义部分
+            if (len(self.modellist)==0): # 如果modellist为空，即第一轮，直接训练服务器分发的模型
+                uploaded_request = client.run_train(self._compressed_model, self.conf.client)
+            else:
+                uploaded_request = client.run_train(self.modellist[int(client.cid[-3:])%(len(self.modellist)-1)], self.conf.client)
+            # 否则，每个客户端从modellist中选出一个模型进行训练，选择方法是取cid的后三位数对modellist的长度取余
+            ### 自定义部分
+
+            uploaded_content = uploaded_request.content
+
+            model = self.decompression(codec.unmarshal(uploaded_content.data))
+            uploaded_models[client.cid] = model
+            uploaded_weights[client.cid] = uploaded_content.data_size
+            uploaded_metrics.append(metric.ClientMetric.from_proto(uploaded_content.metric))
+
+        self.set_client_uploads_train(uploaded_models, uploaded_weights, uploaded_metrics)
     
     
     # 师兄写的，根据模型在各个客户端的loss情况给权重
-    
     # def aggregation(self):
     #     uploaded_content = self.get_client_uploads()
     #     self.modellist = list(uploaded_content[MODEL].values())
@@ -50,27 +76,6 @@ class CustomizedServer(BaseServer):
 
             
     # 下面这段代码是各个客户端不聚合，直接送到下一个客户端进行训练，完全参照论文的算法Def-KT 
-
-    # def distribution_to_train_locally(self):
-    #     uploaded_models = {}
-    #     uploaded_weights = {}
-    #     uploaded_metrics = []
-    #     for client in self.grouped_clients:
-    #         # Update client config before training
-    #         self.conf.client.task_id = self.conf.task_id
-    #         self.conf.client.round_id = self._current_round
-    #         if (len(self.modellist)==0):
-    #             uploaded_request = client.run_train(self._compressed_model, self.conf.client)
-    #         else:
-    #             uploaded_request = client.run_train(self.modellist[int(client.cid[-3:])%(len(self.modellist)-1)], self.conf.client)
-    #         uploaded_content = uploaded_request.content
-
-    #         model = self.decompression(codec.unmarshal(uploaded_content.data))
-    #         uploaded_models[client.cid] = model
-    #         uploaded_weights[client.cid] = uploaded_content.data_size
-    #         uploaded_metrics.append(metric.ClientMetric.from_proto(uploaded_content.metric))
-
-    #     self.set_client_uploads_train(uploaded_models, uploaded_weights, uploaded_metrics)
-    
+    # 注：distribution_to_train_locally是框架中默认Server类的一个方法
 
 

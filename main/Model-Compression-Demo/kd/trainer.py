@@ -63,11 +63,11 @@ class Trainer:
                 student_output = self.student_net(data) # 计算出一个输出
                 teacher_output = teacher_output.detach() #？
                 loss = self.distillation(student_output, label, teacher_output, temp=5.0, alpha=0.7)
-                # distillation loss
+                # 这是总的loss，Total loss = distillation loss × β + student loss × α
                 # loss = self.KLDivLoss(student_output, teacher_output)
                 # loss = self.CrossEntropyLoss(output, label)
 
-                # 学生模型训练
+                # 学生模型根据所得Loss训练
                 self.student_optimizer.zero_grad()
                 loss.backward()
                 self.student_optimizer.step()
@@ -92,8 +92,9 @@ class Trainer:
             print(f"\nevaluate acc:{acc * 100:2f}%")
 
     def distillation(self, y, labels, teacher_scores, temp, alpha):
-        return self.KLDivLoss(F.log_softmax(y / temp, dim=1), F.softmax(teacher_scores / te, dim=1)) * (
-                temp * temp * 2.0 * alpha) + F.cross_entropy(y, labels) * (1. - alpha)
+        distllation_loss = self.KLDivLoss(F.log_softmax(y / temp, dim=1), F.softmax(teacher_scores / temp, dim=1))
+        student_loss = F.cross_entropy(y, labels)
+        return  distllation_loss * (temp * temp * 2.0 * alpha) + student_loss * (1. - alpha)
 
 
 if __name__ == '__main__':
