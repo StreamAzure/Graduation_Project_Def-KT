@@ -1,0 +1,21 @@
+2023-02-22 06:49:49,642 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': './data/', 'dataset': 'cifar10', 'split_type': 'dir', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.8, 'class_per_client': 1, 'num_of_clients': 10, 'alpha': 0.8, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 20, 'clients_per_round': 5, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 32, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'EQUAL_AVERAGE', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 256, 'test_batch_size': 5, 'local_epoch': 5, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.9, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-02-22 06:49:49,746 [MainThread] [INFO ]  Total training data amount: 50000
+2023-02-22 06:49:49,746 [MainThread] [INFO ]  Total testing data amount: 10000
+2023-02-22 06:49:49,787 [MainThread] [INFO ]  Clients in total: 10
+2023-02-22 06:49:49,813 [MainThread] [INFO ]  --- start testing ---
+2023-02-22 06:49:53,873 [MainThread] [INFO ]  Test time 4.06s, Test loss: 0.46, Test accuracy: 10.62%
+2023-02-22 06:49:53,874 [MainThread] [INFO ]  
+-------- round 0 --------
+2023-02-22 06:49:53,874 [MainThread] [INFO ]  --- start training ---
+2023-02-22 06:50:41,858 [MainThread] [INFO ]  Server train time: 47.98440957069397
+2023-02-22 06:50:41,859 [MainThread] [INFO ]  --- start testing ---
+2023-02-22 06:50:43,716 [MainThread] [INFO ]  Test time 1.86s, Test loss: 0.44, Test accuracy: 20.64%
+2023-02-22 06:50:43,717 [MainThread] [INFO ]  
+-------- round 1 --------
+2023-02-22 06:50:43,717 [MainThread] [INFO ]  --- start training ---
+2023-02-22 06:51:30,597 [MainThread] [INFO ]  Server train time: 46.88009786605835
+2023-02-22 06:51:30,598 [MainThread] [INFO ]  --- start testing ---
+2023-02-22 06:51:32,582 [MainThread] [INFO ]  Test time 1.98s, Test loss: 0.42, Test accuracy: 19.95%
+2023-02-22 06:51:32,583 [MainThread] [INFO ]  
+-------- round 2 --------
+2023-02-22 06:51:32,583 [MainThread] [INFO ]  --- start training ---

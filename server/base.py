@@ -554,6 +554,9 @@ class BaseServer(object):
         """Aggregate training updates from clients.
         Server aggregates trained models from clients via federated averaging.
         """
+        # FedAvg
+        # 服务器只对抽样的客户端模型参数梯度进行聚合并更新全局模型，回传给客户端，而不涉及客户端数据
+        # 客户端各自使用私有数据训练自己的本地模型
         uploaded_content = self.get_client_uploads()
         models = list(uploaded_content[MODEL].values())
         weights = list(uploaded_content[DATA_SIZE].values())

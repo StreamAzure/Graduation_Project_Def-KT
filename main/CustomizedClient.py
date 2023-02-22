@@ -65,16 +65,15 @@ class CustomizedClient(BaseClient):
             
             for batched_x, batched_y in self.train_loader:
                 x, y = batched_x.to(device), batched_y.to(device)
-                x,y = Variable(x), Variable(y)
+                x, y = Variable(x), Variable(y)
                 
-                public_out = self.model(x)
-                local_out= self.local_model(x)
+                public_out = self.model(x) # self.model是从server下载的模型（或者说从A组客户端传过来的模型）
+                local_out= self.local_model(x) # self.local_model是本地的模型
                 
-
                 # train local_model
                 local_ce_loss= self.loss_ce(local_out, y)
                 local_kl_loss = self.loss_kl(F.log_softmax(local_out, dim = 1), 
-                                                        F.softmax(Variable(public_out), dim=1))
+                                            F.softmax(Variable(public_out), dim=1))
                 local_loss=local_ce_loss+0.3*local_kl_loss
                 local_loss.requires_grad_(True)
 
@@ -85,15 +84,13 @@ class CustomizedClient(BaseClient):
                 # train public_model
                 public_ce_loss= self.loss_ce(public_out, y)
                 public_kl_loss = self.loss_kl(F.log_softmax(public_out, dim = 1), 
-                                                        F.softmax(Variable(local_out), dim=1))
+                                            F.softmax(Variable(local_out), dim=1))
                 
                 public_loss=public_ce_loss+0.5*public_kl_loss
                 
                 optimizers[0].zero_grad()
                 public_loss.backward()
                 optimizers[0].step()
-
-                
 
                 batch_loss.append(public_loss.item())
             # print([x.grad for x in optimizers[1].param_groups[0]['params']])
@@ -137,6 +134,7 @@ class CustomizedClient(BaseClient):
         return loss_fn, optimizers
 
     def post_train(self):
+        """测试本地模型"""
         """testing local_model after testing public_model """
         self.local_model.eval()
         self.local_model.to(self.device)
@@ -147,7 +145,7 @@ class CustomizedClient(BaseClient):
             for batched_x, batched_y in self.test_loader:
                 x = batched_x.to(self.device)
                 y = batched_y.to(self.device)
-                public_out=self.local_model(x)
+                public_out = self.local_model(x)
                 log_probs = self.local_model(x)
                 local_ce_loss= self.loss_ce(log_probs, y)
                 local_kl_loss = self.loss_kl(F.log_softmax(log_probs, dim = 1), 
@@ -162,10 +160,8 @@ class CustomizedClient(BaseClient):
             s='Client {}, testing -- Local Average loss: {:.4f}, Accuracy: {}/{} ({:.2f}%)'.format(
             self.cid, local_test_loss, correct, test_size, local_test_accuracy)
             print(s)
-            # s=b = bytes(s, 'utf8')
-            # with open('local_acc.log','wb+') as f:
-            # #写字符串
-            #    f.write(s)
+            # with open('local_acc.log','wb+') as f: # 输出各个客户端的测试结果到文件
+            #    f.write(s) 
 
             # 检测各个子类准确率
             # total_num = 0
@@ -191,6 +187,9 @@ class CustomizedClient(BaseClient):
             #             i, 100 * t_correct[i] / t_total[i]))
 
 
+    """
+    压根没调用
+    """
     def run_vaildmodel(self,modellist,device):
         
         loss_fn = self.load_loss_fn(self.conf)

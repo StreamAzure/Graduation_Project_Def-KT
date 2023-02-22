@@ -134,10 +134,12 @@ class BaseClient(object):
 
         self._is_train = True
 
-        self.download(model)
+        self.download(model) 
+        # 下载来自server的模型（即参数model），作为 self.compressed_model
+        # 如果不要求compression的话就是直接用的model的深拷贝
         self.track(metric.TRAIN_DOWNLOAD_SIZE, model_size(model))
 
-        self.decompression()
+        self.decompression() # 啥都没干，只有self.model = self.compressed_model
 
         self.pre_train()
         self.train(conf, self.device)

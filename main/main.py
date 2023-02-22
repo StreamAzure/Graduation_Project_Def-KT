@@ -14,8 +14,8 @@ from CustomizeServer  import CustomizedServer
 
 
 # Register customized client.
-# easyfl.register_server(CustomizedServer)
-# easyfl.register_client(CustomizedClient)
+easyfl.register_server(CustomizedServer)
+easyfl.register_client(CustomizedClient)
 
 # Initialize federated learning with default configurations.
 config_file = "config.yaml"
