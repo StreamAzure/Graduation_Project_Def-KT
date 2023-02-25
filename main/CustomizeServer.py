@@ -75,6 +75,8 @@ class CustomizedServer(BaseServer):
             self.conf.client.task_id = self.conf.task_id
             self.conf.client.round_id = self._current_round
 
+            print("client: {}".format(client.cid))
+
             uploaded_request = client.run_train(self._compressed_model, self.conf.client, train_local_only=True)
             # A组客户端训练自己的本地模型，分发的self.model实际上不会被用到（应该，吧？）
             model = self.decompression(codec.unmarshal(uploaded_request.content.data))
@@ -84,9 +86,14 @@ class CustomizedServer(BaseServer):
         for client in self.B_clients: # 遍历已选出的Q个B组客户端中的每一个
             # 将A组model分发给对应的B组客户端进行DML训练
             model = A_models[self.B_clients.index(client)]
-            upload = client.run_train(model, self.conf.client, train_local_only=False)
+            client.run_train(model, self.conf.client, train_local_only=False)
+            
+        
     
     def aggregation(self):
         pass # 不对收集上来的客户端模型做任何聚合
+
+    def test(self):
+        pass
 
 

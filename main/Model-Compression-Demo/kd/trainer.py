@@ -92,9 +92,9 @@ class Trainer:
             print(f"\nevaluate acc:{acc * 100:2f}%")
 
     def distillation(self, y, labels, teacher_scores, temp, alpha):
-        distllation_loss = self.KLDivLoss(F.log_softmax(y / temp, dim=1), F.softmax(teacher_scores / temp, dim=1))
+        distillation_loss = self.KLDivLoss(F.log_softmax(y / temp, dim=1), F.softmax(teacher_scores / temp, dim=1))
         student_loss = F.cross_entropy(y, labels)
-        return  distllation_loss * (temp * temp * 2.0 * alpha) + student_loss * (1. - alpha)
+        return  distillation_loss * (temp * temp * 2.0 * alpha) + student_loss * (1. - alpha)
 
 
 if __name__ == '__main__':

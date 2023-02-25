@@ -2,17 +2,22 @@ task_id: ""
 data:
   root: "./data/"
   dataset: cifar10
-  split_type: "dir"
+  split_type: "dir" 
+  # 数据集分发方式，选项：iid，niid，dir，class
+  # iid 独立同分布
+  # niid 非独立同分布
+  # dir 用于模拟 CIFAR-10 和 CIFAR-100 数据集的非独立同分布数据的 Dirichlet 过程。
+  # class 按标签类别分发数据集
   
-  min_size: 10
-  data_amount: 0.05
-  iid_fraction: 0.1
-  user: False
+  min_size: 10 # 每个客户端的最小样本数
+  data_amount: 0.05 # LEAF数据集专用选项
+  iid_fraction: 0.1 # iid选项专用
+  user: False # 只适用于femnist和shakespeare数据集
   
-  class_per_client: 1
-  num_of_clients: 100
+  class_per_client: 8 # 每个客户端的类别，只有当split_type是'class'时有用
+  num_of_clients: 5
   train_test_split: 0.8  
-  alpha: 0.8
+  alpha: 0.8 # Dirichlet 过程的参数
   
   weights: NULL
   
@@ -22,8 +27,8 @@ test_method: "average"
 
 server:
   track: False
-  rounds: 20
-  clients_per_round: 5
+  rounds: 2000 # 总的训练轮数
+  clients_per_round: 5 # 每轮选择的客户端数量
   test_every: 1
   save_model_every: 10
   save_model_path: ""
@@ -35,13 +40,13 @@ server:
 
 client:
   track: False
-  batch_size: 256
+  batch_size: 200
   test_batch_size: 5
-  local_epoch: 5
+  local_epoch: 1
   optimizer:
     type: "SGD"
     lr: 0.01
-    momentum: 0.9
+    momentum: 0.5
     weight_decay: 5e-4
     nesterov: True
   seed: 0

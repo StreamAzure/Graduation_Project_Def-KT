@@ -15,7 +15,7 @@ class CustomizedServer(BaseServer):
         pass  # more initialization of attributes.
 
     # 下面这段代码是各个客户端不聚合，直接送到下一个客户端进行训练，完全参照论文的算法Def-KT 
-    # 注：distribution_to_train_locally是框架中默认Server类的一个方法
+
     def distribution_to_train_locally(self):
         uploaded_models = {}
         uploaded_weights = {}
