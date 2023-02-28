@@ -12,14 +12,17 @@ from simple_cnn import Model
 from easyfl.tracking import metric
 from easyfl.tracking.evaluation import model_size
 
-local_batch_size = 64 # B_1
-DML_batch_size = 256 # B_2
+DML_lr = 0.015 # DML训练的学习率
+
+local_batch_size = 16 # B_1
+DML_batch_size = 16 # B_2g
 # 论文里区分了两个阶段的batch size为B_1和B_2
 
-local_epoch = 1 # M
-DML_epoch = 2 # E
+local_epoch = 10 # M
+DML_epoch = 10 # E
 
-alpha = 0.2 # KL散度的权重，1-alpha为交叉熵的权重，论文里alpha = 0.5
+alpha = 1 # KL散度的权重
+beta = 1 # 交叉熵的权重
 
 class CustomizedClient(BaseClient):
     def __init__(self, cid, conf, train_data, test_data, device, **kwargs):
@@ -27,6 +30,7 @@ class CustomizedClient(BaseClient):
         # Initialize a classifier for each client.
         # self.local_model= CNNModel()
         self.local_model = Model()
+        print("local_batch_size: {}, DML_batch_size: {}, local_epoch: {}, DML_epoch: {}, alpha: {}, beta: {}, DML_lr: {}".format(local_batch_size, DML_batch_size, local_epoch, DML_epoch, alpha, beta, DML_lr))
 
     def train_local(self, conf, device):
         self.local_model.train()
@@ -53,25 +57,21 @@ class CustomizedClient(BaseClient):
                 batch_loss.append(loss.item())
             local_epoch_loss.append(sum(batch_loss) / len(batch_loss))
         local_loss = sum(local_epoch_loss) / len(local_epoch_loss)
-        print("--- local_update_loss :", local_loss)
+        print("--- local_update_loss : {:.2f}".format(local_loss))
         self.test_local_model(conf, device)
 
     def train_DML(self, conf, device):
-        # self.model.train()
-        # self.model.to(device)
-        # self.local_model.train()
-        # self.local_model.to(device)
         model_A = copy.deepcopy(self.model)
         model_B = copy.deepcopy(self.local_model)
         model_A.to(device)
         model_B.to(device)
         optimizer_A = torch.optim.SGD(model_A.parameters(),
-                                        lr=conf.optimizer.lr,
+                                        lr=DML_lr,
                                         momentum=conf.optimizer.momentum,
                                         weight_decay=conf.optimizer.weight_decay,
                                         nesterov=conf.optimizer.nesterov)
         optimizer_B = torch.optim.SGD(model_B.parameters(),
-                                        lr=conf.optimizer.lr,
+                                        lr=DML_lr,
                                         momentum=conf.optimizer.momentum,
                                         weight_decay=conf.optimizer.weight_decay,
                                         nesterov=conf.optimizer.nesterov)
@@ -92,10 +92,9 @@ class CustomizedClient(BaseClient):
                 optimizer_A.zero_grad()
                 optimizer_B.zero_grad()
 
-                loss_A = (1-alpha) * loss_ce(out_A, label) + alpha * loss_kl(F.log_softmax(out_A, dim=1), F.softmax(out_B, dim=1))
-                loss_B = (1-alpha) * loss_ce(out_B, label) + alpha * loss_kl(F.log_softmax(out_B, dim=1), F.softmax(out_A, dim=1))
+                loss_A = beta * loss_ce(out_A, label) + alpha * loss_kl(F.log_softmax(out_A, dim=1), F.softmax(out_B, dim=1))
+                loss_B = beta * loss_ce(out_B, label) + alpha * loss_kl(F.log_softmax(out_B, dim=1), F.softmax(out_A, dim=1))
 
-                
                 loss_A.backward(retain_graph=True)
                 loss_B.backward(retain_graph=True)
 
@@ -105,7 +104,7 @@ class CustomizedClient(BaseClient):
                 A_batch_loss.append(loss_A.item())
             A_epoch_loss.append(sum(A_batch_loss) / len(A_batch_loss))
         A_loss = sum(A_epoch_loss) / len(A_epoch_loss)
-        print("--- DML_update_loss(A model) with Client:", self.cid, ":", A_loss)
+        print("--- DML_update_loss(A model) with Client:{}: {:.2f}".format(self.cid, A_loss))
         # self.local_model = copy.deepcopy(self.model)
         # self.local_model = copy.deepcopy(model_A)
         self.local_model.load_state_dict(model_A.state_dict())
@@ -127,8 +126,9 @@ class CustomizedClient(BaseClient):
                 correct += pred.eq(label.view_as(pred)).sum().item()
         test_loss /= len(test_loader.dataset)
         test_acc = 100. * correct / len(test_loader.dataset)
-        print("--- local_test_loss :", test_loss)
-        print("--- local_test_acc :", test_acc)
+        # print("--- local_test_loss : {:.2f}".format( test_loss))
+        print("--- local_test_acc : {:.2f}%".format( test_acc))
+        return test_loss, test_acc
 
     def train(self, conf, device, train_local_only):
         """

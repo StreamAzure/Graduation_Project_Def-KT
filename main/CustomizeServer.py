@@ -14,8 +14,8 @@ Def-KT论文复现
 """
 logger = logging.getLogger(__name__)
 
-K = 100 # 客户端总数
-Q = 5 # 一组客户端数，每轮选两组
+K = 10 # 客户端总数
+Q = 2 # 一组客户端数，每轮选两组
 # 注：“每轮随机选择Q个”已由默认的Selection方法实现，
 # 参数由config.yaml中的clients_per_round及random_selection决定
 
@@ -53,6 +53,8 @@ class CustomizedServer(BaseServer):
         clients_per_round = min(clients_per_round, len(clients))
         # 这里写死了一定是随机选择（默认版本是有选项的）
         # 选出Q个客户端加入self.A_clients
+
+        # 随机选出Q个客户端加入self.A_clients
         np.random.seed(self._current_round)
         self.A_clients = np.random.choice(clients, clients_per_round, replace=False)
         self.A_clients = self.A_clients.tolist()
@@ -88,7 +90,19 @@ class CustomizedServer(BaseServer):
             model = A_models[self.B_clients.index(client)]
             client.run_train(model, self.conf.client, train_local_only=False)
             
+        clients = self.A_clients + self.B_clients
+        loss = []
+        acc = []
+        for client in clients:
+            test_loss, test_acc = client.test_local_model(self.conf, "cuda")
+
+            loss.append(test_loss)
+            acc.append(test_acc)
+        print("--------- test avarage ---------")
+
+        print("--- All clients' test loss: {:.2f}".format(sum(loss)/len(loss)))
         
+        print("--- All clients' test acc: {:.2f}%".format(sum(acc)/len(acc)))
     
     def aggregation(self):
         pass # 不对收集上来的客户端模型做任何聚合
