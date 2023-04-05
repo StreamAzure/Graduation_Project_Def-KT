@@ -565,6 +565,7 @@ class BaseServer(object):
         self.set_model(model, load_dict=True)
 
     def aggregate(self, models, weights):
+        print("agregating...")
         """Aggregate models uploaded from clients via federated averaging.
 
         Args:
