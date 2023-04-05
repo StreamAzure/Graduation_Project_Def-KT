@@ -1,0 +1,92 @@
+2023-04-05 10:58:49,108 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': './data/', 'dataset': 'cifar10', 'split_type': 'class', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.8, 'class_per_client': 8, 'num_of_clients': 10, 'alpha': 0.2, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 2000, 'clients_per_round': 2, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 32, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'FedAvg', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 200, 'test_batch_size': 5, 'local_epoch': 20, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.5, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-04-05 10:58:49,195 [MainThread] [INFO ]  Total training data amount: 50000
+2023-04-05 10:58:49,195 [MainThread] [INFO ]  Total testing data amount: 10000
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 20, DML_epoch: 20, alpha: 1, beta: 1, DML_lr: 0.015
+2023-04-05 10:58:49,227 [MainThread] [INFO ]  Clients in total: 10
+2023-04-05 10:58:49,249 [MainThread] [INFO ]  
+-------- round 0 --------
+2023-04-05 10:58:49,249 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 1.65
+client: f0000008
+--- local_update_loss : 1.64
+--- DML_update_loss(A model) with Client:f0000001: 1.51
+--- DML_update_loss(A model) with Client:f0000007: 1.41
+----------- acc -----------
+[15.5, 56.1, 51.0, 14.2, 11.8, 10.9, 12.5, 63.3, 51.9, 4.8]
+--------- test avarage ---------
+--- All clients' test loss: 1.86
+--- All clients' test acc: 29.20%
+2023-04-05 11:05:51,416 [MainThread] [INFO ]  Server train time: 422.166805267334
+2023-04-05 11:05:51,417 [MainThread] [INFO ]  
+-------- round 1 --------
+2023-04-05 11:05:51,417 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 1.30
+client: f0000009
+--- local_update_loss : 1.74
+--- DML_update_loss(A model) with Client:f0000008: 1.37
+--- DML_update_loss(A model) with Client:f0000001: 1.43
+----------- acc -----------
+[15.5, 56.8, 58.1, 14.2, 11.8, 10.9, 12.5, 63.3, 64.9, 35.0]
+--------- test avarage ---------
+--- All clients' test loss: 1.77
+--- All clients' test acc: 34.30%
+2023-04-05 11:12:56,898 [MainThread] [INFO ]  Server train time: 425.48090958595276
+2023-04-05 11:12:56,906 [MainThread] [INFO ]  
+-------- round 2 --------
+2023-04-05 11:12:56,906 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 1.72
+client: f0000001
+--- local_update_loss : 0.98
+--- DML_update_loss(A model) with Client:f0000007: 1.33
+--- DML_update_loss(A model) with Client:f0000003: 1.39
+----------- acc -----------
+[15.5, 66.4, 58.1, 61.3, 42.3, 10.9, 12.5, 67.6, 64.9, 35.0]
+--------- test avarage ---------
+--- All clients' test loss: 1.55
+--- All clients' test acc: 43.45%
+2023-04-05 11:19:54,775 [MainThread] [INFO ]  Server train time: 417.8687150478363
+2023-04-05 11:19:54,776 [MainThread] [INFO ]  
+-------- round 3 --------
+2023-04-05 11:19:54,776 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 1.75
+client: f0000004
+--- local_update_loss : 1.40
+Traceback (most recent call last):
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/main.py", line 26, in <module>
+    easyfl.run()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 390, in run
+    _global_coord.run()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 80, in run
+    self.server.start(self.model, self.clients)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 164, in start
+    self.train()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 200, in train
+    self.distribution_to_train()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 347, in distribution_to_train
+    self.distribution_to_train_locally()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/CustomizeServer.py", line 104, in distribution_to_train_locally
+    uploaded_request = client.run_train(remote_model, self.conf.client, train_local_only=False)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/CustomizedClient.py", line 154, in run_train
+    self.train(conf, self.device, train_local_only) # 只修改了这里
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/CustomizedClient.py", line 142, in train
+    self.train_DML(conf, device)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/CustomizedClient.py", line 99, in train_DML
+    loss_B.backward(retain_graph=True)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

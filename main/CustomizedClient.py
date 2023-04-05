@@ -12,7 +12,7 @@ from simple_cnn import Model
 from easyfl.tracking import metric
 from easyfl.tracking.evaluation import model_size
 
-DML_lr = 0.018 # DML训练的学习率
+DML_lr = 0.015 # DML训练的学习率
 
 local_batch_size = 64 # B_1
 DML_batch_size = 16 # B_2

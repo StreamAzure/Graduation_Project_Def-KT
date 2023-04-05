@@ -32,20 +32,23 @@ server:
   test_every: 1
   save_model_every: 10
   save_model_path: ""
-  batch_size: 64
+  batch_size: 16
   test_all: True
   random_selection: True
-  aggregation_stragtegy: "EQUAL_AVERAGE"
+  aggregation_stragtegy: "FedAvg"
+  # 选项：FedAvg、EQUAL_AVERAGE
   aggregation_content: "all"
+  # all表示收集参数和持久化缓存（persistent buffers）如BatchNorm stats
+  # parameters表示只收集参数
 
 client:
   track: False
-  batch_size: 200
+  batch_size: 200 # 该参数无效，已在CustomizedClinet.py重新定义
   test_batch_size: 5
-  local_epoch: 20
+  local_epoch: 20 # 该参数无效，已在CustomizedClinet.py重新定义
   optimizer:
     type: "SGD"
-    lr: 0.01
+    lr: 0.01 # 该参数无效，已在CustomizedClinet.py重新定义
     momentum: 0.5
     weight_decay: 5e-4
     nesterov: True

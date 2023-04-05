@@ -10,10 +10,13 @@ import numpy as np
 rounds = int(sys.argv[1])
 baseline_filename = "baseline_20epoch.log"
 
+k = 5 # 统计最后k轮的loss和accuracy平均值
+t = 10 # 统计最后t条的DML loss 
+
 def get_file_name():
     # 获取文件名和要查找的字符串数量参数
     if len(sys.argv) < 3:
-        print("Usage: python plot_accuracy.py <rounds> <nums_range | <spectial_num1>>  ...")
+        print("Usage: python compare.py <rounds> <nums_range | <spectial_num1>>  ...")
         sys.exit(1)
 
     num_list = []
@@ -66,16 +69,16 @@ def read_file(filename, num_of_strings):
     for i in range(length):
         acc_list.append(float(matches[i]))
 
-    # 取最后十轮的loss平均值作为收敛loss
+    # 取最后k轮的loss平均值作为收敛loss
     pattern_loss = r"Test loss:\s*(\d+\.\d+)"
     matches = re.findall(pattern_loss, content)
-    avg_loss = round(sum([float(matches[i]) for i in range(-10, 0)]) / 10, 2)
+    avg_loss = round(sum([float(matches[i]) for i in range(-k, 0)]) / k, 2)
     
     # 记录acc最大值
     max_acc = max(acc_list)
 
-    # 取最后十轮的acc平均值作为收敛acc，保留两位小数
-    avg_acc = round(sum(acc_list[-10:]) / 10, 2)
+    # 取最后k轮的acc平均值作为收敛acc，保留两位小数
+    avg_acc = round(sum(acc_list[-k:]) / k, 2)
 
     res = [acc_list, max_acc, avg_acc, avg_loss]
 
@@ -103,16 +106,16 @@ def read_file2(rounds, selected_file_names):
 
         # 记录acc最大值
         max_acc[filename] = max(acc_list)
-        # 取最后十轮的acc平均值作为收敛acc，保留两位小数
-        avg_acc[filename] = round(sum([float(matches[i]) for i in range(-10, 0)]) / 10, 2)
-        # 取最后十轮的loss平均值作为收敛loss
+        # 取最后k轮的acc平均值作为收敛acc，保留两位小数
+        avg_acc[filename] = round(sum([float(matches[i]) for i in range(-k, 0)]) / k, 2)
+        # 取最后k轮的loss平均值作为收敛loss
         pattern = r"--- All clients' test loss: \s*(\d+\.\d+)"
         matches = re.findall(pattern, content)
-        avg_loss[filename] = round(sum([float(matches[i]) for i in range(-10, 0)]) / 10, 2)
-        # 取最后50条的DML loss平均值作为收敛DML loss
+        avg_loss[filename] = round(sum([float(matches[i]) for i in range(-k, 0)]) / k, 2)
+        # 取最后t条的DML loss平均值作为收敛DML loss
         pattern = r"--- DML_update_loss\(A model\) with Client:f(\d{7}): (\d+\.\d+)"
         matches = re.findall(pattern, content)
-        avg_DML_loss[filename] = round(sum([float(matches[i][1]) for i in range(-40, 0)]) / 40, 2)
+        avg_DML_loss[filename] = round(sum([float(matches[i][1]) for i in range(-t, 0)]) / t, 2)
 
     res = [data_list, max_acc, avg_acc, avg_loss, avg_DML_loss]
 
@@ -192,8 +195,8 @@ def printTable(selected_file_names):
     # 输出表格
     print(table)
 
-# filenames = get_file_name()
-filenames = ["Def-KT.log"]
+filenames = get_file_name()
+# filenames = ["Def-KT.log"]
 draw_plot(rounds, filenames, baseline_filename)
 printTable(filenames)
 

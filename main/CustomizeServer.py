@@ -1,6 +1,7 @@
 from easyfl.server import BaseServer
 from easyfl.server.base import MODEL
 from easyfl.protocol import codec
+from easyfl.tracking import metric
 import numpy as np
 import logging
 
@@ -71,7 +72,11 @@ class CustomizedServer(BaseServer):
         """
         1. 让A组客户端进行本地训练
         2. 把训练好的A组客户端模型分发给B组客户端进行DML
+        3. 各个客户端模型上传
         """
+        uploaded_models = {}
+        uploaded_weights = {}
+        uploaded_metrics = []
         A_models = []
         for client in self.A_clients: # 遍历已选出的Q个A组客户端中的每一个
             self.conf.client.task_id = self.conf.task_id
@@ -81,15 +86,30 @@ class CustomizedServer(BaseServer):
 
             uploaded_request = client.run_train(self._compressed_model, self.conf.client, train_local_only=True)
             # A组客户端训练自己的本地模型，分发的self.model实际上不会被用到（应该，吧？）
+            uploaded_content = uploaded_request.content
+            
             model = self.decompression(codec.unmarshal(uploaded_request.content.data))
-            # 把A组客户端训练好的模型保存为model
+            uploaded_models[client.cid] = model
+            uploaded_weights[client.cid] = uploaded_content.data_size
+            uploaded_metrics.append(metric.ClientMetric.from_proto(uploaded_content.metric))
+            
+            # 把A组客户端训练好的模型保存为model，下一步分发给B组
             A_models.append(model)
 
         for client in self.B_clients: # 遍历已选出的Q个B组客户端中的每一个
+            self.conf.client.task_id = self.conf.task_id
+            self.conf.client.round_id = self._current_round
             # 将A组model分发给对应的B组客户端进行DML训练
-            model = A_models[self.B_clients.index(client)]
-            client.run_train(model, self.conf.client, train_local_only=False)
-            
+            remote_model = A_models[self.B_clients.index(client)]
+            uploaded_request = client.run_train(remote_model, self.conf.client, train_local_only=False)
+            # 训练完成，模型上传
+            uploaded_content = uploaded_request.content
+            model = self.decompression(codec.unmarshal(uploaded_request.content.data))
+            uploaded_models[client.cid] = model
+            uploaded_weights[client.cid] = uploaded_content.data_size
+            uploaded_metrics.append(metric.ClientMetric.from_proto(uploaded_content.metric))
+        
+        #### 统计输出开始 ####
         clients = self.A_clients + self.B_clients
         loss = []
         acc = []
@@ -102,13 +122,16 @@ class CustomizedServer(BaseServer):
         print("----------- acc -----------")
         print(acc)
         print("--------- test avarage ---------")
-
         print("--- All clients' test loss: {:.2f}".format(sum(loss)/len(loss)))
-        
         print("--- All clients' test acc: {:.2f}%".format(sum(acc)/len(acc)))
-    
-    def aggregation(self):
-        pass # 不对收集上来的客户端模型做任何聚合
+        #### 统计输出结束 ####
 
-    def test(self):
-        pass
+        self.set_client_uploads_train(uploaded_models, uploaded_weights, uploaded_metrics)
+    
+    # 对模型进行Fed-Avg聚合计算后分发回去
+
+    # def aggregation(self):
+        # pass # 不对收集上来的客户端模型做任何聚合
+
+    # def test(self):
+        # pass
