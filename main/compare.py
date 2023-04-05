@@ -3,46 +3,53 @@ import os
 import re
 import matplotlib.pyplot as plt
 from prettytable import PrettyTable
+from matplotlib.font_manager import FontProperties
+import matplotlib as mpl
+import numpy as np
 
-# 获取文件名和要查找的字符串数量参数
-if len(sys.argv) < 3:
-    print("Usage: python plot_accuracy.py <num_of_strings1> <nums_range | <spectial_num1>>  ...")
-    sys.exit(1)
-num_of_strings1 = int(sys.argv[1])
+rounds = int(sys.argv[1])
 baseline_filename = "baseline_20epoch.log"
 
-num_list = []
+def get_file_name():
+    # 获取文件名和要查找的字符串数量参数
+    if len(sys.argv) < 3:
+        print("Usage: python plot_accuracy.py <rounds> <nums_range | <spectial_num1>>  ...")
+        sys.exit(1)
 
-if "-" in sys.argv[2]:
-    for i in range(int(sys.argv[3].split("-")[0]), int(sys.argv[3].split("-")[1]) + 1):
-        num_list.append(i)
-else:
-    for i in range(2, len(sys.argv)):
-        num_list.append(int(sys.argv[i]))
+    num_list = []
 
-# 获取当前目录下以".log"结尾的文件名列表
-file_names = [file_name for file_name in os.listdir() if file_name.endswith(".log")]
+    if "-" in sys.argv[2]:
+        for i in range(int(sys.argv[3].split("-")[0]), int(sys.argv[3].split("-")[1]) + 1):
+            num_list.append(i)
+    else:
+        for i in range(2, len(sys.argv)):
+            num_list.append(int(sys.argv[i]))
 
-# 筛选出符合数字范围的文件名
-selected_file_names = []
-for file_name in file_names:
-    # 不以数字开头的文件名将被忽略
-    if not file_name[0].isdigit():
-        continue
-    # 没有"-"的文件名单独处理
-    if "-" not in file_name:
-        file_num = int(file_name.split(".")[0])
+    # 获取当前目录下以".log"结尾的文件名列表
+    file_names = [file_name for file_name in os.listdir() if file_name.endswith(".log")]
+
+    # 筛选出符合数字范围的文件名
+    selected_file_names = []
+    for file_name in file_names:
+        # 不以数字开头的文件名将被忽略
+        if not file_name[0].isdigit():
+            continue
+        # 没有"-"的文件名单独处理
+        if "-" not in file_name:
+            file_num = int(file_name.split(".")[0])
+            if file_num in num_list:
+                selected_file_names.append(file_name)
+            continue
+        file_num = int(file_name.split("-")[0])
         if file_num in num_list:
             selected_file_names.append(file_name)
-        continue
-    file_num = int(file_name.split("-")[0])
-    if file_num in num_list:
-        selected_file_names.append(file_name)
 
-for file_name in selected_file_names:
-    if not os.path.isfile(file_name):
-        print(f"Error: {file_name} does not exist.")
-        sys.exit(1)
+    for file_name in selected_file_names:
+        if not os.path.isfile(file_name):
+            print(f"Error: {file_name} does not exist.")
+            sys.exit(1)
+    
+    return selected_file_names
 
 # 打开baseline文件并读取内容
 def read_file(filename, num_of_strings):
@@ -70,9 +77,11 @@ def read_file(filename, num_of_strings):
     # 取最后十轮的acc平均值作为收敛acc，保留两位小数
     avg_acc = round(sum(acc_list[-10:]) / 10, 2)
 
-    return acc_list, max_acc, avg_acc, avg_loss
+    res = [acc_list, max_acc, avg_acc, avg_loss]
 
-def read_file2(rounds):
+    return res
+
+def read_file2(rounds, selected_file_names):
     data_list = []
     max_acc = {}
     avg_acc = {}
@@ -103,48 +112,88 @@ def read_file2(rounds):
         # 取最后50条的DML loss平均值作为收敛DML loss
         pattern = r"--- DML_update_loss\(A model\) with Client:f(\d{7}): (\d+\.\d+)"
         matches = re.findall(pattern, content)
-        avg_DML_loss[filename] = round(sum([float(matches[i][1]) for i in range(-50, 0)]) / 50, 2)
+        avg_DML_loss[filename] = round(sum([float(matches[i][1]) for i in range(-40, 0)]) / 40, 2)
 
-    return data_list, max_acc, avg_acc, avg_loss, avg_DML_loss
+    res = [data_list, max_acc, avg_acc, avg_loss, avg_DML_loss]
 
-# 读取baseline的数据
-baseline_acc_list, baseline_max_acc, baseline_avg_acc, baseline_avg_loss = read_file(baseline_filename, num_of_strings1)
-# 读取多个文件的数据，每个文件的数据存储在一个列表中
-data_list, max_acc, avg_acc, avg_loss, avg_DML_loss = read_file2(num_of_strings1)
+    return res
 
-# 根据acc_list1和data_list生成折线图
-for i in range(len(data_list)):
-    x = range(len(data_list[i]))
-    y = data_list[i]
-    plt.plot(x, y, label=f"{selected_file_names[i]}")
+def plt_config():
+    # plt.rcParams['font.family'] = 'Times New Roman'
+    plt.rcParams['font.size'] = 12
 
-# 根据acc_list1生成折线图
-x = range(len(baseline_acc_list))
-y = baseline_acc_list
-plt.plot(x, y, label=f"{baseline_filename}")
+    ax = plt.gca()  # 获取当前轴对象
 
-plt.xlabel("Round")
-plt.ylabel("Accuracy")
-plt.legend()
-plt.savefig('compare.png')
+    # 设置刻度线的位置
+    ax.tick_params(axis='both', which='both', direction='in', length=5, width=1)
 
-# note={
-#     "17-.log": "Def-KT, local epoch = 5, DML epoch = 15",
-#     "19.log": "Def-KT, local epoch = 20, DML epoch = 20",
-#     "20.log": "Def-KT, local epoch = 10, DML epoch = 10",
-# }
+    # 开启网格线
+    ax.grid(True, linestyle='-', linewidth=0.5, color='gray', alpha=0.5)
 
-# 创建表格对象并指定表头
-table = PrettyTable()
-# table.field_names = ["num", "max acc", "avg acc", "avg loss(CE)", "DML loss(CE+KL)", "备注"]
-table.field_names = ["num", "max acc", "avg acc", "avg loss(CE)", "DML loss(CE+KL)"]
+    # 设置图例线条的长度
+    handles, labels = ax.get_legend_handles_labels()
+    for handle in handles:
+        # handle.set_linewidth(1)
+        pass
 
-# 添加baseline数据行
-# table.add_row([baseline_filename, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-", "baseline, local epoch = 20"])
-table.add_row([baseline_filename, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-"])
-# 添加其他数据行
-for file_name in selected_file_names:
-    # table.add_row([file_name, max_acc[file_name], avg_acc[file_name], avg_loss[file_name], avg_DML_loss[file_name], note[file_name]])
-    table.add_row([file_name, max_acc[file_name], avg_acc[file_name], avg_loss[file_name], avg_DML_loss[file_name]])
-# 输出表格
-print(table)
+    # ax.spines['bottom'].set_position(('data', 0))   # 将两个坐标轴的位置设在数据点原点
+    ax.spines['left'].set_position(('data', 0))
+
+    return ax
+
+def draw_plot(rounds, selected_file_names, baseline_filename):    
+    res_list = []
+    baseline_acc_list = []
+    # 读取baseline的数据
+    res_list = read_file(baseline_filename, rounds)
+    baseline_acc_list = res_list[0]
+    # 读取多个文件的数据，每个文件的数据存储在一个列表中
+    res_list = read_file2(rounds, selected_file_names)
+    data_list = res_list[0]
+
+    for i in range(len(data_list)):
+        x = range(len(data_list[i]))
+        y = data_list[i]
+        plt_config()
+        plt.plot(x, y, label=f"{selected_file_names[i]}")
+
+    x = range(len(baseline_acc_list))
+    y = baseline_acc_list
+    plt_config()
+    plt.plot(x, y, label=f"{baseline_filename}")
+
+    plt.legend()
+
+    plt.title("CIFAR-10, non-IID")
+    plt.xlabel("Number of rounds")
+    plt.ylabel("Accuracy")
+    plt.savefig('compare.png')
+
+def printTable(selected_file_names):
+    res_list = []
+    res_list = read_file(baseline_filename, rounds)
+    baseline_max_acc, baseline_avg_acc, baseline_avg_loss = res_list[1], res_list[2], res_list[3]
+
+    res_list = read_file2(rounds, selected_file_names)
+    max_acc, avg_acc, avg_loss, avg_DML_loss = res_list[1], res_list[2], res_list[3], res_list[4]
+
+    # 创建表格对象并指定表头
+    table = PrettyTable()
+    # table.field_names = ["num", "max acc", "avg acc", "avg loss(CE)", "DML loss(CE+KL)", "备注"]
+    table.field_names = ["num", "max acc", "avg acc", "avg loss(CE)", "DML loss(CE+KL)"]
+
+    # 添加baseline数据行
+    # table.add_row([baseline_filename, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-", "baseline, local epoch = 20"])
+    table.add_row([baseline_filename, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-"])
+    # 添加其他数据行
+    for file_name in selected_file_names:
+        # table.add_row([file_name, max_acc[file_name], avg_acc[file_name], avg_loss[file_name], avg_DML_loss[file_name], note[file_name]])
+        table.add_row([file_name, max_acc[file_name], avg_acc[file_name], avg_loss[file_name], avg_DML_loss[file_name]])
+    # 输出表格
+    print(table)
+
+# filenames = get_file_name()
+filenames = ["Def-KT.log"]
+draw_plot(rounds, filenames, baseline_filename)
+printTable(filenames)
+

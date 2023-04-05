@@ -12,14 +12,14 @@ from simple_cnn import Model
 from easyfl.tracking import metric
 from easyfl.tracking.evaluation import model_size
 
-DML_lr = 0.015 # DML训练的学习率
+DML_lr = 0.018 # DML训练的学习率
 
-local_batch_size = 16 # B_1
-DML_batch_size = 16 # B_2g
+local_batch_size = 64 # B_1
+DML_batch_size = 16 # B_2
 # 论文里区分了两个阶段的batch size为B_1和B_2
 
-local_epoch = 10 # M
-DML_epoch = 10 # E
+local_epoch = 5 # M
+DML_epoch = 15 # E
 
 alpha = 1 # KL散度的权重
 beta = 1 # 交叉熵的权重
@@ -127,7 +127,7 @@ class CustomizedClient(BaseClient):
         test_loss /= len(test_loader.dataset)
         test_acc = 100. * correct / len(test_loader.dataset)
         # print("--- local_test_loss : {:.2f}".format( test_loss))
-        print("--- local_test_acc : {:.2f}%".format( test_acc))
+        # print("--- local_test_acc : {:.2f}%".format( test_acc))
         return test_loss, test_acc
 
     def train(self, conf, device, train_local_only):

@@ -93,11 +93,14 @@ class CustomizedServer(BaseServer):
         clients = self.A_clients + self.B_clients
         loss = []
         acc = []
-        for client in clients:
+        for client in self._clients:
             test_loss, test_acc = client.test_local_model(self.conf, "cuda")
 
             loss.append(test_loss)
             acc.append(test_acc)
+        
+        print("----------- acc -----------")
+        print(acc)
         print("--------- test avarage ---------")
 
         print("--- All clients' test loss: {:.2f}".format(sum(loss)/len(loss)))
@@ -109,5 +112,3 @@ class CustomizedServer(BaseServer):
 
     def test(self):
         pass
-
-
