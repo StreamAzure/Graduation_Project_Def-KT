@@ -71,7 +71,7 @@ class Cifar100(BaseDataset):
             os.makedirs(self.data_folder)
         if self.weights is None and os.path.exists(train_data_path):
             return
-        logger.info("Start CIFAR10 data simulation")
+        logger.info("Start CIFAR100 data simulation")
         _, train_data = data_simulation(self.train_data['x'],
                                         self.train_data['y'],
                                         self.num_of_client,
@@ -80,9 +80,17 @@ class Cifar100(BaseDataset):
                                         self.alpha,
                                         self.min_size,
                                         self.class_per_client)
-        logger.info("Complete CIFAR10 data simulation")
+        _, test_data = data_simulation( self.test_data['x'],
+                                        self.test_data['y'],
+                                        self.num_of_client,
+                                        self.split_type,
+                                        self.weights,
+                                        self.alpha,
+                                        self.min_size,
+                                        self.class_per_client)
+        logger.info("Complete CIFAR100 data simulation")
         save_dict(train_data, train_data_path)
-        save_dict(self.test_data, test_data_path)
+        save_dict(test_data, test_data_path)
 
     def convert_data_to_json(self):
         pass

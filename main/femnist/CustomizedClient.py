@@ -18,8 +18,8 @@ local_batch_size = 64 # B_1
 DML_batch_size = 16 # B_2
 # 论文里区分了两个阶段的batch size为B_1和B_2
 
-local_epoch = 20 # M
-DML_epoch = 20 # E
+local_epoch = 1 # M
+DML_epoch = 25 # E
 
 alpha = 1 # KL散度的权重
 beta = 1 # 交叉熵的权重
