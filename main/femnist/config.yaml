@@ -1,8 +1,8 @@
 task_id: ""
 data:
   root: "../data/"
-  dataset: cifar10
-  split_type: "iid" 
+  dataset: femnist
+  split_type: "class" 
   # 数据集分发方式，选项：iid，niid，dir，class
   # iid 独立同分布
   # niid 非独立同分布
