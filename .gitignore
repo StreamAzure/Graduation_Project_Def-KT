@@ -1,3 +1,4 @@
 *.pyc
 main/data
 **/__pycache__
+main/femnist/logs
