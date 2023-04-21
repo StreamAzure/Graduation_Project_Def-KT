@@ -1,59 +1,38 @@
+from torch import nn
+import torch.nn.functional as F
 import easyfl
-import os
-from torchvision import transforms
-from easyfl.datasets import FederatedImageDataset
+from easyfl.models import BaseModel
 
-TRANSFORM_TRAIN_LIST = transforms.Compose([
-    transforms.Resize((256, 128), interpolation=3),
-    transforms.Pad(10),
-    transforms.RandomCrop((256, 128)),
-    transforms.RandomHorizontalFlip(),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-])
-TRANSFORM_VAL_LIST = transforms.Compose([
-    transforms.Resize(size=(256, 128), interpolation=3),
-    transforms.ToTensor(),
-    transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
-])
+# Define a customized model class.
+class CustomizedModel(BaseModel):
+    def __init__(self, channels=32):
+        super(CustomizedModel, self).__init__()
+        self.num_channels = channels
+        self.conv1 = nn.Conv2d(1, self.num_channels, 3, stride=1)
+        self.conv2 = nn.Conv2d(self.num_channels, self.num_channels * 2, 3, stride=1)
+        self.conv3 = nn.Conv2d(self.num_channels * 2, self.num_channels * 2, 3, stride=1)
 
-DATASETS = ["MSMT17", "Duke", "Market", "cuhk03", "prid", "cuhk01", "viper", "3dpes", "ilids"]
+        self.fc1 = nn.Linear(4 * 4 * self.num_channels * 2, self.num_channels * 2)
+        self.fc2 = nn.Linear(self.num_channels * 2, 10)
 
-# Prepare customized training data
-def prepare_train_data(data_dir):
-    client_ids = []
-    roots = []
-    for db in DATASETS:
-        client_ids.append(db)
-        data_path = os.path.join(data_dir, db, "pytorch")
-        roots.append(os.path.join(data_path, "train_all"))
-    data = FederatedImageDataset(root=roots,
-                                 simulated=True,
-                                 do_simulate=False,
-                                 transform=TRANSFORM_TRAIN_LIST,
-                                 client_ids=client_ids)
-    return data
+    def forward(self, s):
+        s = F.pad(s, (2, 2, 2, 2)) # 在图像边缘进行填充
+        s = self.conv1(s)  # batch_size x num_channels x 32 x 32
+        s = F.relu(F.max_pool2d(s, 2))  # batch_size x num_channels x 16 x 16
+        s = self.conv2(s)  # batch_size x num_channels*2 x 16 x 16
+        s = F.relu(F.max_pool2d(s, 2))  # batch_size x num_channels*2 x 8 x 8
+        s = self.conv3(s)  # batch_size x num_channels*2 x 8 x 8
+        # flatten the output for each image
+        s = s.view(-1, 4 * 4 * self.num_channels * 2)  # batch_size x 4*4*num_channels*4
+        # apply 2 fully connected layers with dropout
+        s = F.relu(self.fc1(s))
+        s = self.fc2(s)  # batch_size x 10
+        return s
 
+# Register the customized model class.
+easyfl.register_model(CustomizedModel)
 
-# Prepare customized testing data
-def prepare_test_data(data_dir):
-    roots = []
-    client_ids = []
-    for db in DATASETS:
-        test_gallery = os.path.join(data_dir, db, 'pytorch', 'gallery')
-        test_query = os.path.join(data_dir, db, 'pytorch', 'query')
-        roots.extend([test_gallery, test_query])
-        client_ids.extend([f"{db}_gallery", f"{db}_query"])
-    data = FederatedImageDataset(root=roots,
-                                 simulated=True,
-                                 do_simulate=False,
-                                 transform=TRANSFORM_VAL_LIST,
-                                 client_ids=client_ids)
-    return data
-
-
-if __name__ == '__main__':
-    config_file = "config.yaml"
-    config = easyfl.load_config(config_file)
-    easyfl.init(config)
-    easyfl.run()
+config_file = "config.yaml"
+config = easyfl.load_config(config_file)
+easyfl.init(config)
+easyfl.run()
