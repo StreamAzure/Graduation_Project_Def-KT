@@ -27,8 +27,8 @@ test_method: "average"
 
 server:
   track: False
-  rounds: 800 # 总的训练轮数
-  clients_per_round: 2 # 每轮选择的客户端数量
+  rounds: 5000 # 总的训练轮数
+  clients_per_round: 20 # 每轮选择的客户端数量
   test_every: 1
   save_model_every: 10
   save_model_path: ""
@@ -40,7 +40,7 @@ server:
 
 client:
   track: False
-  batch_size: 200
+  batch_size: 1024
   test_batch_size: 5
   local_epoch: 20
   optimizer:
