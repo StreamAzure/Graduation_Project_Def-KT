@@ -2,7 +2,7 @@ task_id: ""
 data:
   root: "../data/"
   dataset: cifar10
-  split_type: "iid" 
+  split_type: "class" 
   # 数据集分发方式，选项：iid，niid，dir，class
   # iid 独立同分布
   # niid 非独立同分布
@@ -27,7 +27,7 @@ test_method: "average"
 
 server:
   track: False
-  rounds: 800 # 总的训练轮数
+  rounds: 300 # 总的训练轮数
   clients_per_round: 2 # 每轮选择的客户端数量
   test_every: 1
   save_model_every: 10
@@ -40,7 +40,7 @@ server:
 
 client:
   track: False
-  batch_size: 200
+  batch_size: 16
   test_batch_size: 5
   local_epoch: 20
   optimizer:

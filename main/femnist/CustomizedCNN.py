@@ -15,8 +15,8 @@ class CustomizedCNN(nn.Module):
         self.conv3 = nn.Conv2d(64, 64, kernel_size=3)
         #经过卷积层后，张量(64,3,3)
         #64*3*3=576
-        self.fc1 = nn.Linear(576, 64)
-        self.fc2 = nn.Linear(64, 62)
+        self.fc1 = nn.Linear(576, 128)
+        self.fc2 = nn.Linear(128, 62)
 
     def forward(self, x):
         x = F.relu(F.max_pool2d(self.conv1(x), 2))
@@ -26,5 +26,6 @@ class CustomizedCNN(nn.Module):
         x = x.view(-1, 576) # 576 = 64 * 3 * 3
         x = F.relu(self.fc1(x))
         x = self.fc2(x)
+        # print("forward finished")
         return x
         

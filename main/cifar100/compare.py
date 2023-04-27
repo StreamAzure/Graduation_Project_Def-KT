@@ -6,51 +6,26 @@ from prettytable import PrettyTable
 from matplotlib.font_manager import FontProperties
 import matplotlib as mpl
 import numpy as np
+from statsmodels.nonparametric.smoothers_lowess import lowess
 
 rounds = int(sys.argv[1])
-baseline_filename = "baseline_5000rounds.log"
 
 def get_file_name():
     # 获取文件名和要查找的字符串数量参数
     if len(sys.argv) < 2:
-        print("Usage: python plot_accuracy.py <rounds> <nums_range | <spectial_num1>>  ...")
-        sys.exit(1)
+        print("Usage: python compare.py file1 file2 file3 ...")
+        sys.exit()
 
-    num_list = []
+    file_list = []
+    for i in range(2, len(sys.argv)):
+        file_list.append(sys.argv[i])
 
-    if len(sys.argv) > 2:
-        if "-" in sys.argv[2]:
-            for i in range(int(sys.argv[3].split("-")[0]), int(sys.argv[3].split("-")[1]) + 1):
-                num_list.append(i)
-        else:
-            for i in range(2, len(sys.argv)):
-                num_list.append(int(sys.argv[i]))
-
-    # 获取当前目录下以".log"结尾的文件名列表
-    file_names = [file_name for file_name in os.listdir() if file_name.endswith(".log")]
-
-    # 筛选出符合数字范围的文件名
-    selected_file_names = []
-    for file_name in file_names:
-        # 不以数字开头的文件名将被忽略
-        if not file_name[0].isdigit():
-            continue
-        # 没有"-"的文件名单独处理
-        if "-" not in file_name:
-            file_num = int(file_name.split(".")[0])
-            if file_num in num_list:
-                selected_file_names.append(file_name)
-            continue
-        file_num = int(file_name.split("-")[0])
-        if file_num in num_list:
-            selected_file_names.append(file_name)
-
-    for file_name in selected_file_names:
+    for file_name in file_list:
         if not os.path.isfile(file_name):
             print(f"Error: {file_name} does not exist.")
             sys.exit(1)
     
-    return selected_file_names
+    return file_list
 
 # 打开baseline文件并读取内容
 def read_baseline_file(filename, num_of_strings):
@@ -82,6 +57,35 @@ def read_baseline_file(filename, num_of_strings):
 
     return res
 
+def read_single_DML_file(rounds, kt_file):
+    with open(kt_file, "r") as f:
+        content = f.read()
+    acc_list = []
+    pattern = r"--- All clients' test acc: \s*(\d+\.\d+)%"
+    matches = re.findall(pattern, content)
+    length = rounds
+    if len(matches) < rounds:
+        length = len(matches)
+    for i in range(length):
+        acc_list.append(float(matches[i]))
+
+    # 取最后十轮的loss平均值作为收敛loss
+    pattern_loss = r"--- All clients' test loss: \s*(\d+\.\d+)"
+    matches = re.findall(pattern_loss, content)
+    # avg_loss = round(sum([float(matches[i]) for i in range(-10, 0)]) / 10, 2)
+    avg_loss = 1
+    # 记录acc最大值
+    max_acc = max(acc_list)
+    # 取最后十轮的acc平均值作为收敛acc，保留两位小数
+    avg_acc = round(sum(acc_list[-10:]) / 10, 2)
+    # 取最后50条的DML loss平均值作为收敛DML loss
+    pattern = r"--- DML_update_loss\(A model\) with Client:(\w+): (\d+\.\d+)"
+    matches = re.findall(pattern, content)
+    # avg_DML_loss = round(sum([float(matches[i][1]) for i in range(-40, 0)]) / 40, 2)
+    avg_DML_loss=1
+    res = [acc_list, max_acc, avg_acc, avg_loss, avg_DML_loss]
+    return res
+    
 def read_DML_file(rounds, selected_file_names):
     data_list = []
     max_acc = {}
@@ -142,40 +146,48 @@ def plt_config():
 
     return ax
 
-def draw_plot(rounds, selected_file_names, baseline_filename):    
+# 定义平滑函数
+def moving_average(x, y, window_size):
+    window = np.ones(int(window_size))/float(window_size)
+    y_smooth = np.convolve(y, window, 'same')
+    return y_smooth
+
+def draw_plot(rounds, kt_file, baseline_file):    
     res_list = []
     baseline_acc_list = []
+    kt_acc_list =[]
     # 读取baseline的数据
-    res_list = read_baseline_file(baseline_filename, rounds)
+    res_list = read_baseline_file(baseline_file, rounds)
     baseline_acc_list = res_list[0]
-    # 读取多个文件的数据，每个文件的数据存储在一个列表中
-    res_list = read_DML_file(rounds, selected_file_names)
-    data_list = res_list[0]
-
-    for i in range(len(data_list)):
-        x = range(len(data_list[i]))
-        y = data_list[i]
-        plt_config()
-        plt.plot(x, y, label=f"{selected_file_names[i]}")
+    # 读取kt的数据
+    res_list = read_single_DML_file(rounds, kt_file)
+    kt_acc_list = res_list[0]
+    
+    x = range(len(kt_acc_list))
+    y = kt_acc_list
+    y_smooth = lowess(y, x, frac=0.1, return_sorted=False)
+    plt_config()
+    plt.plot(x, y_smooth, label=f"Def-KT")
 
     x = range(len(baseline_acc_list))
     y = baseline_acc_list
+    y_smooth = lowess(y, x, frac=0.1, return_sorted=False)
     plt_config()
-    plt.plot(x, y, label=f"{baseline_filename}")
+    plt.plot(x, y_smooth, label=f"FedAvg")
 
     plt.legend()
 
-    plt.title("CIFAR-10, non-IID")
+    plt.title("CIFAR-100, non-IID(ξ=80)")
     plt.xlabel("Number of rounds")
     plt.ylabel("Accuracy")
     plt.savefig('compare.png')
 
-def printTable(selected_file_names):
+def printTable(kt_file, baseline_file):
     res_list = []
-    res_list = read_baseline_file(baseline_filename, rounds)
+    res_list = read_baseline_file(baseline_file, rounds)
     baseline_max_acc, baseline_avg_acc, baseline_avg_loss = res_list[1], res_list[2], res_list[3]
 
-    res_list = read_DML_file(rounds, selected_file_names)
+    res_list = read_single_DML_file(rounds, kt_file)
     max_acc, avg_acc, avg_loss, avg_DML_loss = res_list[1], res_list[2], res_list[3], res_list[4]
 
     # 创建表格对象并指定表头
@@ -184,17 +196,23 @@ def printTable(selected_file_names):
     table.field_names = ["num", "max acc", "avg acc", "avg loss(CE)", "DML loss(CE+KL)"]
 
     # 添加baseline数据行
-    # table.add_row([baseline_filename, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-", "baseline, local epoch = 20"])
-    table.add_row([baseline_filename, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-"])
+    # table.add_row([baseline_file, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-", "baseline, local epoch = 20"])
+    table.add_row([baseline_file, baseline_max_acc, baseline_avg_acc, baseline_avg_loss, "-"])
     # 添加其他数据行
-    for file_name in selected_file_names:
-        # table.add_row([file_name, max_acc[file_name], avg_acc[file_name], avg_loss[file_name], avg_DML_loss[file_name], note[file_name]])
-        table.add_row([file_name, max_acc[file_name], avg_acc[file_name], avg_loss[file_name], avg_DML_loss[file_name]])
+    table.add_row([kt_file, max_acc, avg_acc, avg_loss, avg_DML_loss])
     # 输出表格
     print(table)
 
-filenames = []
-filenames += get_file_name()
-draw_plot(rounds, filenames, baseline_filename)
-printTable(filenames)
-
+filenames = get_file_name()
+baseline_file = ""
+kt_file = ""
+for file in filenames:
+    if "baseline" in file:
+        baseline_file = file
+        break
+for file in filenames:
+    if "kt" in file:
+        kt_file= file
+        break
+draw_plot(rounds, kt_file, baseline_file)
+printTable(kt_file, baseline_file)

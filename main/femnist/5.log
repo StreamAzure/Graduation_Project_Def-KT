@@ -1,0 +1,25 @@
+2023-04-22 09:28:23,158 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': '../data/', 'dataset': 'femnist', 'split_type': 'niid', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.9, 'class_per_client': 1, 'num_of_clients': 10, 'alpha': 0.2, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 100, 'clients_per_round': 2, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 64, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'FedAvg', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 16, 'test_batch_size': 5, 'local_epoch': 20, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.5, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-04-22 09:28:23,160 [MainThread] [INFO ]  Failed to download packaged dataset: ('femnist_niid_10_10_1_0.05_0.1_sample_0.9.zip',)
+2023-04-22 09:28:23,160 [MainThread] [INFO ]  raw file exists
+2023-04-22 09:28:23,160 [MainThread] [INFO ]  calculating image hashes
+2023-04-22 09:28:23,481 [MainThread] [INFO ]  hashed 0 class images
+Traceback (most recent call last):
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/main.py", line 17, in <module>
+    easyfl.init(config)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 384, in init
+    _global_coord.init(config, init_all)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 58, in init
+    self.init_dataset()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 104, in init_dataset
+    self.train_data, self.test_data = construct_datasets(self.conf.data.root,
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/data.py", line 213, in construct_datasets
+    train_data, test_data, process_x, process_y, transform_train, transform_test = load_data(root,
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/data.py", line 159, in load_data
+    dataset.setup()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/utils/base_dataset.py", line 109, in setup
+    self.preprocess()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/femnist/femnist.py", line 91, in preprocess
+    get_hash(self.base_folder)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/femnist/preprocess/get_hashes.py", line 31, in get_hash
+    chash = hashlib.md5(open(file_path, "rb").read()).hexdigest()
+FileNotFoundError: [Errno 2] No such file or directory: '../data/femnist/../data/femnist/raw_data/by_class/37/hsf_2/hsf_2_02556.png'

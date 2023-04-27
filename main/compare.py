@@ -6,6 +6,7 @@ from prettytable import PrettyTable
 from matplotlib.font_manager import FontProperties
 import matplotlib as mpl
 import numpy as np
+from statsmodels.nonparametric.smoothers_lowess import lowess
 
 rounds = int(sys.argv[1])
 baseline_filename = "baseline_20epoch.log"
@@ -154,13 +155,16 @@ def draw_plot(rounds, selected_file_names, baseline_filename):
     for i in range(len(data_list)):
         x = range(len(data_list[i]))
         y = data_list[i]
+        y_smooth = lowess(y, x, frac=0.01, return_sorted=False)
         plt_config()
-        plt.plot(x, y, label=f"{selected_file_names[i]}")
+        # plt.plot(x, y_smooth, label=f"{selected_file_names[i]}")
+        plt.plot(x, y_smooth, label=f"Def-KT")
 
     x = range(len(baseline_acc_list))
     y = baseline_acc_list
+    y_smooth = lowess(y, x, frac=0.01, return_sorted=False)
     plt_config()
-    plt.plot(x, y, label=f"{baseline_filename}")
+    plt.plot(x, y_smooth, label=f"FedAvg")
 
     plt.legend()
 
@@ -193,7 +197,7 @@ def printTable(selected_file_names):
     print(table)
 
 # filenames = get_file_name()
-filenames = ["Def-KT.log"]
+filenames = ["17-acc.log"]
 draw_plot(rounds, filenames, baseline_filename)
 printTable(filenames)
 

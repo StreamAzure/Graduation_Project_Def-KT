@@ -1,0 +1,3074 @@
+2023-04-23 02:45:01,799 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': '../data/', 'dataset': 'cifar10', 'split_type': 'class', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.8, 'class_per_client': 5, 'num_of_clients': 10, 'alpha': 0.2, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 500, 'clients_per_round': 2, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 64, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'FedAvg', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 16, 'test_batch_size': 5, 'local_epoch': 20, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.5, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-04-23 02:45:01,800 [MainThread] [INFO ]  Downloaded packaged dataset cifar10: cifar10_class_10_10_5_0.2_0.zip
+Files already downloaded and verified
+Files already downloaded and verified
+2023-04-23 02:45:03,350 [MainThread] [INFO ]  Start CIFAR10 data simulation
+2023-04-23 02:45:03,551 [MainThread] [INFO ]  {'f0000000': {0: 1000, 1: 1000, 2: 1000, 3: 1000, 4: 1000}, 'f0000001': {5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000}, 'f0000002': {0: 1000, 1: 1000, 2: 1000, 3: 1000, 4: 1000}, 'f0000003': {5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000}, 'f0000004': {0: 1000, 1: 1000, 2: 1000, 3: 1000, 4: 1000}, 'f0000005': {5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000}, 'f0000006': {0: 1000, 1: 1000, 2: 1000, 3: 1000, 4: 1000}, 'f0000007': {5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000}, 'f0000008': {0: 1000, 1: 1000, 2: 1000, 3: 1000, 4: 1000}, 'f0000009': {5: 1000, 6: 1000, 7: 1000, 8: 1000, 9: 1000}}
+2023-04-23 02:45:03,587 [MainThread] [INFO ]  {'f0000000': {0: 200, 1: 200, 2: 200, 3: 200, 4: 200}, 'f0000001': {5: 200, 6: 200, 7: 200, 8: 200, 9: 200}, 'f0000002': {0: 200, 1: 200, 2: 200, 3: 200, 4: 200}, 'f0000003': {5: 200, 6: 200, 7: 200, 8: 200, 9: 200}, 'f0000004': {0: 200, 1: 200, 2: 200, 3: 200, 4: 200}, 'f0000005': {5: 200, 6: 200, 7: 200, 8: 200, 9: 200}, 'f0000006': {0: 200, 1: 200, 2: 200, 3: 200, 4: 200}, 'f0000007': {5: 200, 6: 200, 7: 200, 8: 200, 9: 200}, 'f0000008': {0: 200, 1: 200, 2: 200, 3: 200, 4: 200}, 'f0000009': {5: 200, 6: 200, 7: 200, 8: 200, 9: 200}}
+2023-04-23 02:45:03,588 [MainThread] [INFO ]  Complete CIFAR10 data simulation
+2023-04-23 02:45:04,704 [MainThread] [INFO ]  Total training data amount: 50000
+2023-04-23 02:45:04,704 [MainThread] [INFO ]  Total testing data amount: 10000
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+2023-04-23 02:45:04,743 [MainThread] [INFO ]  Clients in total: 10
+2023-04-23 02:45:04,773 [MainThread] [INFO ]  
+-------- round 0 --------
+2023-04-23 02:45:04,773 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 1.52
+client: f0000008
+--- local_update_loss : 1.56
+--- DML_update_loss(A model) with Client:f0000004: 1.14
+--- DML_update_loss(A model) with Client:f0000000: 1.15
+----------- acc -----------
+[65.7, 22.2, 35.3, 18.4, 67.5, 0.0, 0.0, 3.7, 41.8, 6.5]
+--------- test avarage ---------
+--- All clients' test loss: 1.84
+--- All clients' test acc: 26.11%
+2023-04-23 02:47:56,276 [MainThread] [INFO ]  Server train time: 171.50210857391357
+2023-04-23 02:47:56,276 [MainThread] [INFO ]  
+-------- round 1 --------
+2023-04-23 02:47:56,276 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 1.26
+client: f0000009
+--- local_update_loss : 1.44
+--- DML_update_loss(A model) with Client:f0000006: 1.14
+--- DML_update_loss(A model) with Client:f0000007: 1.00
+----------- acc -----------
+[65.7, 22.2, 45.3, 18.4, 67.5, 0.0, 65.2, 77.6, 41.8, 35.7]
+--------- test avarage ---------
+--- All clients' test loss: 1.46
+--- All clients' test acc: 43.94%
+2023-04-23 02:50:48,045 [MainThread] [INFO ]  Server train time: 171.7685525417328
+2023-04-23 02:50:48,046 [MainThread] [INFO ]  
+-------- round 2 --------
+2023-04-23 02:50:48,046 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.86
+client: f0000001
+--- local_update_loss : 1.44
+--- DML_update_loss(A model) with Client:f0000005: 1.01
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[65.7, 51.7, 45.3, 18.4, 69.2, 80.6, 65.2, 83.6, 41.8, 35.7]
+--------- test avarage ---------
+--- All clients' test loss: 1.15
+--- All clients' test acc: 55.72%
+2023-04-23 02:53:38,624 [MainThread] [INFO ]  Server train time: 170.57797694206238
+2023-04-23 02:53:38,625 [MainThread] [INFO ]  
+-------- round 3 --------
+2023-04-23 02:53:38,625 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.63
+client: f0000004
+--- local_update_loss : 0.83
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 1.00
+----------- acc -----------
+[65.7, 51.7, 45.3, 70.7, 70.3, 81.0, 65.2, 78.4, 41.8, 35.7]
+--------- test avarage ---------
+--- All clients' test loss: 1.00
+--- All clients' test acc: 60.58%
+2023-04-23 02:56:29,366 [MainThread] [INFO ]  Server train time: 170.74097275733948
+2023-04-23 02:56:29,367 [MainThread] [INFO ]  
+-------- round 4 --------
+2023-04-23 02:56:29,367 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.62
+client: f0000008
+--- local_update_loss : 1.27
+--- DML_update_loss(A model) with Client:f0000009: 0.99
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[65.7, 51.7, 45.3, 83.3, 70.3, 81.0, 65.2, 82.4, 48.2, 78.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.83
+--- All clients' test acc: 67.12%
+2023-04-23 02:59:19,387 [MainThread] [INFO ]  Server train time: 170.0196475982666
+2023-04-23 02:59:19,388 [MainThread] [INFO ]  
+-------- round 5 --------
+2023-04-23 02:59:19,388 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.62
+client: f0000005
+--- local_update_loss : 0.59
+--- DML_update_loss(A model) with Client:f0000001: 0.99
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+----------- acc -----------
+[68.2, 76.0, 45.3, 83.3, 70.3, 78.4, 65.2, 82.4, 48.2, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.77
+--- All clients' test acc: 69.69%
+2023-04-23 03:02:11,418 [MainThread] [INFO ]  Server train time: 172.02987504005432
+2023-04-23 03:02:11,419 [MainThread] [INFO ]  
+-------- round 6 --------
+2023-04-23 03:02:11,419 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 1.15
+client: f0000001
+--- local_update_loss : 0.63
+--- DML_update_loss(A model) with Client:f0000006: 1.08
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+----------- acc -----------
+[68.2, 80.9, 45.3, 83.3, 70.3, 80.8, 66.5, 82.4, 54.6, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.74
+--- All clients' test acc: 71.19%
+2023-04-23 03:05:02,744 [MainThread] [INFO ]  Server train time: 171.32492351531982
+2023-04-23 03:05:02,745 [MainThread] [INFO ]  
+-------- round 7 --------
+2023-04-23 03:05:02,745 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 1.08
+client: f0000005
+--- local_update_loss : 0.56
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[71.4, 80.7, 45.3, 83.3, 70.3, 83.3, 66.5, 82.4, 54.1, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.73
+--- All clients' test acc: 71.69%
+2023-04-23 03:07:53,872 [MainThread] [INFO ]  Server train time: 171.12621521949768
+2023-04-23 03:07:53,872 [MainThread] [INFO ]  
+-------- round 8 --------
+2023-04-23 03:07:53,873 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 1.04
+client: f0000006
+--- local_update_loss : 0.80
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[71.4, 80.7, 45.3, 81.4, 70.3, 83.3, 69.3, 81.7, 58.7, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.71
+--- All clients' test acc: 72.17%
+2023-04-23 03:10:44,970 [MainThread] [INFO ]  Server train time: 171.09660577774048
+2023-04-23 03:10:44,970 [MainThread] [INFO ]  
+-------- round 9 --------
+2023-04-23 03:10:44,970 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 1.01
+client: f0000004
+--- local_update_loss : 0.81
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[71.4, 81.7, 45.3, 81.4, 72.3, 83.3, 69.3, 81.7, 62.3, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.69
+--- All clients' test acc: 72.83%
+2023-04-23 03:13:35,795 [MainThread] [INFO ]  Server train time: 170.82435131072998
+2023-04-23 03:13:35,797 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_9.pth
+2023-04-23 03:13:35,798 [MainThread] [INFO ]  
+-------- round 10 --------
+2023-04-23 03:13:35,798 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.98
+client: f0000002
+--- local_update_loss : 1.14
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[71.4, 77.3, 56.3, 81.4, 71.3, 83.3, 69.3, 81.7, 59.3, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.68
+--- All clients' test acc: 73.09%
+2023-04-23 03:16:25,386 [MainThread] [INFO ]  Server train time: 169.58798909187317
+2023-04-23 03:16:25,387 [MainThread] [INFO ]  
+-------- round 11 --------
+2023-04-23 03:16:25,387 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000008
+--- local_update_loss : 0.96
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[70.0, 77.3, 56.3, 81.4, 67.8, 83.3, 69.3, 85.3, 63.8, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 73.41%
+2023-04-23 03:19:16,481 [MainThread] [INFO ]  Server train time: 171.09335780143738
+2023-04-23 03:19:16,481 [MainThread] [INFO ]  
+-------- round 12 --------
+2023-04-23 03:19:16,481 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.53
+client: f0000008
+--- local_update_loss : 0.94
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000002: 1.12
+----------- acc -----------
+[70.0, 77.3, 67.2, 82.7, 67.8, 83.0, 69.3, 85.3, 66.8, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 74.90%
+2023-04-23 03:22:07,032 [MainThread] [INFO ]  Server train time: 170.5506386756897
+2023-04-23 03:22:07,033 [MainThread] [INFO ]  
+-------- round 13 --------
+2023-04-23 03:22:07,033 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.53
+client: f0000005
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000008: 1.12
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[70.0, 77.3, 70.6, 83.7, 67.8, 85.5, 69.3, 85.3, 69.6, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 75.87%
+2023-04-23 03:24:58,708 [MainThread] [INFO ]  Server train time: 171.67405438423157
+2023-04-23 03:24:58,708 [MainThread] [INFO ]  
+-------- round 14 --------
+2023-04-23 03:24:58,708 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.50
+client: f0000009
+--- local_update_loss : 0.59
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[70.0, 77.3, 70.6, 84.1, 67.8, 85.5, 67.6, 73.0, 69.6, 81.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 74.68%
+2023-04-23 03:27:52,463 [MainThread] [INFO ]  Server train time: 173.7547266483307
+2023-04-23 03:27:52,464 [MainThread] [INFO ]  
+-------- round 15 --------
+2023-04-23 03:27:52,464 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.79
+client: f0000006
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[70.0, 77.3, 73.3, 84.1, 71.9, 85.5, 72.3, 73.0, 69.6, 78.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 75.50%
+2023-04-23 03:30:46,239 [MainThread] [INFO ]  Server train time: 173.77443385124207
+2023-04-23 03:30:46,240 [MainThread] [INFO ]  
+-------- round 16 --------
+2023-04-23 03:30:46,240 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.73
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[70.0, 77.3, 68.2, 84.1, 69.8, 76.9, 75.3, 73.0, 69.6, 78.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.69
+--- All clients' test acc: 74.22%
+2023-04-23 03:33:39,418 [MainThread] [INFO ]  Server train time: 173.17833423614502
+2023-04-23 03:33:39,419 [MainThread] [INFO ]  
+-------- round 17 --------
+2023-04-23 03:33:39,419 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000002
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[70.0, 80.3, 75.6, 84.1, 73.6, 76.9, 75.3, 82.9, 69.6, 78.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.63%
+2023-04-23 03:36:33,680 [MainThread] [INFO ]  Server train time: 174.26090216636658
+2023-04-23 03:36:33,681 [MainThread] [INFO ]  
+-------- round 18 --------
+2023-04-23 03:36:33,681 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.50
+client: f0000009
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[72.6, 80.3, 75.6, 84.1, 73.6, 76.9, 70.7, 84.7, 69.6, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.13%
+2023-04-23 03:39:26,586 [MainThread] [INFO ]  Server train time: 172.90486574172974
+2023-04-23 03:39:26,587 [MainThread] [INFO ]  
+-------- round 19 --------
+2023-04-23 03:39:26,587 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.55
+client: f0000007
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+----------- acc -----------
+[72.6, 82.0, 75.6, 84.1, 71.4, 76.9, 70.7, 84.6, 68.9, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.00%
+2023-04-23 03:42:20,079 [MainThread] [INFO ]  Server train time: 173.49185633659363
+2023-04-23 03:42:20,082 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_19.pth
+2023-04-23 03:42:20,082 [MainThread] [INFO ]  
+-------- round 20 --------
+2023-04-23 03:42:20,082 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.47
+client: f0000001
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[72.6, 81.9, 75.6, 84.1, 65.0, 76.9, 71.3, 83.6, 68.9, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.31%
+2023-04-23 03:45:14,094 [MainThread] [INFO ]  Server train time: 174.01173543930054
+2023-04-23 03:45:14,095 [MainThread] [INFO ]  
+-------- round 21 --------
+2023-04-23 03:45:14,095 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.51
+client: f0000002
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[72.6, 84.6, 73.0, 84.1, 65.0, 76.9, 71.0, 80.4, 68.9, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 75.97%
+2023-04-23 03:48:06,748 [MainThread] [INFO ]  Server train time: 172.65267038345337
+2023-04-23 03:48:06,749 [MainThread] [INFO ]  
+-------- round 22 --------
+2023-04-23 03:48:06,749 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.71
+client: f0000001
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[72.6, 83.6, 75.2, 84.1, 65.0, 76.9, 70.1, 82.0, 68.9, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.16%
+2023-04-23 03:51:00,217 [MainThread] [INFO ]  Server train time: 173.46741819381714
+2023-04-23 03:51:00,217 [MainThread] [INFO ]  
+-------- round 23 --------
+2023-04-23 03:51:00,217 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000008
+--- local_update_loss : 0.79
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[72.6, 83.6, 72.2, 84.1, 65.0, 84.3, 70.1, 82.0, 71.3, 80.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.57%
+2023-04-23 03:53:53,151 [MainThread] [INFO ]  Server train time: 172.9330906867981
+2023-04-23 03:53:53,152 [MainThread] [INFO ]  
+-------- round 24 --------
+2023-04-23 03:53:53,152 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.55
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000006: 1.08
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[72.6, 83.6, 72.2, 84.1, 74.2, 84.3, 69.5, 82.0, 71.6, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.73%
+2023-04-23 03:56:46,331 [MainThread] [INFO ]  Server train time: 173.17920184135437
+2023-04-23 03:56:46,332 [MainThread] [INFO ]  
+-------- round 25 --------
+2023-04-23 03:56:46,332 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.51
+client: f0000001
+--- local_update_loss : 0.48
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[71.7, 82.9, 72.2, 84.1, 74.2, 82.9, 55.6, 82.0, 71.6, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 76.04%
+2023-04-23 03:59:39,712 [MainThread] [INFO ]  Server train time: 173.3798394203186
+2023-04-23 03:59:39,713 [MainThread] [INFO ]  
+-------- round 26 --------
+2023-04-23 03:59:39,713 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.78
+client: f0000004
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000001: 0.95
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[71.7, 78.8, 72.2, 80.8, 75.6, 82.9, 55.6, 82.0, 73.5, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 75.63%
+2023-04-23 04:02:32,612 [MainThread] [INFO ]  Server train time: 172.8985617160797
+2023-04-23 04:02:32,613 [MainThread] [INFO ]  
+-------- round 27 --------
+2023-04-23 04:02:32,613 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.71
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[71.7, 81.5, 73.6, 80.8, 73.8, 82.9, 55.6, 82.4, 73.5, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 75.90%
+2023-04-23 04:05:25,942 [MainThread] [INFO ]  Server train time: 173.32934141159058
+2023-04-23 04:05:25,943 [MainThread] [INFO ]  
+-------- round 28 --------
+2023-04-23 04:05:25,943 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.51
+client: f0000002
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[71.7, 81.5, 75.1, 82.3, 73.8, 81.8, 55.6, 82.4, 73.5, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 76.13%
+2023-04-23 04:08:18,972 [MainThread] [INFO ]  Server train time: 173.02864527702332
+2023-04-23 04:08:18,973 [MainThread] [INFO ]  
+-------- round 29 --------
+2023-04-23 04:08:18,973 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.75
+client: f0000006
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[71.7, 81.5, 75.1, 79.0, 72.7, 81.8, 74.9, 82.4, 72.5, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.52%
+2023-04-23 04:11:12,991 [MainThread] [INFO ]  Server train time: 174.0174527168274
+2023-04-23 04:11:12,993 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_29.pth
+2023-04-23 04:11:12,993 [MainThread] [INFO ]  
+-------- round 30 --------
+2023-04-23 04:11:12,993 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.76
+client: f0000001
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[74.8, 82.8, 70.1, 79.0, 72.7, 81.8, 74.9, 82.4, 71.5, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.36%
+2023-04-23 04:14:06,879 [MainThread] [INFO ]  Server train time: 173.88560223579407
+2023-04-23 04:14:06,880 [MainThread] [INFO ]  
+-------- round 31 --------
+2023-04-23 04:14:06,880 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.76
+client: f0000001
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+----------- acc -----------
+[74.8, 84.6, 70.1, 79.0, 73.4, 81.8, 74.9, 82.4, 67.9, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.25%
+2023-04-23 04:17:01,340 [MainThread] [INFO ]  Server train time: 174.45992708206177
+2023-04-23 04:17:01,341 [MainThread] [INFO ]  
+-------- round 32 --------
+2023-04-23 04:17:01,341 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.50
+client: f0000001
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[74.8, 82.4, 70.1, 81.2, 73.4, 81.8, 71.1, 82.4, 67.9, 81.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.67%
+2023-04-23 04:19:54,675 [MainThread] [INFO ]  Server train time: 173.33380699157715
+2023-04-23 04:19:54,676 [MainThread] [INFO ]  
+-------- round 33 --------
+2023-04-23 04:19:54,676 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.77
+client: f0000003
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[74.8, 79.1, 70.1, 83.6, 73.4, 81.6, 71.1, 82.4, 73.7, 81.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.14%
+2023-04-23 04:22:49,311 [MainThread] [INFO ]  Server train time: 174.63435435295105
+2023-04-23 04:22:49,311 [MainThread] [INFO ]  
+-------- round 34 --------
+2023-04-23 04:22:49,311 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.74
+client: f0000009
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[75.2, 79.1, 70.1, 83.6, 70.2, 81.6, 71.1, 74.1, 73.7, 84.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.31%
+2023-04-23 04:25:44,518 [MainThread] [INFO ]  Server train time: 175.20648169517517
+2023-04-23 04:25:44,519 [MainThread] [INFO ]  
+-------- round 35 --------
+2023-04-23 04:25:44,519 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.75
+client: f0000002
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+----------- acc -----------
+[71.7, 79.1, 75.6, 81.1, 70.2, 81.6, 74.1, 74.1, 73.7, 84.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.56%
+2023-04-23 04:28:39,007 [MainThread] [INFO ]  Server train time: 174.48749613761902
+2023-04-23 04:28:39,008 [MainThread] [INFO ]  
+-------- round 36 --------
+2023-04-23 04:28:39,008 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.52
+client: f0000009
+--- local_update_loss : 0.47
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[71.7, 79.1, 75.6, 81.1, 70.2, 83.1, 71.3, 74.1, 73.7, 83.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.32%
+2023-04-23 04:31:34,013 [MainThread] [INFO ]  Server train time: 175.00441431999207
+2023-04-23 04:31:34,013 [MainThread] [INFO ]  
+-------- round 37 --------
+2023-04-23 04:31:34,013 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.76
+client: f0000009
+--- local_update_loss : 0.46
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[71.7, 79.1, 75.6, 81.1, 74.0, 81.3, 71.3, 82.8, 73.7, 79.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.04%
+2023-04-23 04:34:29,851 [MainThread] [INFO ]  Server train time: 175.83685970306396
+2023-04-23 04:34:29,851 [MainThread] [INFO ]  
+-------- round 38 --------
+2023-04-23 04:34:29,851 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.74
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[74.7, 79.1, 75.6, 79.5, 74.0, 81.3, 71.3, 82.8, 73.2, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.21%
+2023-04-23 04:37:25,192 [MainThread] [INFO ]  Server train time: 175.3399589061737
+2023-04-23 04:37:25,192 [MainThread] [INFO ]  
+-------- round 39 --------
+2023-04-23 04:37:25,192 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.73
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[69.5, 83.0, 74.5, 79.5, 74.0, 80.8, 71.3, 82.8, 73.2, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.92%
+2023-04-23 04:40:19,670 [MainThread] [INFO ]  Server train time: 174.47744870185852
+2023-04-23 04:40:19,673 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_39.pth
+2023-04-23 04:40:19,673 [MainThread] [INFO ]  
+-------- round 40 --------
+2023-04-23 04:40:19,673 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.73
+client: f0000003
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[69.5, 79.4, 74.5, 85.0, 74.0, 80.8, 71.3, 82.8, 70.7, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.86%
+2023-04-23 04:43:14,738 [MainThread] [INFO ]  Server train time: 175.06513595581055
+2023-04-23 04:43:14,739 [MainThread] [INFO ]  
+-------- round 41 --------
+2023-04-23 04:43:14,739 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000006
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[69.5, 79.4, 72.2, 85.0, 74.0, 83.3, 74.4, 81.7, 70.7, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.08%
+2023-04-23 04:46:09,874 [MainThread] [INFO ]  Server train time: 175.13491535186768
+2023-04-23 04:46:09,875 [MainThread] [INFO ]  
+-------- round 42 --------
+2023-04-23 04:46:09,875 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.77
+client: f0000001
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[69.5, 80.9, 72.0, 85.0, 72.2, 83.3, 74.4, 81.7, 75.1, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.47%
+2023-04-23 04:49:05,078 [MainThread] [INFO ]  Server train time: 175.20276999473572
+2023-04-23 04:49:05,079 [MainThread] [INFO ]  
+-------- round 43 --------
+2023-04-23 04:49:05,079 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.50
+client: f0000009
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[69.5, 80.9, 72.0, 84.1, 70.7, 79.9, 74.4, 81.7, 75.1, 82.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.11%
+2023-04-23 04:52:00,128 [MainThread] [INFO ]  Server train time: 175.04855012893677
+2023-04-23 04:52:00,129 [MainThread] [INFO ]  
+-------- round 44 --------
+2023-04-23 04:52:00,129 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.76
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[69.5, 80.5, 74.0, 84.1, 70.7, 79.9, 74.4, 84.4, 75.1, 79.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.16%
+2023-04-23 04:54:54,752 [MainThread] [INFO ]  Server train time: 174.62313747406006
+2023-04-23 04:54:54,753 [MainThread] [INFO ]  
+-------- round 45 --------
+2023-04-23 04:54:54,753 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.74
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[69.5, 77.1, 75.1, 84.1, 75.4, 79.9, 74.4, 81.7, 75.1, 79.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.13%
+2023-04-23 04:57:50,093 [MainThread] [INFO ]  Server train time: 175.3398985862732
+2023-04-23 04:57:50,094 [MainThread] [INFO ]  
+-------- round 46 --------
+2023-04-23 04:57:50,094 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000000
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[74.9, 78.2, 75.1, 84.1, 75.4, 81.5, 74.4, 84.4, 75.1, 79.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.58
+--- All clients' test acc: 78.21%
+2023-04-23 05:00:44,446 [MainThread] [INFO ]  Server train time: 174.35107278823853
+2023-04-23 05:00:44,446 [MainThread] [INFO ]  
+-------- round 47 --------
+2023-04-23 05:00:44,446 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.72
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+----------- acc -----------
+[74.9, 81.4, 73.8, 84.1, 75.4, 81.5, 69.2, 84.4, 67.3, 79.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.10%
+2023-04-23 05:03:39,195 [MainThread] [INFO ]  Server train time: 174.7481245994568
+2023-04-23 05:03:39,195 [MainThread] [INFO ]  
+-------- round 48 --------
+2023-04-23 05:03:39,196 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.49
+client: f0000005
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[74.9, 81.4, 73.8, 84.1, 69.0, 84.1, 69.2, 81.4, 67.3, 81.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.64%
+2023-04-23 05:06:34,658 [MainThread] [INFO ]  Server train time: 175.46213006973267
+2023-04-23 05:06:34,659 [MainThread] [INFO ]  
+-------- round 49 --------
+2023-04-23 05:06:34,659 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.53
+client: f0000000
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000006: 1.08
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[74.9, 79.1, 73.8, 84.1, 69.0, 84.1, 69.5, 81.4, 67.3, 83.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.65%
+2023-04-23 05:09:31,379 [MainThread] [INFO ]  Server train time: 176.71993827819824
+2023-04-23 05:09:31,383 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_49.pth
+2023-04-23 05:09:31,383 [MainThread] [INFO ]  
+-------- round 50 --------
+2023-04-23 05:09:31,383 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.48
+client: f0000008
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000002: 1.11
+----------- acc -----------
+[74.9, 79.1, 70.2, 84.1, 69.0, 78.4, 69.5, 82.5, 73.2, 83.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.42%
+2023-04-23 05:12:29,933 [MainThread] [INFO ]  Server train time: 178.5491223335266
+2023-04-23 05:12:29,933 [MainThread] [INFO ]  
+-------- round 51 --------
+2023-04-23 05:12:29,934 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.47
+client: f0000004
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[71.3, 79.1, 70.2, 83.5, 73.4, 78.4, 70.5, 82.5, 73.2, 83.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.54%
+2023-04-23 05:15:26,841 [MainThread] [INFO ]  Server train time: 176.90704536437988
+2023-04-23 05:15:26,842 [MainThread] [INFO ]  
+-------- round 52 --------
+2023-04-23 05:15:26,842 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.50
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[71.3, 81.8, 69.6, 83.5, 73.4, 78.4, 70.5, 82.5, 68.2, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.28%
+2023-04-23 05:18:25,106 [MainThread] [INFO ]  Server train time: 178.26379013061523
+2023-04-23 05:18:25,107 [MainThread] [INFO ]  
+-------- round 53 --------
+2023-04-23 05:18:25,107 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.52
+client: f0000002
+--- local_update_loss : 0.78
+--- DML_update_loss(A model) with Client:f0000007: 0.94
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[71.3, 83.4, 72.9, 83.5, 73.4, 78.4, 70.5, 83.2, 70.8, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.10%
+2023-04-23 05:21:23,272 [MainThread] [INFO ]  Server train time: 178.16504645347595
+2023-04-23 05:21:23,273 [MainThread] [INFO ]  
+-------- round 54 --------
+2023-04-23 05:21:23,273 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.74
+client: f0000008
+--- local_update_loss : 0.78
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[71.0, 83.4, 72.9, 83.5, 75.5, 78.4, 70.5, 83.6, 74.0, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.64%
+2023-04-23 05:24:21,123 [MainThread] [INFO ]  Server train time: 177.84924244880676
+2023-04-23 05:24:21,123 [MainThread] [INFO ]  
+-------- round 55 --------
+2023-04-23 05:24:21,123 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.71
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[74.1, 83.4, 71.0, 83.1, 75.9, 78.4, 70.5, 83.6, 74.0, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.76%
+2023-04-23 05:27:18,403 [MainThread] [INFO ]  Server train time: 177.27974677085876
+2023-04-23 05:27:18,404 [MainThread] [INFO ]  
+-------- round 56 --------
+2023-04-23 05:27:18,404 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.76
+client: f0000001
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+----------- acc -----------
+[74.1, 83.1, 71.0, 81.1, 75.9, 78.4, 70.2, 83.6, 72.0, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.30%
+2023-04-23 05:30:16,901 [MainThread] [INFO ]  Server train time: 178.49608159065247
+2023-04-23 05:30:16,901 [MainThread] [INFO ]  
+-------- round 57 --------
+2023-04-23 05:30:16,901 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.53
+client: f0000008
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+----------- acc -----------
+[70.0, 83.1, 71.0, 85.3, 74.3, 78.4, 70.2, 83.6, 71.6, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.11%
+2023-04-23 05:33:14,056 [MainThread] [INFO ]  Server train time: 177.154479265213
+2023-04-23 05:33:14,057 [MainThread] [INFO ]  
+-------- round 58 --------
+2023-04-23 05:33:14,057 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.76
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[70.0, 83.1, 74.0, 85.3, 76.0, 81.1, 70.2, 82.4, 71.6, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.58
+--- All clients' test acc: 77.73%
+2023-04-23 05:36:11,120 [MainThread] [INFO ]  Server train time: 177.0629687309265
+2023-04-23 05:36:11,121 [MainThread] [INFO ]  
+-------- round 59 --------
+2023-04-23 05:36:11,121 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.74
+client: f0000006
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[71.6, 83.1, 73.9, 85.3, 76.0, 81.1, 73.7, 78.3, 71.6, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.82%
+2023-04-23 05:39:10,746 [MainThread] [INFO ]  Server train time: 179.62436842918396
+2023-04-23 05:39:10,748 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_59.pth
+2023-04-23 05:39:10,749 [MainThread] [INFO ]  
+-------- round 60 --------
+2023-04-23 05:39:10,749 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000008
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+----------- acc -----------
+[71.6, 83.1, 73.9, 85.3, 74.7, 80.9, 70.8, 78.3, 70.9, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.31%
+2023-04-23 05:42:08,173 [MainThread] [INFO ]  Server train time: 177.42411875724792
+2023-04-23 05:42:08,174 [MainThread] [INFO ]  
+-------- round 61 --------
+2023-04-23 05:42:08,174 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.75
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[71.6, 83.1, 68.7, 85.3, 76.0, 82.1, 72.4, 78.3, 70.9, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.20%
+2023-04-23 05:45:05,942 [MainThread] [INFO ]  Server train time: 177.76816534996033
+2023-04-23 05:45:05,943 [MainThread] [INFO ]  
+-------- round 62 --------
+2023-04-23 05:45:05,943 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.77
+client: f0000004
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[73.6, 83.1, 71.3, 85.3, 76.6, 82.1, 72.4, 78.3, 68.4, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.47%
+2023-04-23 05:48:04,285 [MainThread] [INFO ]  Server train time: 178.34176921844482
+2023-04-23 05:48:04,286 [MainThread] [INFO ]  
+-------- round 63 --------
+2023-04-23 05:48:04,286 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.53
+client: f0000009
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+----------- acc -----------
+[73.6, 83.1, 71.3, 78.3, 76.6, 84.0, 72.4, 78.3, 70.2, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.21%
+2023-04-23 05:51:02,319 [MainThread] [INFO ]  Server train time: 178.03291702270508
+2023-04-23 05:51:02,320 [MainThread] [INFO ]  
+-------- round 64 --------
+2023-04-23 05:51:02,320 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.76
+client: f0000000
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[73.2, 83.1, 74.0, 78.3, 73.2, 82.4, 72.4, 78.3, 70.2, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.94%
+2023-04-23 05:54:00,635 [MainThread] [INFO ]  Server train time: 178.31408882141113
+2023-04-23 05:54:00,635 [MainThread] [INFO ]  
+-------- round 65 --------
+2023-04-23 05:54:00,635 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.52
+client: f0000002
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[73.2, 83.1, 72.2, 85.4, 70.3, 82.4, 72.4, 81.2, 70.2, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.47%
+2023-04-23 05:56:57,520 [MainThread] [INFO ]  Server train time: 176.883642911911
+2023-04-23 05:56:57,520 [MainThread] [INFO ]  
+-------- round 66 --------
+2023-04-23 05:56:57,520 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.72
+client: f0000008
+--- local_update_loss : 0.78
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[75.3, 83.1, 70.5, 82.5, 70.3, 82.4, 72.4, 81.2, 73.3, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.53%
+2023-04-23 05:59:55,687 [MainThread] [INFO ]  Server train time: 178.16681480407715
+2023-04-23 05:59:55,688 [MainThread] [INFO ]  
+-------- round 67 --------
+2023-04-23 05:59:55,688 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.70
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[76.5, 83.1, 70.5, 81.7, 75.8, 82.0, 72.4, 81.2, 73.3, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.08%
+2023-04-23 06:02:53,483 [MainThread] [INFO ]  Server train time: 177.7943572998047
+2023-04-23 06:02:53,484 [MainThread] [INFO ]  
+-------- round 68 --------
+2023-04-23 06:02:53,484 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.73
+client: f0000001
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[76.5, 80.6, 70.2, 81.7, 75.8, 79.8, 73.5, 81.2, 73.3, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.69%
+2023-04-23 06:05:50,822 [MainThread] [INFO ]  Server train time: 177.33815717697144
+2023-04-23 06:05:50,823 [MainThread] [INFO ]  
+-------- round 69 --------
+2023-04-23 06:05:50,823 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.53
+client: f0000008
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+----------- acc -----------
+[76.5, 80.6, 70.2, 85.0, 75.8, 79.8, 73.5, 82.5, 72.1, 68.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.66
+--- All clients' test acc: 76.42%
+2023-04-23 06:08:48,825 [MainThread] [INFO ]  Server train time: 178.00149202346802
+2023-04-23 06:08:48,827 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_69.pth
+2023-04-23 06:08:48,828 [MainThread] [INFO ]  
+-------- round 70 --------
+2023-04-23 06:08:48,828 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000008
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+----------- acc -----------
+[70.1, 80.6, 70.2, 85.0, 75.8, 84.6, 73.5, 81.1, 70.4, 68.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 75.95%
+2023-04-23 06:11:46,194 [MainThread] [INFO ]  Server train time: 177.36565041542053
+2023-04-23 06:11:46,195 [MainThread] [INFO ]  
+-------- round 71 --------
+2023-04-23 06:11:46,195 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.73
+client: f0000005
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000001: 0.95
+----------- acc -----------
+[69.8, 80.1, 70.2, 85.0, 76.6, 84.3, 73.5, 81.1, 70.4, 68.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 75.92%
+2023-04-23 06:14:44,097 [MainThread] [INFO ]  Server train time: 177.90242791175842
+2023-04-23 06:14:44,098 [MainThread] [INFO ]  
+-------- round 72 --------
+2023-04-23 06:14:44,098 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.77
+client: f0000004
+--- local_update_loss : 0.71
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[72.3, 80.1, 74.3, 85.0, 73.0, 81.6, 73.5, 81.1, 70.4, 68.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 75.95%
+2023-04-23 06:17:42,060 [MainThread] [INFO ]  Server train time: 177.96184873580933
+2023-04-23 06:17:42,061 [MainThread] [INFO ]  
+-------- round 73 --------
+2023-04-23 06:17:42,061 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000004
+--- local_update_loss : 0.70
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+----------- acc -----------
+[72.3, 80.1, 74.3, 81.1, 76.8, 81.6, 73.5, 84.2, 71.4, 68.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.66
+--- All clients' test acc: 76.35%
+2023-04-23 06:20:38,622 [MainThread] [INFO ]  Server train time: 176.5601406097412
+2023-04-23 06:20:38,623 [MainThread] [INFO ]  
+-------- round 74 --------
+2023-04-23 06:20:38,623 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.74
+client: f0000005
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[74.0, 80.1, 73.2, 81.1, 76.8, 83.0, 69.8, 84.2, 71.4, 68.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 76.18%
+2023-04-23 06:23:36,461 [MainThread] [INFO ]  Server train time: 177.83784914016724
+2023-04-23 06:23:36,462 [MainThread] [INFO ]  
+-------- round 75 --------
+2023-04-23 06:23:36,462 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.76
+client: f0000004
+--- local_update_loss : 0.69
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[74.0, 80.1, 69.8, 81.1, 74.3, 83.0, 73.8, 84.2, 71.4, 80.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.18%
+2023-04-23 06:26:34,653 [MainThread] [INFO ]  Server train time: 178.19121980667114
+2023-04-23 06:26:34,654 [MainThread] [INFO ]  
+-------- round 76 --------
+2023-04-23 06:26:34,654 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.73
+client: f0000003
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+----------- acc -----------
+[74.0, 80.1, 69.8, 83.6, 71.0, 81.8, 74.6, 84.2, 71.4, 80.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.06%
+2023-04-23 06:29:32,325 [MainThread] [INFO ]  Server train time: 177.67101073265076
+2023-04-23 06:29:32,326 [MainThread] [INFO ]  
+-------- round 77 --------
+2023-04-23 06:29:32,326 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.77
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[74.0, 81.2, 73.4, 83.6, 71.0, 81.5, 69.9, 84.2, 71.4, 80.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.03%
+2023-04-23 06:32:30,340 [MainThread] [INFO ]  Server train time: 178.0129735469818
+2023-04-23 06:32:30,340 [MainThread] [INFO ]  
+-------- round 78 --------
+2023-04-23 06:32:30,340 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.50
+client: f0000002
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[71.0, 81.2, 75.9, 85.3, 71.0, 83.2, 69.9, 84.2, 71.4, 80.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.32%
+2023-04-23 06:35:27,588 [MainThread] [INFO ]  Server train time: 177.24742245674133
+2023-04-23 06:35:27,589 [MainThread] [INFO ]  
+-------- round 79 --------
+2023-04-23 06:35:27,589 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.53
+client: f0000005
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[71.0, 81.2, 71.7, 85.3, 72.7, 82.9, 69.9, 84.2, 71.4, 84.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.47%
+2023-04-23 06:38:25,587 [MainThread] [INFO ]  Server train time: 177.99786186218262
+2023-04-23 06:38:25,590 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_79.pth
+2023-04-23 06:38:25,590 [MainThread] [INFO ]  
+-------- round 80 --------
+2023-04-23 06:38:25,590 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.76
+client: f0000009
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+----------- acc -----------
+[75.7, 81.2, 71.7, 81.1, 72.7, 82.9, 69.9, 82.5, 71.4, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.34%
+2023-04-23 06:41:23,247 [MainThread] [INFO ]  Server train time: 177.65709447860718
+2023-04-23 06:41:23,248 [MainThread] [INFO ]  
+-------- round 81 --------
+2023-04-23 06:41:23,248 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.52
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[75.7, 80.4, 75.2, 81.1, 72.7, 82.9, 69.0, 84.8, 71.4, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.75%
+2023-04-23 06:44:20,982 [MainThread] [INFO ]  Server train time: 177.7330985069275
+2023-04-23 06:44:20,982 [MainThread] [INFO ]  
+-------- round 82 --------
+2023-04-23 06:44:20,982 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.55
+client: f0000006
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[75.7, 81.5, 75.2, 81.1, 72.7, 82.9, 74.8, 84.8, 65.1, 84.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.81%
+2023-04-23 06:47:18,924 [MainThread] [INFO ]  Server train time: 177.9409589767456
+2023-04-23 06:47:18,924 [MainThread] [INFO ]  
+-------- round 83 --------
+2023-04-23 06:47:18,925 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.49
+client: f0000001
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[69.1, 83.0, 75.2, 81.0, 72.7, 82.9, 74.8, 84.8, 65.1, 83.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.19%
+2023-04-23 06:50:16,898 [MainThread] [INFO ]  Server train time: 177.9733316898346
+2023-04-23 06:50:16,899 [MainThread] [INFO ]  
+-------- round 84 --------
+2023-04-23 06:50:16,899 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.53
+client: f0000006
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+----------- acc -----------
+[71.9, 83.0, 75.2, 83.5, 72.7, 82.9, 75.0, 84.8, 67.7, 83.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.00%
+2023-04-23 06:53:13,881 [MainThread] [INFO ]  Server train time: 176.981351852417
+2023-04-23 06:53:13,881 [MainThread] [INFO ]  
+-------- round 85 --------
+2023-04-23 06:53:13,882 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.48
+client: f0000006
+--- local_update_loss : 0.71
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+----------- acc -----------
+[71.9, 83.0, 75.2, 83.0, 72.7, 83.7, 74.5, 84.8, 67.7, 85.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.19%
+2023-04-23 06:56:11,623 [MainThread] [INFO ]  Server train time: 177.74117946624756
+2023-04-23 06:56:11,624 [MainThread] [INFO ]  
+-------- round 86 --------
+2023-04-23 06:56:11,624 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.73
+client: f0000006
+--- local_update_loss : 0.69
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+--- DML_update_loss(A model) with Client:f0000007: 0.94
+----------- acc -----------
+[71.9, 83.0, 75.4, 83.0, 72.7, 83.7, 74.8, 82.7, 69.9, 85.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.25%
+2023-04-23 06:59:08,404 [MainThread] [INFO ]  Server train time: 176.77996969223022
+2023-04-23 06:59:08,405 [MainThread] [INFO ]  
+-------- round 87 --------
+2023-04-23 06:59:08,405 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.72
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[71.9, 83.0, 72.8, 78.8, 75.1, 81.1, 74.8, 82.7, 69.9, 85.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.55%
+2023-04-23 07:02:05,353 [MainThread] [INFO ]  Server train time: 176.94806241989136
+2023-04-23 07:02:05,354 [MainThread] [INFO ]  
+-------- round 88 --------
+2023-04-23 07:02:05,354 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.46
+client: f0000003
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+----------- acc -----------
+[72.1, 83.0, 72.8, 85.2, 75.1, 82.4, 74.8, 82.7, 69.9, 82.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.02%
+2023-04-23 07:05:03,221 [MainThread] [INFO ]  Server train time: 177.86692070960999
+2023-04-23 07:05:03,222 [MainThread] [INFO ]  
+-------- round 89 --------
+2023-04-23 07:05:03,222 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.50
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+----------- acc -----------
+[72.1, 82.5, 72.8, 85.2, 75.1, 82.4, 70.9, 83.1, 69.9, 81.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.50%
+2023-04-23 07:08:00,129 [MainThread] [INFO ]  Server train time: 176.90642023086548
+2023-04-23 07:08:00,132 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_89.pth
+2023-04-23 07:08:00,132 [MainThread] [INFO ]  
+-------- round 90 --------
+2023-04-23 07:08:00,132 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.78
+client: f0000001
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000009: 0.92
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[72.1, 82.2, 72.8, 81.9, 75.1, 82.4, 70.9, 83.1, 73.5, 66.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.07%
+2023-04-23 07:10:58,107 [MainThread] [INFO ]  Server train time: 177.97495460510254
+2023-04-23 07:10:58,108 [MainThread] [INFO ]  
+-------- round 91 --------
+2023-04-23 07:10:58,108 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.52
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[70.1, 82.2, 72.8, 86.1, 75.1, 82.4, 70.6, 80.2, 73.5, 66.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 75.97%
+2023-04-23 07:13:54,949 [MainThread] [INFO ]  Server train time: 176.84053230285645
+2023-04-23 07:13:54,950 [MainThread] [INFO ]  
+-------- round 92 --------
+2023-04-23 07:13:54,950 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.54
+client: f0000000
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[74.8, 82.2, 72.8, 81.3, 75.1, 82.4, 70.6, 84.1, 73.5, 77.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.45%
+2023-04-23 07:16:52,712 [MainThread] [INFO ]  Server train time: 177.76221132278442
+2023-04-23 07:16:52,713 [MainThread] [INFO ]  
+-------- round 93 --------
+2023-04-23 07:16:52,713 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.71
+client: f0000008
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[74.8, 82.2, 75.1, 81.3, 75.1, 82.0, 70.6, 84.1, 73.7, 78.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.73%
+2023-04-23 07:19:50,785 [MainThread] [INFO ]  Server train time: 178.0709228515625
+2023-04-23 07:19:50,785 [MainThread] [INFO ]  
+-------- round 94 --------
+2023-04-23 07:19:50,785 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.73
+client: f0000006
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+----------- acc -----------
+[70.6, 82.2, 75.1, 81.3, 76.6, 82.0, 71.3, 79.4, 73.7, 78.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.06%
+2023-04-23 07:22:48,728 [MainThread] [INFO ]  Server train time: 177.94221687316895
+2023-04-23 07:22:48,729 [MainThread] [INFO ]  
+-------- round 95 --------
+2023-04-23 07:22:48,729 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.73
+client: f0000001
+--- local_update_loss : 0.48
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[70.6, 76.4, 75.1, 81.3, 76.6, 82.0, 71.3, 79.6, 74.0, 81.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.88%
+2023-04-23 07:25:46,023 [MainThread] [INFO ]  Server train time: 177.2939374446869
+2023-04-23 07:25:46,024 [MainThread] [INFO ]  
+-------- round 96 --------
+2023-04-23 07:25:46,024 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.77
+client: f0000008
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000001: 0.95
+----------- acc -----------
+[74.7, 80.3, 75.1, 82.0, 76.6, 82.0, 71.3, 79.6, 72.6, 81.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.61%
+2023-04-23 07:28:44,337 [MainThread] [INFO ]  Server train time: 178.31293940544128
+2023-04-23 07:28:44,338 [MainThread] [INFO ]  
+-------- round 97 --------
+2023-04-23 07:28:44,338 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000001
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[74.7, 81.6, 72.2, 82.0, 76.6, 79.8, 71.3, 85.3, 72.6, 81.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.80%
+2023-04-23 07:31:41,709 [MainThread] [INFO ]  Server train time: 177.37074947357178
+2023-04-23 07:31:41,710 [MainThread] [INFO ]  
+-------- round 98 --------
+2023-04-23 07:31:41,710 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.73
+client: f0000005
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[74.1, 71.2, 72.2, 82.0, 72.6, 83.4, 71.3, 85.3, 72.6, 81.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.66%
+2023-04-23 07:34:38,532 [MainThread] [INFO ]  Server train time: 176.82136249542236
+2023-04-23 07:34:38,532 [MainThread] [INFO ]  
+-------- round 99 --------
+2023-04-23 07:34:38,532 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.70
+client: f0000005
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000009: 0.92
+----------- acc -----------
+[74.1, 71.2, 72.2, 82.0, 72.6, 78.5, 71.3, 82.5, 73.2, 80.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.67
+--- All clients' test acc: 75.79%
+2023-04-23 07:37:36,875 [MainThread] [INFO ]  Server train time: 178.34250712394714
+2023-04-23 07:37:36,878 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_99.pth
+2023-04-23 07:37:36,878 [MainThread] [INFO ]  
+-------- round 100 --------
+2023-04-23 07:37:36,878 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.52
+client: f0000006
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[74.1, 78.9, 72.2, 82.0, 73.2, 78.5, 74.0, 84.9, 73.2, 80.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.13%
+2023-04-23 07:40:34,827 [MainThread] [INFO ]  Server train time: 177.94842553138733
+2023-04-23 07:40:34,827 [MainThread] [INFO ]  
+-------- round 101 --------
+2023-04-23 07:40:34,828 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.69
+client: f0000002
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[72.1, 78.9, 70.7, 82.0, 73.2, 78.5, 74.0, 83.7, 72.1, 80.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.55%
+2023-04-23 07:43:32,374 [MainThread] [INFO ]  Server train time: 177.54603958129883
+2023-04-23 07:43:32,375 [MainThread] [INFO ]  
+-------- round 102 --------
+2023-04-23 07:43:32,375 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.76
+client: f0000009
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[72.1, 78.9, 70.2, 81.2, 72.4, 78.5, 74.0, 83.7, 72.1, 82.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.57%
+2023-04-23 07:46:29,035 [MainThread] [INFO ]  Server train time: 176.6600079536438
+2023-04-23 07:46:29,036 [MainThread] [INFO ]  
+-------- round 103 --------
+2023-04-23 07:46:29,036 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.77
+client: f0000009
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000008: 1.11
+----------- acc -----------
+[72.1, 78.9, 75.6, 81.2, 72.4, 78.5, 72.0, 83.7, 69.3, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.73%
+2023-04-23 07:49:24,998 [MainThread] [INFO ]  Server train time: 175.96181440353394
+2023-04-23 07:49:24,999 [MainThread] [INFO ]  
+-------- round 104 --------
+2023-04-23 07:49:24,999 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.74
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000006: 1.08
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[70.1, 78.9, 74.2, 81.2, 72.4, 78.5, 69.8, 83.8, 69.3, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.18%
+2023-04-23 07:52:22,185 [MainThread] [INFO ]  Server train time: 177.1853289604187
+2023-04-23 07:52:22,185 [MainThread] [INFO ]  
+-------- round 105 --------
+2023-04-23 07:52:22,185 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.50
+client: f0000002
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[70.1, 78.9, 74.0, 81.2, 72.6, 78.5, 69.8, 84.4, 70.5, 83.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.36%
+2023-04-23 07:55:20,107 [MainThread] [INFO ]  Server train time: 177.92129468917847
+2023-04-23 07:55:20,108 [MainThread] [INFO ]  
+-------- round 106 --------
+2023-04-23 07:55:20,108 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.49
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[74.1, 78.9, 71.7, 81.2, 72.6, 78.5, 67.5, 84.4, 70.5, 82.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.20%
+2023-04-23 07:58:18,557 [MainThread] [INFO ]  Server train time: 178.44865942001343
+2023-04-23 07:58:18,558 [MainThread] [INFO ]  
+-------- round 107 --------
+2023-04-23 07:58:18,558 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.47
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[74.1, 80.1, 71.7, 80.1, 74.3, 78.5, 67.5, 84.4, 70.5, 84.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.53%
+2023-04-23 08:01:15,831 [MainThread] [INFO ]  Server train time: 177.27314066886902
+2023-04-23 08:01:15,832 [MainThread] [INFO ]  
+-------- round 108 --------
+2023-04-23 08:01:15,832 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.74
+client: f0000006
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[73.8, 80.1, 68.5, 80.1, 74.3, 78.5, 70.3, 83.6, 70.5, 84.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.38%
+2023-04-23 08:04:13,564 [MainThread] [INFO ]  Server train time: 177.73137068748474
+2023-04-23 08:04:13,565 [MainThread] [INFO ]  
+-------- round 109 --------
+2023-04-23 08:04:13,565 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.78
+client: f0000004
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+----------- acc -----------
+[73.8, 79.6, 73.0, 80.1, 75.4, 78.5, 70.3, 83.6, 70.5, 80.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.56%
+2023-04-23 08:07:11,987 [MainThread] [INFO ]  Server train time: 178.42198300361633
+2023-04-23 08:07:11,989 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_109.pth
+2023-04-23 08:07:11,990 [MainThread] [INFO ]  
+-------- round 110 --------
+2023-04-23 08:07:11,990 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.73
+client: f0000002
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000003: 0.91
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[73.8, 79.6, 75.4, 81.9, 75.4, 78.5, 74.3, 83.6, 70.5, 79.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.27%
+2023-04-23 08:10:10,835 [MainThread] [INFO ]  Server train time: 178.84512782096863
+2023-04-23 08:10:10,836 [MainThread] [INFO ]  
+-------- round 111 --------
+2023-04-23 08:10:10,836 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000000
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000009: 0.92
+----------- acc -----------
+[75.4, 79.6, 75.4, 81.9, 73.1, 78.5, 74.3, 86.4, 70.5, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.57%
+2023-04-23 08:13:09,348 [MainThread] [INFO ]  Server train time: 178.51214385032654
+2023-04-23 08:13:09,349 [MainThread] [INFO ]  
+-------- round 112 --------
+2023-04-23 08:13:09,349 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.71
+client: f0000007
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000003: 0.91
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[75.4, 76.6, 75.4, 82.5, 73.1, 78.5, 76.1, 85.0, 70.5, 80.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.37%
+2023-04-23 08:16:07,188 [MainThread] [INFO ]  Server train time: 177.83877301216125
+2023-04-23 08:16:07,189 [MainThread] [INFO ]  
+-------- round 113 --------
+2023-04-23 08:16:07,189 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.53
+client: f0000003
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+----------- acc -----------
+[75.4, 76.6, 75.4, 84.8, 70.9, 82.5, 76.1, 85.0, 70.5, 83.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.06%
+2023-04-23 08:19:05,313 [MainThread] [INFO ]  Server train time: 178.1234245300293
+2023-04-23 08:19:05,314 [MainThread] [INFO ]  
+-------- round 114 --------
+2023-04-23 08:19:05,314 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000008
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+----------- acc -----------
+[70.9, 76.6, 75.4, 84.8, 70.9, 84.6, 70.1, 85.0, 73.4, 83.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.51%
+2023-04-23 08:22:04,032 [MainThread] [INFO ]  Server train time: 178.7176215648651
+2023-04-23 08:22:04,032 [MainThread] [INFO ]  
+-------- round 115 --------
+2023-04-23 08:22:04,033 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.50
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[70.9, 76.6, 75.4, 84.8, 73.5, 83.3, 70.1, 85.0, 66.7, 82.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.87%
+2023-04-23 08:25:01,896 [MainThread] [INFO ]  Server train time: 177.86325597763062
+2023-04-23 08:25:01,897 [MainThread] [INFO ]  
+-------- round 116 --------
+2023-04-23 08:25:01,897 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.77
+client: f0000004
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000009: 0.92
+----------- acc -----------
+[74.5, 76.6, 75.4, 84.8, 74.6, 83.3, 70.0, 85.0, 66.7, 77.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.86%
+2023-04-23 08:27:58,714 [MainThread] [INFO ]  Server train time: 176.81683826446533
+2023-04-23 08:27:58,715 [MainThread] [INFO ]  
+-------- round 117 --------
+2023-04-23 08:27:58,715 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.71
+client: f0000002
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[74.5, 76.6, 74.6, 75.4, 75.9, 83.3, 70.0, 85.0, 71.4, 77.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.44%
+2023-04-23 08:30:55,915 [MainThread] [INFO ]  Server train time: 177.1993932723999
+2023-04-23 08:30:55,915 [MainThread] [INFO ]  
+-------- round 118 --------
+2023-04-23 08:30:55,915 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.77
+client: f0000007
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[74.5, 76.6, 74.6, 79.0, 75.9, 80.4, 70.0, 85.8, 71.0, 77.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.55%
+2023-04-23 08:33:53,788 [MainThread] [INFO ]  Server train time: 177.87167835235596
+2023-04-23 08:33:53,788 [MainThread] [INFO ]  
+-------- round 119 --------
+2023-04-23 08:33:53,788 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.53
+client: f0000003
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[74.5, 79.1, 74.6, 83.0, 70.9, 82.9, 70.0, 85.8, 71.0, 77.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 76.95%
+2023-04-23 08:36:51,947 [MainThread] [INFO ]  Server train time: 178.15857124328613
+2023-04-23 08:36:51,950 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_119.pth
+2023-04-23 08:36:51,950 [MainThread] [INFO ]  
+-------- round 120 --------
+2023-04-23 08:36:51,950 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.50
+client: f0000003
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[71.1, 79.2, 74.6, 82.6, 70.9, 83.8, 70.0, 85.8, 71.0, 77.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.67%
+2023-04-23 08:39:49,678 [MainThread] [INFO ]  Server train time: 177.72688722610474
+2023-04-23 08:39:49,678 [MainThread] [INFO ]  
+-------- round 121 --------
+2023-04-23 08:39:49,678 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.74
+client: f0000009
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[71.1, 79.2, 70.8, 82.6, 70.9, 82.2, 70.0, 85.8, 71.0, 81.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.52%
+2023-04-23 08:42:47,419 [MainThread] [INFO ]  Server train time: 177.74035239219666
+2023-04-23 08:42:47,420 [MainThread] [INFO ]  
+-------- round 122 --------
+2023-04-23 08:42:47,420 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.47
+client: f0000008
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[67.3, 79.2, 70.8, 82.6, 70.9, 81.8, 70.0, 85.2, 68.6, 81.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 75.80%
+2023-04-23 08:45:44,297 [MainThread] [INFO ]  Server train time: 176.87654042243958
+2023-04-23 08:45:44,297 [MainThread] [INFO ]  
+-------- round 123 --------
+2023-04-23 08:45:44,297 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.76
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000007: 0.94
+----------- acc -----------
+[73.6, 71.4, 70.8, 82.6, 70.9, 81.8, 70.0, 84.1, 68.6, 81.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.66
+--- All clients' test acc: 75.54%
+2023-04-23 08:48:41,505 [MainThread] [INFO ]  Server train time: 177.2072081565857
+2023-04-23 08:48:41,506 [MainThread] [INFO ]  
+-------- round 124 --------
+2023-04-23 08:48:41,506 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.75
+client: f0000008
+--- local_update_loss : 0.71
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[73.6, 71.4, 70.8, 82.6, 70.9, 80.3, 70.3, 84.1, 75.1, 81.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.65
+--- All clients' test acc: 76.03%
+2023-04-23 08:51:39,338 [MainThread] [INFO ]  Server train time: 177.831707239151
+2023-04-23 08:51:39,339 [MainThread] [INFO ]  
+-------- round 125 --------
+2023-04-23 08:51:39,339 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.53
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[73.6, 82.8, 70.8, 82.6, 72.1, 80.3, 70.3, 84.4, 75.1, 82.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.49%
+2023-04-23 08:54:37,703 [MainThread] [INFO ]  Server train time: 178.3638608455658
+2023-04-23 08:54:37,704 [MainThread] [INFO ]  
+-------- round 126 --------
+2023-04-23 08:54:37,704 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.52
+client: f0000009
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[73.6, 79.2, 70.8, 82.6, 72.1, 80.3, 70.3, 84.3, 69.9, 85.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.87%
+2023-04-23 08:57:35,456 [MainThread] [INFO ]  Server train time: 177.7520010471344
+2023-04-23 08:57:35,457 [MainThread] [INFO ]  
+-------- round 127 --------
+2023-04-23 08:57:35,457 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.77
+client: f0000006
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[73.6, 77.2, 70.8, 82.6, 70.2, 80.3, 76.0, 84.3, 70.3, 85.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.09%
+2023-04-23 09:00:33,272 [MainThread] [INFO ]  Server train time: 177.81425428390503
+2023-04-23 09:00:33,272 [MainThread] [INFO ]  
+-------- round 128 --------
+2023-04-23 09:00:33,272 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.75
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[68.3, 81.3, 70.8, 82.6, 75.8, 80.3, 76.0, 84.3, 74.8, 85.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.98%
+2023-04-23 09:03:32,433 [MainThread] [INFO ]  Server train time: 179.15976881980896
+2023-04-23 09:03:32,433 [MainThread] [INFO ]  
+-------- round 129 --------
+2023-04-23 09:03:32,433 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.73
+client: f0000005
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[69.4, 81.3, 70.8, 82.6, 74.9, 84.4, 76.0, 84.3, 71.3, 85.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 78.06%
+2023-04-23 09:06:30,720 [MainThread] [INFO ]  Server train time: 178.28592038154602
+2023-04-23 09:06:30,722 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_129.pth
+2023-04-23 09:06:30,722 [MainThread] [INFO ]  
+-------- round 130 --------
+2023-04-23 09:06:30,723 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.72
+client: f0000006
+--- local_update_loss : 0.70
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+----------- acc -----------
+[69.4, 81.3, 70.8, 82.6, 76.3, 83.3, 75.7, 84.3, 71.3, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.61%
+2023-04-23 09:09:28,099 [MainThread] [INFO ]  Server train time: 177.37651014328003
+2023-04-23 09:09:28,100 [MainThread] [INFO ]  
+-------- round 131 --------
+2023-04-23 09:09:28,100 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.53
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+----------- acc -----------
+[74.9, 81.7, 70.8, 82.6, 76.3, 81.4, 68.8, 84.3, 71.3, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.32%
+2023-04-23 09:12:26,206 [MainThread] [INFO ]  Server train time: 178.10546040534973
+2023-04-23 09:12:26,207 [MainThread] [INFO ]  
+-------- round 132 --------
+2023-04-23 09:12:26,207 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.78
+client: f0000000
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[75.0, 81.7, 66.5, 82.6, 76.3, 81.4, 68.8, 83.0, 74.2, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.06%
+2023-04-23 09:15:24,116 [MainThread] [INFO ]  Server train time: 177.9090383052826
+2023-04-23 09:15:24,117 [MainThread] [INFO ]  
+-------- round 133 --------
+2023-04-23 09:15:24,117 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.76
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[75.0, 79.0, 73.8, 82.6, 76.3, 81.4, 68.8, 84.8, 63.0, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.58%
+2023-04-23 09:18:21,652 [MainThread] [INFO ]  Server train time: 177.53427600860596
+2023-04-23 09:18:21,652 [MainThread] [INFO ]  
+-------- round 134 --------
+2023-04-23 09:18:21,652 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.54
+client: f0000005
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[75.0, 79.0, 69.6, 81.2, 76.3, 84.5, 68.8, 84.8, 63.0, 84.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 76.62%
+2023-04-23 09:21:19,982 [MainThread] [INFO ]  Server train time: 178.3288071155548
+2023-04-23 09:21:19,982 [MainThread] [INFO ]  
+-------- round 135 --------
+2023-04-23 09:21:19,982 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.50
+client: f0000009
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[75.0, 79.0, 72.7, 81.2, 76.3, 82.7, 68.8, 84.9, 63.0, 85.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 76.88%
+2023-04-23 09:24:17,827 [MainThread] [INFO ]  Server train time: 177.84393167495728
+2023-04-23 09:24:17,827 [MainThread] [INFO ]  
+-------- round 136 --------
+2023-04-23 09:24:17,827 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.71
+client: f0000007
+--- local_update_loss : 0.48
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+----------- acc -----------
+[74.7, 79.0, 72.7, 81.2, 73.2, 82.7, 68.8, 84.0, 63.0, 80.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 75.98%
+2023-04-23 09:27:15,871 [MainThread] [INFO ]  Server train time: 178.04359674453735
+2023-04-23 09:27:15,872 [MainThread] [INFO ]  
+-------- round 137 --------
+2023-04-23 09:27:15,872 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.47
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[74.7, 75.9, 68.3, 81.2, 75.1, 82.7, 68.8, 86.4, 63.0, 80.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 75.66%
+2023-04-23 09:30:14,693 [MainThread] [INFO ]  Server train time: 178.82033729553223
+2023-04-23 09:30:14,694 [MainThread] [INFO ]  
+-------- round 138 --------
+2023-04-23 09:30:14,694 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.73
+client: f0000003
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[74.7, 75.9, 70.5, 85.3, 75.3, 82.7, 68.8, 81.1, 63.0, 80.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 75.78%
+2023-04-23 09:33:12,605 [MainThread] [INFO ]  Server train time: 177.9110918045044
+2023-04-23 09:33:12,606 [MainThread] [INFO ]  
+-------- round 139 --------
+2023-04-23 09:33:12,606 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.74
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[72.7, 75.9, 74.6, 85.3, 75.3, 82.0, 75.8, 81.1, 63.0, 80.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.62%
+2023-04-23 09:36:11,806 [MainThread] [INFO ]  Server train time: 179.1999635696411
+2023-04-23 09:36:11,809 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_139.pth
+2023-04-23 09:36:11,809 [MainThread] [INFO ]  
+-------- round 140 --------
+2023-04-23 09:36:11,809 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.49
+client: f0000002
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+----------- acc -----------
+[72.7, 75.9, 73.3, 85.6, 71.9, 79.0, 75.8, 81.1, 63.0, 80.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 75.88%
+2023-04-23 09:39:10,540 [MainThread] [INFO ]  Server train time: 178.73029851913452
+2023-04-23 09:39:10,540 [MainThread] [INFO ]  
+-------- round 141 --------
+2023-04-23 09:39:10,540 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.53
+client: f0000009
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[72.7, 80.7, 73.3, 85.6, 73.5, 83.9, 75.8, 81.1, 63.0, 83.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.34%
+2023-04-23 09:42:08,831 [MainThread] [INFO ]  Server train time: 178.29064416885376
+2023-04-23 09:42:08,832 [MainThread] [INFO ]  
+-------- round 142 --------
+2023-04-23 09:42:08,832 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.78
+client: f0000006
+--- local_update_loss : 0.71
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+----------- acc -----------
+[72.7, 80.7, 70.2, 85.6, 73.5, 82.9, 73.2, 81.1, 72.8, 83.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.65%
+2023-04-23 09:45:06,272 [MainThread] [INFO ]  Server train time: 177.4391417503357
+2023-04-23 09:45:06,272 [MainThread] [INFO ]  
+-------- round 143 --------
+2023-04-23 09:45:06,273 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.76
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[74.0, 80.7, 70.2, 85.6, 73.5, 82.9, 69.3, 83.4, 71.2, 83.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.46%
+2023-04-23 09:48:03,498 [MainThread] [INFO ]  Server train time: 177.22520351409912
+2023-04-23 09:48:03,499 [MainThread] [INFO ]  
+-------- round 144 --------
+2023-04-23 09:48:03,499 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[74.0, 82.7, 70.2, 85.6, 73.3, 85.0, 69.3, 83.7, 71.2, 83.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.88%
+2023-04-23 09:51:02,284 [MainThread] [INFO ]  Server train time: 178.78455257415771
+2023-04-23 09:51:02,285 [MainThread] [INFO ]  
+-------- round 145 --------
+2023-04-23 09:51:02,285 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.77
+client: f0000006
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[71.3, 82.7, 70.2, 81.4, 75.3, 85.0, 73.6, 83.7, 71.2, 83.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.82%
+2023-04-23 09:54:00,331 [MainThread] [INFO ]  Server train time: 178.04589009284973
+2023-04-23 09:54:00,332 [MainThread] [INFO ]  
+-------- round 146 --------
+2023-04-23 09:54:00,332 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.51
+client: f0000005
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[71.3, 82.7, 70.2, 81.4, 75.3, 85.7, 72.0, 83.7, 71.7, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.72%
+2023-04-23 09:56:58,972 [MainThread] [INFO ]  Server train time: 178.63998007774353
+2023-04-23 09:56:58,973 [MainThread] [INFO ]  
+-------- round 147 --------
+2023-04-23 09:56:58,973 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.76
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[74.4, 82.7, 74.3, 81.4, 69.8, 80.0, 72.0, 83.7, 71.7, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.32%
+2023-04-23 09:59:57,144 [MainThread] [INFO ]  Server train time: 178.17135095596313
+2023-04-23 09:59:57,145 [MainThread] [INFO ]  
+-------- round 148 --------
+2023-04-23 09:59:57,145 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.77
+client: f0000005
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+----------- acc -----------
+[69.7, 82.7, 74.3, 81.4, 74.7, 84.6, 72.0, 83.7, 71.7, 81.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.67%
+2023-04-23 10:02:55,624 [MainThread] [INFO ]  Server train time: 178.4783890247345
+2023-04-23 10:02:55,625 [MainThread] [INFO ]  
+-------- round 149 --------
+2023-04-23 10:02:55,625 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000008
+--- local_update_loss : 0.78
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[69.9, 82.7, 74.3, 81.4, 74.7, 80.8, 72.0, 82.3, 71.4, 81.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 77.14%
+2023-04-23 10:05:53,356 [MainThread] [INFO ]  Server train time: 177.73086786270142
+2023-04-23 10:05:53,359 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_149.pth
+2023-04-23 10:05:53,359 [MainThread] [INFO ]  
+-------- round 150 --------
+2023-04-23 10:05:53,359 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.52
+client: f0000008
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[60.2, 82.7, 74.3, 84.6, 74.7, 80.8, 72.0, 82.3, 72.3, 80.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.48%
+2023-04-23 10:08:49,683 [MainThread] [INFO ]  Server train time: 176.323468208313
+2023-04-23 10:08:49,683 [MainThread] [INFO ]  
+-------- round 151 --------
+2023-04-23 10:08:49,683 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.51
+client: f0000007
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000009: 0.92
+----------- acc -----------
+[60.2, 82.6, 74.3, 84.6, 74.7, 80.9, 72.0, 86.0, 72.3, 79.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.69%
+2023-04-23 10:11:47,018 [MainThread] [INFO ]  Server train time: 177.33377027511597
+2023-04-23 10:11:47,018 [MainThread] [INFO ]  
+-------- round 152 --------
+2023-04-23 10:11:47,018 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.73
+client: f0000002
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[60.2, 82.6, 75.6, 84.6, 74.7, 80.9, 70.5, 80.7, 74.7, 79.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.38%
+2023-04-23 10:14:44,751 [MainThread] [INFO ]  Server train time: 177.73206186294556
+2023-04-23 10:14:44,752 [MainThread] [INFO ]  
+-------- round 153 --------
+2023-04-23 10:14:44,752 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.53
+client: f0000003
+--- local_update_loss : 0.49
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[71.0, 82.6, 75.6, 85.8, 74.7, 82.0, 70.5, 80.7, 74.7, 83.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.58
+--- All clients' test acc: 78.10%
+2023-04-23 10:17:41,914 [MainThread] [INFO ]  Server train time: 177.1618378162384
+2023-04-23 10:17:41,915 [MainThread] [INFO ]  
+-------- round 154 --------
+2023-04-23 10:17:41,915 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.75
+client: f0000000
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[72.3, 82.6, 75.6, 85.8, 69.3, 82.0, 74.7, 80.7, 69.3, 83.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.57%
+2023-04-23 10:20:40,064 [MainThread] [INFO ]  Server train time: 178.14890813827515
+2023-04-23 10:20:40,065 [MainThread] [INFO ]  
+-------- round 155 --------
+2023-04-23 10:20:40,065 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.73
+client: f0000008
+--- local_update_loss : 0.78
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+----------- acc -----------
+[72.3, 82.6, 75.6, 80.5, 69.3, 81.8, 75.7, 80.7, 72.5, 83.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.44%
+2023-04-23 10:23:36,906 [MainThread] [INFO ]  Server train time: 176.84060716629028
+2023-04-23 10:23:36,906 [MainThread] [INFO ]  
+-------- round 156 --------
+2023-04-23 10:23:36,906 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.72
+client: f0000004
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+----------- acc -----------
+[72.3, 82.6, 75.6, 81.1, 72.2, 81.8, 72.4, 80.0, 72.5, 83.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.39%
+2023-04-23 10:26:35,034 [MainThread] [INFO ]  Server train time: 178.12757802009583
+2023-04-23 10:26:35,035 [MainThread] [INFO ]  
+-------- round 157 --------
+2023-04-23 10:26:35,035 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.70
+client: f0000009
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[72.3, 82.6, 75.6, 83.8, 72.2, 81.8, 71.9, 80.0, 69.5, 83.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.32%
+2023-04-23 10:29:32,756 [MainThread] [INFO ]  Server train time: 177.7206437587738
+2023-04-23 10:29:32,757 [MainThread] [INFO ]  
+-------- round 158 --------
+2023-04-23 10:29:32,757 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.49
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+----------- acc -----------
+[72.3, 82.6, 75.6, 83.8, 72.2, 82.1, 71.9, 81.1, 71.7, 86.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.93%
+2023-04-23 10:32:29,860 [MainThread] [INFO ]  Server train time: 177.10242438316345
+2023-04-23 10:32:29,860 [MainThread] [INFO ]  
+-------- round 159 --------
+2023-04-23 10:32:29,861 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.48
+client: f0000001
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[72.3, 83.1, 75.6, 80.6, 72.2, 82.1, 71.9, 78.2, 71.7, 84.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.24%
+2023-04-23 10:35:27,363 [MainThread] [INFO ]  Server train time: 177.50160694122314
+2023-04-23 10:35:27,365 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_159.pth
+2023-04-23 10:35:27,365 [MainThread] [INFO ]  
+-------- round 160 --------
+2023-04-23 10:35:27,365 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.54
+client: f0000002
+--- local_update_loss : 0.71
+--- DML_update_loss(A model) with Client:f0000008: 1.09
+--- DML_update_loss(A model) with Client:f0000009: 0.94
+----------- acc -----------
+[72.3, 83.1, 73.9, 80.6, 72.2, 82.1, 71.9, 84.7, 67.7, 81.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.03%
+2023-04-23 10:38:24,218 [MainThread] [INFO ]  Server train time: 176.85238361358643
+2023-04-23 10:38:24,219 [MainThread] [INFO ]  
+-------- round 161 --------
+2023-04-23 10:38:24,219 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.69
+client: f0000008
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[72.3, 83.1, 73.9, 79.0, 72.2, 82.1, 74.8, 83.2, 74.1, 81.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.65%
+2023-04-23 10:41:20,145 [MainThread] [INFO ]  Server train time: 175.92572855949402
+2023-04-23 10:41:20,146 [MainThread] [INFO ]  
+-------- round 162 --------
+2023-04-23 10:41:20,146 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.74
+client: f0000004
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000006: 1.10
+----------- acc -----------
+[75.1, 83.1, 73.9, 79.0, 75.8, 80.1, 71.1, 83.2, 74.1, 81.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.72%
+2023-04-23 10:44:17,757 [MainThread] [INFO ]  Server train time: 177.61105012893677
+2023-04-23 10:44:17,758 [MainThread] [INFO ]  
+-------- round 163 --------
+2023-04-23 10:44:17,758 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.53
+client: f0000005
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[65.8, 83.1, 73.9, 79.0, 75.8, 83.4, 71.1, 77.7, 74.1, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.50%
+2023-04-23 10:47:13,825 [MainThread] [INFO ]  Server train time: 176.06670808792114
+2023-04-23 10:47:13,826 [MainThread] [INFO ]  
+-------- round 164 --------
+2023-04-23 10:47:13,826 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.71
+client: f0000005
+--- local_update_loss : 0.51
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[65.8, 83.1, 73.9, 79.0, 76.9, 84.1, 72.0, 77.7, 74.1, 82.0]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.86%
+2023-04-23 10:50:09,887 [MainThread] [INFO ]  Server train time: 176.06077671051025
+2023-04-23 10:50:09,888 [MainThread] [INFO ]  
+-------- round 165 --------
+2023-04-23 10:50:09,888 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.50
+client: f0000006
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[65.8, 83.1, 73.9, 83.7, 76.9, 84.2, 71.9, 77.7, 74.1, 81.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.27%
+2023-04-23 10:53:07,315 [MainThread] [INFO ]  Server train time: 177.42705416679382
+2023-04-23 10:53:07,316 [MainThread] [INFO ]  
+-------- round 166 --------
+2023-04-23 10:53:07,316 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.77
+client: f0000003
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[73.8, 83.1, 73.9, 84.8, 76.9, 78.7, 70.9, 77.7, 74.1, 81.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.53%
+2023-04-23 10:56:03,739 [MainThread] [INFO ]  Server train time: 176.42297101020813
+2023-04-23 10:56:03,740 [MainThread] [INFO ]  
+-------- round 167 --------
+2023-04-23 10:56:03,740 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.70
+client: f0000004
+--- local_update_loss : 0.69
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[73.8, 79.7, 70.4, 84.8, 75.5, 74.3, 70.9, 77.7, 74.1, 81.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.26%
+2023-04-23 10:59:01,583 [MainThread] [INFO ]  Server train time: 177.84302020072937
+2023-04-23 10:59:01,584 [MainThread] [INFO ]  
+-------- round 168 --------
+2023-04-23 10:59:01,584 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.50
+client: f0000000
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000002: 1.11
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[70.9, 79.7, 70.6, 85.5, 75.5, 74.3, 70.9, 79.6, 74.1, 81.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.64
+--- All clients' test acc: 76.25%
+2023-04-23 11:01:58,175 [MainThread] [INFO ]  Server train time: 176.5900456905365
+2023-04-23 11:01:58,175 [MainThread] [INFO ]  
+-------- round 169 --------
+2023-04-23 11:01:58,175 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.75
+client: f0000008
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[69.3, 79.7, 70.6, 85.5, 75.5, 74.3, 72.6, 81.5, 74.7, 81.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.51%
+2023-04-23 11:04:55,603 [MainThread] [INFO ]  Server train time: 177.4271945953369
+2023-04-23 11:04:55,605 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_169.pth
+2023-04-23 11:04:55,606 [MainThread] [INFO ]  
+-------- round 170 --------
+2023-04-23 11:04:55,606 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.72
+client: f0000001
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+--- DML_update_loss(A model) with Client:f0000008: 1.11
+----------- acc -----------
+[69.3, 82.4, 70.6, 85.5, 75.5, 83.0, 71.3, 81.5, 69.5, 81.4]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.00%
+2023-04-23 11:07:51,596 [MainThread] [INFO ]  Server train time: 175.98954439163208
+2023-04-23 11:07:51,596 [MainThread] [INFO ]  
+-------- round 171 --------
+2023-04-23 11:07:51,596 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.69
+client: f0000003
+--- local_update_loss : 0.48
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[69.3, 82.4, 70.6, 85.1, 75.4, 82.8, 71.3, 81.5, 69.5, 79.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.72%
+2023-04-23 11:10:49,638 [MainThread] [INFO ]  Server train time: 178.0409038066864
+2023-04-23 11:10:49,638 [MainThread] [INFO ]  
+-------- round 172 --------
+2023-04-23 11:10:49,639 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.52
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[73.9, 82.6, 70.6, 85.1, 75.4, 82.8, 71.3, 81.5, 68.4, 79.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.09%
+2023-04-23 11:13:45,836 [MainThread] [INFO ]  Server train time: 176.19687509536743
+2023-04-23 11:13:45,836 [MainThread] [INFO ]  
+-------- round 173 --------
+2023-04-23 11:13:45,837 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.77
+client: f0000004
+--- local_update_loss : 0.67
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[71.5, 82.6, 70.6, 85.1, 76.8, 82.8, 71.2, 81.5, 72.2, 79.3]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.36%
+2023-04-23 11:16:44,481 [MainThread] [INFO ]  Server train time: 178.64402198791504
+2023-04-23 11:16:44,482 [MainThread] [INFO ]  
+-------- round 174 --------
+2023-04-23 11:16:44,482 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.54
+client: f0000003
+--- local_update_loss : 0.47
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+----------- acc -----------
+[69.6, 82.6, 70.6, 86.0, 76.8, 82.8, 71.2, 81.6, 72.2, 83.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.69%
+2023-04-23 11:19:42,021 [MainThread] [INFO ]  Server train time: 177.53885173797607
+2023-04-23 11:19:42,022 [MainThread] [INFO ]  
+-------- round 175 --------
+2023-04-23 11:19:42,022 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.52
+client: f0000002
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+----------- acc -----------
+[71.7, 82.6, 74.3, 86.0, 76.8, 82.8, 68.6, 84.9, 72.2, 83.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.58
+--- All clients' test acc: 78.34%
+2023-04-23 11:22:36,278 [MainThread] [INFO ]  Server train time: 174.25581693649292
+2023-04-23 11:22:36,279 [MainThread] [INFO ]  
+-------- round 176 --------
+2023-04-23 11:22:36,279 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.50
+client: f0000002
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+--- DML_update_loss(A model) with Client:f0000005: 0.93
+----------- acc -----------
+[72.3, 83.1, 75.4, 86.0, 76.8, 83.4, 68.6, 84.9, 72.2, 83.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.57
+--- All clients' test acc: 78.62%
+2023-04-23 11:25:33,503 [MainThread] [INFO ]  Server train time: 177.2239911556244
+2023-04-23 11:25:33,504 [MainThread] [INFO ]  
+-------- round 177 --------
+2023-04-23 11:25:33,504 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.76
+client: f0000002
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000004: 1.10
+--- DML_update_loss(A model) with Client:f0000001: 0.94
+----------- acc -----------
+[73.1, 80.6, 74.8, 86.0, 68.5, 83.4, 68.6, 84.9, 72.2, 83.5]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.56%
+2023-04-23 11:28:31,222 [MainThread] [INFO ]  Server train time: 177.71783542633057
+2023-04-23 11:28:31,223 [MainThread] [INFO ]  
+-------- round 178 --------
+2023-04-23 11:28:31,223 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.73
+client: f0000005
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000009: 0.93
+----------- acc -----------
+[73.6, 80.6, 74.8, 86.0, 73.3, 83.9, 68.6, 84.9, 72.2, 79.6]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.75%
+2023-04-23 11:31:27,775 [MainThread] [INFO ]  Server train time: 176.55210328102112
+2023-04-23 11:31:27,776 [MainThread] [INFO ]  
+-------- round 179 --------
+2023-04-23 11:31:27,776 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.71
+client: f0000001
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000003: 0.93
+--- DML_update_loss(A model) with Client:f0000009: 0.92
+----------- acc -----------
+[75.7, 81.9, 74.8, 78.9, 73.3, 83.9, 68.6, 84.9, 72.2, 82.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.70%
+2023-04-23 11:34:24,921 [MainThread] [INFO ]  Server train time: 177.14475631713867
+2023-04-23 11:34:24,924 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_179.pth
+2023-04-23 11:34:24,924 [MainThread] [INFO ]  
+-------- round 180 --------
+2023-04-23 11:34:24,924 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.70
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[69.7, 81.9, 67.3, 78.9, 75.6, 83.5, 68.6, 84.9, 72.2, 82.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.54%
+2023-04-23 11:37:22,372 [MainThread] [INFO ]  Server train time: 177.44728326797485
+2023-04-23 11:37:22,372 [MainThread] [INFO ]  
+-------- round 181 --------
+2023-04-23 11:37:22,372 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.69
+client: f0000008
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[73.6, 81.4, 67.3, 78.9, 75.6, 83.5, 68.6, 80.5, 74.5, 82.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.67%
+2023-04-23 11:40:20,533 [MainThread] [INFO ]  Server train time: 178.15985202789307
+2023-04-23 11:40:20,533 [MainThread] [INFO ]  
+-------- round 182 --------
+2023-04-23 11:40:20,533 [MainThread] [INFO ]  --- start training ---
+client: f0000003
+--- local_update_loss : 0.53
+client: f0000004
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+--- DML_update_loss(A model) with Client:f0000008: 1.10
+----------- acc -----------
+[70.1, 81.4, 67.3, 84.9, 75.2, 83.5, 68.6, 80.5, 69.6, 82.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.39%
+2023-04-23 11:43:19,116 [MainThread] [INFO ]  Server train time: 178.58258509635925
+2023-04-23 11:43:19,117 [MainThread] [INFO ]  
+-------- round 183 --------
+2023-04-23 11:43:19,117 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.53
+client: f0000000
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+----------- acc -----------
+[73.8, 81.4, 67.3, 82.2, 73.7, 83.5, 68.6, 84.2, 69.6, 82.8]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.71%
+2023-04-23 11:46:16,461 [MainThread] [INFO ]  Server train time: 177.34363293647766
+2023-04-23 11:46:16,462 [MainThread] [INFO ]  
+-------- round 184 --------
+2023-04-23 11:46:16,462 [MainThread] [INFO ]  --- start training ---
+client: f0000006
+--- local_update_loss : 0.76
+client: f0000009
+--- local_update_loss : 0.54
+--- DML_update_loss(A model) with Client:f0000004: 1.08
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[73.8, 81.4, 67.3, 82.2, 73.9, 77.9, 73.5, 84.2, 69.6, 82.9]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.67%
+2023-04-23 11:49:13,710 [MainThread] [INFO ]  Server train time: 177.24800300598145
+2023-04-23 11:49:13,711 [MainThread] [INFO ]  
+-------- round 185 --------
+2023-04-23 11:49:13,711 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.51
+client: f0000004
+--- local_update_loss : 0.76
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[70.6, 79.1, 67.3, 82.2, 73.9, 77.9, 73.5, 84.2, 69.6, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.15%
+2023-04-23 11:52:12,048 [MainThread] [INFO ]  Server train time: 178.33609294891357
+2023-04-23 11:52:12,048 [MainThread] [INFO ]  
+-------- round 186 --------
+2023-04-23 11:52:12,048 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.77
+client: f0000004
+--- local_update_loss : 0.74
+--- DML_update_loss(A model) with Client:f0000000: 1.09
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[72.4, 80.6, 67.3, 82.2, 70.4, 77.9, 73.5, 84.2, 72.9, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.46%
+2023-04-23 11:55:09,908 [MainThread] [INFO ]  Server train time: 177.85926246643066
+2023-04-23 11:55:09,909 [MainThread] [INFO ]  
+-------- round 187 --------
+2023-04-23 11:55:09,909 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.71
+client: f0000007
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+----------- acc -----------
+[66.5, 80.6, 73.1, 82.2, 74.7, 77.9, 73.5, 82.2, 72.9, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.68%
+2023-04-23 11:58:07,571 [MainThread] [INFO ]  Server train time: 177.66220831871033
+2023-04-23 11:58:07,572 [MainThread] [INFO ]  
+-------- round 188 --------
+2023-04-23 11:58:07,572 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.53
+client: f0000008
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000000: 1.10
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[70.1, 80.6, 73.1, 82.2, 74.7, 82.7, 71.3, 82.2, 71.0, 83.2]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.11%
+2023-04-23 12:01:05,577 [MainThread] [INFO ]  Server train time: 178.0041856765747
+2023-04-23 12:01:05,577 [MainThread] [INFO ]  
+-------- round 189 --------
+2023-04-23 12:01:05,577 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.50
+client: f0000008
+--- local_update_loss : 0.72
+--- DML_update_loss(A model) with Client:f0000004: 1.09
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+----------- acc -----------
+[70.1, 80.6, 73.1, 80.8, 72.9, 82.7, 71.3, 82.2, 73.1, 85.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.19%
+2023-04-23 12:04:03,407 [MainThread] [INFO ]  Server train time: 177.82947373390198
+2023-04-23 12:04:03,410 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_189.pth
+2023-04-23 12:04:03,410 [MainThread] [INFO ]  
+-------- round 190 --------
+2023-04-23 12:04:03,410 [MainThread] [INFO ]  --- start training ---
+client: f0000001
+--- local_update_loss : 0.55
+client: f0000009
+--- local_update_loss : 0.48
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[70.1, 81.5, 70.4, 80.8, 72.9, 82.7, 69.1, 82.2, 73.1, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.39%
+2023-04-23 12:07:00,681 [MainThread] [INFO ]  Server train time: 177.2706916332245
+2023-04-23 12:07:00,682 [MainThread] [INFO ]  
+-------- round 191 --------
+2023-04-23 12:07:00,682 [MainThread] [INFO ]  --- start training ---
+client: f0000007
+--- local_update_loss : 0.49
+client: f0000002
+--- local_update_loss : 0.78
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[70.1, 81.5, 74.1, 80.8, 72.9, 75.9, 69.7, 83.1, 73.1, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.63
+--- All clients' test acc: 76.23%
+2023-04-23 12:09:58,317 [MainThread] [INFO ]  Server train time: 177.6350543498993
+2023-04-23 12:09:58,318 [MainThread] [INFO ]  
+-------- round 192 --------
+2023-04-23 12:09:58,318 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.54
+client: f0000004
+--- local_update_loss : 0.75
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+--- DML_update_loss(A model) with Client:f0000006: 1.09
+----------- acc -----------
+[70.1, 81.5, 74.1, 80.8, 75.6, 83.7, 69.7, 82.4, 73.1, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.21%
+2023-04-23 12:12:55,442 [MainThread] [INFO ]  Server train time: 177.12333989143372
+2023-04-23 12:12:55,443 [MainThread] [INFO ]  
+-------- round 193 --------
+2023-04-23 12:12:55,443 [MainThread] [INFO ]  --- start training ---
+client: f0000005
+--- local_update_loss : 0.51
+client: f0000003
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+----------- acc -----------
+[70.1, 79.9, 63.9, 83.3, 75.6, 85.7, 69.7, 82.4, 73.1, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.48%
+2023-04-23 12:15:53,076 [MainThread] [INFO ]  Server train time: 177.63298678398132
+2023-04-23 12:15:53,077 [MainThread] [INFO ]  
+-------- round 194 --------
+2023-04-23 12:15:53,077 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.71
+client: f0000000
+--- local_update_loss : 0.77
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[74.6, 79.9, 71.7, 82.1, 75.6, 85.7, 69.7, 82.4, 73.2, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.60%
+2023-04-23 12:18:50,267 [MainThread] [INFO ]  Server train time: 177.19003057479858
+2023-04-23 12:18:50,268 [MainThread] [INFO ]  
+-------- round 195 --------
+2023-04-23 12:18:50,268 [MainThread] [INFO ]  --- start training ---
+client: f0000000
+--- local_update_loss : 0.74
+client: f0000004
+--- local_update_loss : 0.73
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+--- DML_update_loss(A model) with Client:f0000001: 0.93
+----------- acc -----------
+[74.8, 79.8, 71.2, 82.1, 75.2, 85.7, 69.7, 82.4, 73.2, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.59
+--- All clients' test acc: 77.52%
+2023-04-23 12:21:47,586 [MainThread] [INFO ]  Server train time: 177.31733322143555
+2023-04-23 12:21:47,587 [MainThread] [INFO ]  
+-------- round 196 --------
+2023-04-23 12:21:47,587 [MainThread] [INFO ]  --- start training ---
+client: f0000004
+--- local_update_loss : 0.71
+client: f0000005
+--- local_update_loss : 0.50
+--- DML_update_loss(A model) with Client:f0000007: 0.93
+--- DML_update_loss(A model) with Client:f0000002: 1.09
+----------- acc -----------
+[74.8, 79.8, 68.8, 82.1, 77.4, 85.0, 69.7, 79.6, 73.2, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 77.15%
+2023-04-23 12:24:43,453 [MainThread] [INFO ]  Server train time: 175.86618399620056
+2023-04-23 12:24:43,454 [MainThread] [INFO ]  
+-------- round 197 --------
+2023-04-23 12:24:43,454 [MainThread] [INFO ]  --- start training ---
+client: f0000002
+--- local_update_loss : 0.77
+client: f0000007
+--- local_update_loss : 0.53
+--- DML_update_loss(A model) with Client:f0000005: 0.95
+--- DML_update_loss(A model) with Client:f0000000: 1.11
+----------- acc -----------
+[67.8, 79.8, 73.7, 82.1, 77.4, 82.5, 69.7, 85.0, 73.2, 81.1]
+--------- test avarage ---------
+--- All clients' test loss: 0.60
+--- All clients' test acc: 77.23%
+2023-04-23 12:27:38,889 [MainThread] [INFO ]  Server train time: 175.43461084365845
+2023-04-23 12:27:38,890 [MainThread] [INFO ]  
+-------- round 198 --------
+2023-04-23 12:27:38,890 [MainThread] [INFO ]  --- start training ---
+client: f0000009
+--- local_update_loss : 0.47
+client: f0000001
+--- local_update_loss : 0.55
+--- DML_update_loss(A model) with Client:f0000003: 0.92
+--- DML_update_loss(A model) with Client:f0000007: 0.92
+----------- acc -----------
+[67.8, 79.2, 73.7, 76.4, 77.4, 82.5, 69.7, 82.4, 73.2, 84.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.62
+--- All clients' test acc: 76.70%
+2023-04-23 12:30:35,240 [MainThread] [INFO ]  Server train time: 176.3501467704773
+2023-04-23 12:30:35,241 [MainThread] [INFO ]  
+-------- round 199 --------
+2023-04-23 12:30:35,241 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.71
+client: f0000001
+--- local_update_loss : 0.52
+--- DML_update_loss(A model) with Client:f0000002: 1.10
+--- DML_update_loss(A model) with Client:f0000005: 0.94
+----------- acc -----------
+[67.8, 83.0, 71.7, 76.4, 77.4, 82.7, 69.7, 82.4, 74.0, 84.7]
+--------- test avarage ---------
+--- All clients' test loss: 0.61
+--- All clients' test acc: 76.98%
+2023-04-23 12:33:31,828 [MainThread] [INFO ]  Server train time: 176.58657240867615
+2023-04-23 12:33:31,831 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/saved_models/_global_model_r_199.pth
+2023-04-23 12:33:31,831 [MainThread] [INFO ]  
+-------- round 200 --------
+2023-04-23 12:33:31,831 [MainThread] [INFO ]  --- start training ---
+client: f0000008
+--- local_update_loss : 0.69
+client: f0000003
+--- local_update_loss : 0.53
+Traceback (most recent call last):
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/main.py", line 26, in <module>
+    easyfl.run()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 390, in run
+    _global_coord.run()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 80, in run
+    self.server.start(self.model, self.clients)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 164, in start
+    self.train()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 200, in train
+    self.distribution_to_train()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 347, in distribution_to_train
+    self.distribution_to_train_locally()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/CustomizeServer.py", line 91, in distribution_to_train_locally
+    client.run_train(model, self.conf.client, train_local_only=False)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/CustomizedClient.py", line 154, in run_train
+    self.train(conf, self.device, train_local_only) # 只修改了这里
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/CustomizedClient.py", line 142, in train
+    self.train_DML(conf, device)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar10/CustomizedClient.py", line 98, in train_DML
+    loss_A.backward(retain_graph=True)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/_tensor.py", line 488, in backward
+    torch.autograd.backward(
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

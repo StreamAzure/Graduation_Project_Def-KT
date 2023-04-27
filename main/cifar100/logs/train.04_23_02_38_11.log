@@ -1,0 +1,425 @@
+2023-04-23 02:38:11,146 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': '../data/', 'dataset': 'cifar100', 'split_type': 'class', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.8, 'class_per_client': 10, 'num_of_clients': 10, 'alpha': 0.2, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 1000, 'clients_per_round': 2, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 64, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'FedAvg', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 16, 'test_batch_size': 5, 'local_epoch': 20, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.5, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-04-23 02:38:11,248 [MainThread] [INFO ]  Total training data amount: 50000
+2023-04-23 02:38:11,248 [MainThread] [INFO ]  Total testing data amount: 10000
+2023-04-23 02:38:11,285 [MainThread] [INFO ]  Clients in total: 10
+2023-04-23 02:38:11,311 [MainThread] [INFO ]  
+-------- round 0 --------
+2023-04-23 02:38:11,311 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:40:48,294 [MainThread] [INFO ]  Server train time: 156.9830253124237
+2023-04-23 02:40:48,295 [MainThread] [INFO ]  
+-------- round 1 --------
+2023-04-23 02:40:48,295 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:43:24,807 [MainThread] [INFO ]  Server train time: 156.51165437698364
+2023-04-23 02:43:24,808 [MainThread] [INFO ]  
+-------- round 2 --------
+2023-04-23 02:43:24,808 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:46:06,562 [MainThread] [INFO ]  Server train time: 161.75352144241333
+2023-04-23 02:46:06,563 [MainThread] [INFO ]  
+-------- round 3 --------
+2023-04-23 02:46:06,563 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:48:57,207 [MainThread] [INFO ]  Server train time: 170.64360547065735
+2023-04-23 02:48:57,208 [MainThread] [INFO ]  
+-------- round 4 --------
+2023-04-23 02:48:57,208 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:51:48,057 [MainThread] [INFO ]  Server train time: 170.84825563430786
+2023-04-23 02:51:48,057 [MainThread] [INFO ]  
+-------- round 5 --------
+2023-04-23 02:51:48,057 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:54:39,437 [MainThread] [INFO ]  Server train time: 171.3790590763092
+2023-04-23 02:54:39,438 [MainThread] [INFO ]  
+-------- round 6 --------
+2023-04-23 02:54:39,438 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:57:30,886 [MainThread] [INFO ]  Server train time: 171.44773030281067
+2023-04-23 02:57:30,887 [MainThread] [INFO ]  
+-------- round 7 --------
+2023-04-23 02:57:30,887 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:00:21,854 [MainThread] [INFO ]  Server train time: 170.9671242237091
+2023-04-23 03:00:21,855 [MainThread] [INFO ]  
+-------- round 8 --------
+2023-04-23 03:00:21,855 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:03:13,498 [MainThread] [INFO ]  Server train time: 171.64226269721985
+2023-04-23 03:03:13,498 [MainThread] [INFO ]  
+-------- round 9 --------
+2023-04-23 03:03:13,498 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:06:03,850 [MainThread] [INFO ]  Server train time: 170.35126066207886
+2023-04-23 03:06:03,853 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_9.pth
+2023-04-23 03:06:03,854 [MainThread] [INFO ]  
+-------- round 10 --------
+2023-04-23 03:06:03,854 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:08:55,601 [MainThread] [INFO ]  Server train time: 171.74730372428894
+2023-04-23 03:08:55,602 [MainThread] [INFO ]  
+-------- round 11 --------
+2023-04-23 03:08:55,602 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:11:45,663 [MainThread] [INFO ]  Server train time: 170.0603587627411
+2023-04-23 03:11:45,664 [MainThread] [INFO ]  
+-------- round 12 --------
+2023-04-23 03:11:45,664 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:14:36,452 [MainThread] [INFO ]  Server train time: 170.78774762153625
+2023-04-23 03:14:36,453 [MainThread] [INFO ]  
+-------- round 13 --------
+2023-04-23 03:14:36,453 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:17:29,188 [MainThread] [INFO ]  Server train time: 172.73522233963013
+2023-04-23 03:17:29,189 [MainThread] [INFO ]  
+-------- round 14 --------
+2023-04-23 03:17:29,189 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:20:20,205 [MainThread] [INFO ]  Server train time: 171.01584672927856
+2023-04-23 03:20:20,206 [MainThread] [INFO ]  
+-------- round 15 --------
+2023-04-23 03:20:20,206 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:23:10,315 [MainThread] [INFO ]  Server train time: 170.10864806175232
+2023-04-23 03:23:10,316 [MainThread] [INFO ]  
+-------- round 16 --------
+2023-04-23 03:23:10,316 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:26:04,365 [MainThread] [INFO ]  Server train time: 174.04900574684143
+2023-04-23 03:26:04,366 [MainThread] [INFO ]  
+-------- round 17 --------
+2023-04-23 03:26:04,366 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:28:58,291 [MainThread] [INFO ]  Server train time: 173.92444825172424
+2023-04-23 03:28:58,291 [MainThread] [INFO ]  
+-------- round 18 --------
+2023-04-23 03:28:58,292 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:31:51,513 [MainThread] [INFO ]  Server train time: 173.22058701515198
+2023-04-23 03:31:51,513 [MainThread] [INFO ]  
+-------- round 19 --------
+2023-04-23 03:31:51,513 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:34:45,190 [MainThread] [INFO ]  Server train time: 173.67594695091248
+2023-04-23 03:34:45,193 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_19.pth
+2023-04-23 03:34:45,193 [MainThread] [INFO ]  
+-------- round 20 --------
+2023-04-23 03:34:45,193 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:37:38,757 [MainThread] [INFO ]  Server train time: 173.56320142745972
+2023-04-23 03:37:38,757 [MainThread] [INFO ]  
+-------- round 21 --------
+2023-04-23 03:37:38,757 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:40:32,697 [MainThread] [INFO ]  Server train time: 173.93962693214417
+2023-04-23 03:40:32,698 [MainThread] [INFO ]  
+-------- round 22 --------
+2023-04-23 03:40:32,698 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:43:26,582 [MainThread] [INFO ]  Server train time: 173.88347911834717
+2023-04-23 03:43:26,583 [MainThread] [INFO ]  
+-------- round 23 --------
+2023-04-23 03:43:26,583 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:46:20,141 [MainThread] [INFO ]  Server train time: 173.5578019618988
+2023-04-23 03:46:20,142 [MainThread] [INFO ]  
+-------- round 24 --------
+2023-04-23 03:46:20,142 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:49:14,356 [MainThread] [INFO ]  Server train time: 174.21392107009888
+2023-04-23 03:49:14,357 [MainThread] [INFO ]  
+-------- round 25 --------
+2023-04-23 03:49:14,357 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:52:07,866 [MainThread] [INFO ]  Server train time: 173.50922060012817
+2023-04-23 03:52:07,867 [MainThread] [INFO ]  
+-------- round 26 --------
+2023-04-23 03:52:07,867 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:55:02,053 [MainThread] [INFO ]  Server train time: 174.18489956855774
+2023-04-23 03:55:02,053 [MainThread] [INFO ]  
+-------- round 27 --------
+2023-04-23 03:55:02,053 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:57:56,398 [MainThread] [INFO ]  Server train time: 174.3444802761078
+2023-04-23 03:57:56,399 [MainThread] [INFO ]  
+-------- round 28 --------
+2023-04-23 03:57:56,399 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:00:50,186 [MainThread] [INFO ]  Server train time: 173.7867293357849
+2023-04-23 04:00:50,187 [MainThread] [INFO ]  
+-------- round 29 --------
+2023-04-23 04:00:50,187 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:03:42,642 [MainThread] [INFO ]  Server train time: 172.45497250556946
+2023-04-23 04:03:42,645 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_29.pth
+2023-04-23 04:03:42,646 [MainThread] [INFO ]  
+-------- round 30 --------
+2023-04-23 04:03:42,646 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:06:37,431 [MainThread] [INFO ]  Server train time: 174.78460144996643
+2023-04-23 04:06:37,431 [MainThread] [INFO ]  
+-------- round 31 --------
+2023-04-23 04:06:37,432 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:09:31,045 [MainThread] [INFO ]  Server train time: 173.61319017410278
+2023-04-23 04:09:31,046 [MainThread] [INFO ]  
+-------- round 32 --------
+2023-04-23 04:09:31,046 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:12:24,508 [MainThread] [INFO ]  Server train time: 173.46180367469788
+2023-04-23 04:12:24,509 [MainThread] [INFO ]  
+-------- round 33 --------
+2023-04-23 04:12:24,509 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:15:18,668 [MainThread] [INFO ]  Server train time: 174.15921998023987
+2023-04-23 04:15:18,669 [MainThread] [INFO ]  
+-------- round 34 --------
+2023-04-23 04:15:18,669 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:18:12,614 [MainThread] [INFO ]  Server train time: 173.94412231445312
+2023-04-23 04:18:12,614 [MainThread] [INFO ]  
+-------- round 35 --------
+2023-04-23 04:18:12,614 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:21:06,001 [MainThread] [INFO ]  Server train time: 173.3858060836792
+2023-04-23 04:21:06,001 [MainThread] [INFO ]  
+-------- round 36 --------
+2023-04-23 04:21:06,001 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:23:59,234 [MainThread] [INFO ]  Server train time: 173.2327184677124
+2023-04-23 04:23:59,235 [MainThread] [INFO ]  
+-------- round 37 --------
+2023-04-23 04:23:59,235 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:26:53,010 [MainThread] [INFO ]  Server train time: 173.77409601211548
+2023-04-23 04:26:53,010 [MainThread] [INFO ]  
+-------- round 38 --------
+2023-04-23 04:26:53,010 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:29:46,832 [MainThread] [INFO ]  Server train time: 173.82127404212952
+2023-04-23 04:29:46,833 [MainThread] [INFO ]  
+-------- round 39 --------
+2023-04-23 04:29:46,833 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:32:40,671 [MainThread] [INFO ]  Server train time: 173.83778429031372
+2023-04-23 04:32:40,674 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_39.pth
+2023-04-23 04:32:40,674 [MainThread] [INFO ]  
+-------- round 40 --------
+2023-04-23 04:32:40,675 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:35:33,278 [MainThread] [INFO ]  Server train time: 172.60348987579346
+2023-04-23 04:35:33,279 [MainThread] [INFO ]  
+-------- round 41 --------
+2023-04-23 04:35:33,279 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:38:28,178 [MainThread] [INFO ]  Server train time: 174.89862275123596
+2023-04-23 04:38:28,179 [MainThread] [INFO ]  
+-------- round 42 --------
+2023-04-23 04:38:28,179 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:41:21,896 [MainThread] [INFO ]  Server train time: 173.71636033058167
+2023-04-23 04:41:21,896 [MainThread] [INFO ]  
+-------- round 43 --------
+2023-04-23 04:41:21,896 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:44:15,068 [MainThread] [INFO ]  Server train time: 173.1711835861206
+2023-04-23 04:44:15,069 [MainThread] [INFO ]  
+-------- round 44 --------
+2023-04-23 04:44:15,069 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:47:08,585 [MainThread] [INFO ]  Server train time: 173.51617860794067
+2023-04-23 04:47:08,586 [MainThread] [INFO ]  
+-------- round 45 --------
+2023-04-23 04:47:08,586 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:50:01,709 [MainThread] [INFO ]  Server train time: 173.12283086776733
+2023-04-23 04:50:01,710 [MainThread] [INFO ]  
+-------- round 46 --------
+2023-04-23 04:50:01,710 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:52:55,826 [MainThread] [INFO ]  Server train time: 174.11584568023682
+2023-04-23 04:52:55,827 [MainThread] [INFO ]  
+-------- round 47 --------
+2023-04-23 04:52:55,827 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:55:50,083 [MainThread] [INFO ]  Server train time: 174.25561714172363
+2023-04-23 04:55:50,084 [MainThread] [INFO ]  
+-------- round 48 --------
+2023-04-23 04:55:50,084 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:58:43,930 [MainThread] [INFO ]  Server train time: 173.84608578681946
+2023-04-23 04:58:43,931 [MainThread] [INFO ]  
+-------- round 49 --------
+2023-04-23 04:58:43,931 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:01:37,311 [MainThread] [INFO ]  Server train time: 173.37942719459534
+2023-04-23 05:01:37,314 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_49.pth
+2023-04-23 05:01:37,314 [MainThread] [INFO ]  
+-------- round 50 --------
+2023-04-23 05:01:37,314 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:04:32,266 [MainThread] [INFO ]  Server train time: 174.95142579078674
+2023-04-23 05:04:32,267 [MainThread] [INFO ]  
+-------- round 51 --------
+2023-04-23 05:04:32,267 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:07:25,974 [MainThread] [INFO ]  Server train time: 173.70631623268127
+2023-04-23 05:07:25,974 [MainThread] [INFO ]  
+-------- round 52 --------
+2023-04-23 05:07:25,974 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:10:17,794 [MainThread] [INFO ]  Server train time: 171.81926226615906
+2023-04-23 05:10:17,795 [MainThread] [INFO ]  
+-------- round 53 --------
+2023-04-23 05:10:17,795 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:13:08,493 [MainThread] [INFO ]  Server train time: 170.6970672607422
+2023-04-23 05:13:08,493 [MainThread] [INFO ]  
+-------- round 54 --------
+2023-04-23 05:13:08,494 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:15:59,108 [MainThread] [INFO ]  Server train time: 170.61413383483887
+2023-04-23 05:15:59,109 [MainThread] [INFO ]  
+-------- round 55 --------
+2023-04-23 05:15:59,109 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:18:50,233 [MainThread] [INFO ]  Server train time: 171.12352395057678
+2023-04-23 05:18:50,234 [MainThread] [INFO ]  
+-------- round 56 --------
+2023-04-23 05:18:50,234 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:21:40,988 [MainThread] [INFO ]  Server train time: 170.7538447380066
+2023-04-23 05:21:40,989 [MainThread] [INFO ]  
+-------- round 57 --------
+2023-04-23 05:21:40,989 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:24:31,863 [MainThread] [INFO ]  Server train time: 170.87444949150085
+2023-04-23 05:24:31,864 [MainThread] [INFO ]  
+-------- round 58 --------
+2023-04-23 05:24:31,864 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:27:22,774 [MainThread] [INFO ]  Server train time: 170.90977120399475
+2023-04-23 05:27:22,775 [MainThread] [INFO ]  
+-------- round 59 --------
+2023-04-23 05:27:22,775 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:30:14,010 [MainThread] [INFO ]  Server train time: 171.23459434509277
+2023-04-23 05:30:14,013 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_59.pth
+2023-04-23 05:30:14,014 [MainThread] [INFO ]  
+-------- round 60 --------
+2023-04-23 05:30:14,014 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:33:05,431 [MainThread] [INFO ]  Server train time: 171.41701412200928
+2023-04-23 05:33:05,432 [MainThread] [INFO ]  
+-------- round 61 --------
+2023-04-23 05:33:05,432 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:35:56,508 [MainThread] [INFO ]  Server train time: 171.07541513442993
+2023-04-23 05:35:56,508 [MainThread] [INFO ]  
+-------- round 62 --------
+2023-04-23 05:35:56,508 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:38:46,869 [MainThread] [INFO ]  Server train time: 170.36051416397095
+2023-04-23 05:38:46,870 [MainThread] [INFO ]  
+-------- round 63 --------
+2023-04-23 05:38:46,870 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:41:37,559 [MainThread] [INFO ]  Server train time: 170.68846225738525
+2023-04-23 05:41:37,560 [MainThread] [INFO ]  
+-------- round 64 --------
+2023-04-23 05:41:37,560 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:44:28,209 [MainThread] [INFO ]  Server train time: 170.6484408378601
+2023-04-23 05:44:28,209 [MainThread] [INFO ]  
+-------- round 65 --------
+2023-04-23 05:44:28,209 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:47:18,240 [MainThread] [INFO ]  Server train time: 170.03060460090637
+2023-04-23 05:47:18,241 [MainThread] [INFO ]  
+-------- round 66 --------
+2023-04-23 05:47:18,241 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:50:09,235 [MainThread] [INFO ]  Server train time: 170.99323225021362
+2023-04-23 05:50:09,235 [MainThread] [INFO ]  
+-------- round 67 --------
+2023-04-23 05:50:09,235 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:52:59,258 [MainThread] [INFO ]  Server train time: 170.02266645431519
+2023-04-23 05:52:59,259 [MainThread] [INFO ]  
+-------- round 68 --------
+2023-04-23 05:52:59,259 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:55:50,766 [MainThread] [INFO ]  Server train time: 171.50648403167725
+2023-04-23 05:55:50,767 [MainThread] [INFO ]  
+-------- round 69 --------
+2023-04-23 05:55:50,767 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:58:41,461 [MainThread] [INFO ]  Server train time: 170.6943051815033
+2023-04-23 05:58:41,465 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_69.pth
+2023-04-23 05:58:41,465 [MainThread] [INFO ]  
+-------- round 70 --------
+2023-04-23 05:58:41,465 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:01:31,980 [MainThread] [INFO ]  Server train time: 170.51446437835693
+2023-04-23 06:01:31,981 [MainThread] [INFO ]  
+-------- round 71 --------
+2023-04-23 06:01:31,981 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:04:22,400 [MainThread] [INFO ]  Server train time: 170.4184970855713
+2023-04-23 06:04:22,400 [MainThread] [INFO ]  
+-------- round 72 --------
+2023-04-23 06:04:22,400 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:07:12,780 [MainThread] [INFO ]  Server train time: 170.37933158874512
+2023-04-23 06:07:12,781 [MainThread] [INFO ]  
+-------- round 73 --------
+2023-04-23 06:07:12,781 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:10:02,993 [MainThread] [INFO ]  Server train time: 170.2116358280182
+2023-04-23 06:10:02,994 [MainThread] [INFO ]  
+-------- round 74 --------
+2023-04-23 06:10:02,994 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:12:53,594 [MainThread] [INFO ]  Server train time: 170.60015892982483
+2023-04-23 06:12:53,595 [MainThread] [INFO ]  
+-------- round 75 --------
+2023-04-23 06:12:53,595 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:15:44,462 [MainThread] [INFO ]  Server train time: 170.8670904636383
+2023-04-23 06:15:44,463 [MainThread] [INFO ]  
+-------- round 76 --------
+2023-04-23 06:15:44,463 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:18:34,955 [MainThread] [INFO ]  Server train time: 170.49172472953796
+2023-04-23 06:18:34,956 [MainThread] [INFO ]  
+-------- round 77 --------
+2023-04-23 06:18:34,956 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:21:25,098 [MainThread] [INFO ]  Server train time: 170.14142489433289
+2023-04-23 06:21:25,099 [MainThread] [INFO ]  
+-------- round 78 --------
+2023-04-23 06:21:25,099 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:24:16,009 [MainThread] [INFO ]  Server train time: 170.91022872924805
+2023-04-23 06:24:16,010 [MainThread] [INFO ]  
+-------- round 79 --------
+2023-04-23 06:24:16,010 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:27:07,159 [MainThread] [INFO ]  Server train time: 171.14819407463074
+2023-04-23 06:27:07,162 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_79.pth
+2023-04-23 06:27:07,162 [MainThread] [INFO ]  
+-------- round 80 --------
+2023-04-23 06:27:07,162 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:29:57,501 [MainThread] [INFO ]  Server train time: 170.3381826877594
+2023-04-23 06:29:57,501 [MainThread] [INFO ]  
+-------- round 81 --------
+2023-04-23 06:29:57,502 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:32:48,282 [MainThread] [INFO ]  Server train time: 170.7805633544922
+2023-04-23 06:32:48,283 [MainThread] [INFO ]  
+-------- round 82 --------
+2023-04-23 06:32:48,283 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:35:39,556 [MainThread] [INFO ]  Server train time: 171.2723729610443
+2023-04-23 06:35:39,557 [MainThread] [INFO ]  
+-------- round 83 --------
+2023-04-23 06:35:39,557 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:38:30,961 [MainThread] [INFO ]  Server train time: 171.4040949344635
+2023-04-23 06:38:30,962 [MainThread] [INFO ]  
+-------- round 84 --------
+2023-04-23 06:38:30,962 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:41:22,333 [MainThread] [INFO ]  Server train time: 171.37049174308777
+2023-04-23 06:41:22,334 [MainThread] [INFO ]  
+-------- round 85 --------
+2023-04-23 06:41:22,334 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:44:12,760 [MainThread] [INFO ]  Server train time: 170.42569208145142
+2023-04-23 06:44:12,760 [MainThread] [INFO ]  
+-------- round 86 --------
+2023-04-23 06:44:12,761 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:47:03,714 [MainThread] [INFO ]  Server train time: 170.9526491165161
+2023-04-23 06:47:03,714 [MainThread] [INFO ]  
+-------- round 87 --------
+2023-04-23 06:47:03,714 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:49:54,565 [MainThread] [INFO ]  Server train time: 170.85071277618408
+2023-04-23 06:49:54,566 [MainThread] [INFO ]  
+-------- round 88 --------
+2023-04-23 06:49:54,566 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:52:45,949 [MainThread] [INFO ]  Server train time: 171.38261771202087
+2023-04-23 06:52:45,950 [MainThread] [INFO ]  
+-------- round 89 --------
+2023-04-23 06:52:45,950 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:55:36,444 [MainThread] [INFO ]  Server train time: 170.49340796470642
+2023-04-23 06:55:36,447 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_89.pth
+2023-04-23 06:55:36,447 [MainThread] [INFO ]  
+-------- round 90 --------
+2023-04-23 06:55:36,447 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:58:27,739 [MainThread] [INFO ]  Server train time: 171.29119157791138
+2023-04-23 06:58:27,740 [MainThread] [INFO ]  
+-------- round 91 --------
+2023-04-23 06:58:27,740 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:01:18,036 [MainThread] [INFO ]  Server train time: 170.29581594467163
+2023-04-23 07:01:18,037 [MainThread] [INFO ]  
+-------- round 92 --------
+2023-04-23 07:01:18,037 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:04:08,823 [MainThread] [INFO ]  Server train time: 170.7857780456543
+2023-04-23 07:04:08,823 [MainThread] [INFO ]  
+-------- round 93 --------
+2023-04-23 07:04:08,824 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:06:59,289 [MainThread] [INFO ]  Server train time: 170.46513438224792
+2023-04-23 07:06:59,290 [MainThread] [INFO ]  
+-------- round 94 --------
+2023-04-23 07:06:59,290 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:09:50,048 [MainThread] [INFO ]  Server train time: 170.75758051872253
+2023-04-23 07:09:50,049 [MainThread] [INFO ]  
+-------- round 95 --------
+2023-04-23 07:09:50,049 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:12:41,006 [MainThread] [INFO ]  Server train time: 170.95737743377686
+2023-04-23 07:12:41,007 [MainThread] [INFO ]  
+-------- round 96 --------
+2023-04-23 07:12:41,007 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:15:31,340 [MainThread] [INFO ]  Server train time: 170.3321979045868
+2023-04-23 07:15:31,340 [MainThread] [INFO ]  
+-------- round 97 --------
+2023-04-23 07:15:31,340 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:18:21,999 [MainThread] [INFO ]  Server train time: 170.65842461585999
+2023-04-23 07:18:22,000 [MainThread] [INFO ]  
+-------- round 98 --------
+2023-04-23 07:18:22,000 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:21:13,028 [MainThread] [INFO ]  Server train time: 171.0275616645813
+2023-04-23 07:21:13,029 [MainThread] [INFO ]  
+-------- round 99 --------
+2023-04-23 07:21:13,029 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:24:04,106 [MainThread] [INFO ]  Server train time: 171.07732701301575
+2023-04-23 07:24:04,110 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_99.pth
+2023-04-23 07:24:04,110 [MainThread] [INFO ]  
+-------- round 100 --------
+2023-04-23 07:24:04,110 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:26:53,824 [MainThread] [INFO ]  Server train time: 169.71398639678955
+2023-04-23 07:26:53,825 [MainThread] [INFO ]  
+-------- round 101 --------
+2023-04-23 07:26:53,825 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:29:44,160 [MainThread] [INFO ]  Server train time: 170.33450603485107
+2023-04-23 07:29:44,161 [MainThread] [INFO ]  
+-------- round 102 --------
+2023-04-23 07:29:44,161 [MainThread] [INFO ]  --- start training ---

@@ -1,0 +1,1723 @@
+2023-04-23 02:38:54,588 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': '../data/', 'dataset': 'cifar100', 'split_type': 'class', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.8, 'class_per_client': 50, 'num_of_clients': 10, 'alpha': 0.2, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 1000, 'clients_per_round': 2, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 64, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'FedAvg', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 16, 'test_batch_size': 5, 'local_epoch': 20, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.5, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-04-23 02:38:54,858 [MainThread] [INFO ]  Total training data amount: 50000
+2023-04-23 02:38:54,858 [MainThread] [INFO ]  Total testing data amount: 10000
+2023-04-23 02:38:54,881 [MainThread] [INFO ]  Clients in total: 10
+2023-04-23 02:38:54,900 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:38:59,725 [MainThread] [INFO ]  Test time 4.82s, Test loss: 0.92, Test accuracy: 0.92%
+2023-04-23 02:38:59,725 [MainThread] [INFO ]  
+-------- round 0 --------
+2023-04-23 02:38:59,725 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:40:43,908 [MainThread] [INFO ]  Server train time: 104.18235206604004
+2023-04-23 02:40:43,909 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:40:46,457 [MainThread] [INFO ]  Test time 2.55s, Test loss: 1.22, Test accuracy: 15.11%
+2023-04-23 02:40:46,457 [MainThread] [INFO ]  
+-------- round 1 --------
+2023-04-23 02:40:46,458 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:42:30,785 [MainThread] [INFO ]  Server train time: 104.3273708820343
+2023-04-23 02:42:30,786 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:42:33,350 [MainThread] [INFO ]  Test time 2.56s, Test loss: 0.75, Test accuracy: 17.75%
+2023-04-23 02:42:33,350 [MainThread] [INFO ]  
+-------- round 2 --------
+2023-04-23 02:42:33,350 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:44:19,016 [MainThread] [INFO ]  Server train time: 105.66529512405396
+2023-04-23 02:44:19,016 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:44:22,015 [MainThread] [INFO ]  Test time 3.00s, Test loss: 0.65, Test accuracy: 22.33%
+2023-04-23 02:44:22,016 [MainThread] [INFO ]  
+-------- round 3 --------
+2023-04-23 02:44:22,016 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:46:10,361 [MainThread] [INFO ]  Server train time: 108.34449982643127
+2023-04-23 02:46:10,361 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:46:14,612 [MainThread] [INFO ]  Test time 4.25s, Test loss: 0.61, Test accuracy: 26.58%
+2023-04-23 02:46:14,613 [MainThread] [INFO ]  
+-------- round 4 --------
+2023-04-23 02:46:14,613 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:48:08,404 [MainThread] [INFO ]  Server train time: 113.7912061214447
+2023-04-23 02:48:08,405 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:48:13,608 [MainThread] [INFO ]  Test time 5.20s, Test loss: 0.56, Test accuracy: 30.47%
+2023-04-23 02:48:13,609 [MainThread] [INFO ]  
+-------- round 5 --------
+2023-04-23 02:48:13,609 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:50:07,487 [MainThread] [INFO ]  Server train time: 113.87780117988586
+2023-04-23 02:50:07,488 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:50:13,743 [MainThread] [INFO ]  Test time 6.26s, Test loss: 1.14, Test accuracy: 25.08%
+2023-04-23 02:50:13,744 [MainThread] [INFO ]  
+-------- round 6 --------
+2023-04-23 02:50:13,744 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:52:06,909 [MainThread] [INFO ]  Server train time: 113.16446185112
+2023-04-23 02:52:06,909 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:52:13,107 [MainThread] [INFO ]  Test time 6.20s, Test loss: 0.56, Test accuracy: 30.78%
+2023-04-23 02:52:13,108 [MainThread] [INFO ]  
+-------- round 7 --------
+2023-04-23 02:52:13,108 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:54:09,279 [MainThread] [INFO ]  Server train time: 116.17026877403259
+2023-04-23 02:54:09,279 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:54:15,250 [MainThread] [INFO ]  Test time 5.97s, Test loss: 0.55, Test accuracy: 32.83%
+2023-04-23 02:54:15,250 [MainThread] [INFO ]  
+-------- round 8 --------
+2023-04-23 02:54:15,250 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:56:13,507 [MainThread] [INFO ]  Server train time: 118.2562997341156
+2023-04-23 02:56:13,508 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:56:19,576 [MainThread] [INFO ]  Test time 6.07s, Test loss: 1.16, Test accuracy: 25.57%
+2023-04-23 02:56:19,577 [MainThread] [INFO ]  
+-------- round 9 --------
+2023-04-23 02:56:19,577 [MainThread] [INFO ]  --- start training ---
+2023-04-23 02:58:16,687 [MainThread] [INFO ]  Server train time: 117.10964250564575
+2023-04-23 02:58:16,687 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 02:58:22,895 [MainThread] [INFO ]  Test time 6.21s, Test loss: 1.28, Test accuracy: 25.13%
+2023-04-23 02:58:22,898 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_9.pth
+2023-04-23 02:58:22,898 [MainThread] [INFO ]  
+-------- round 10 --------
+2023-04-23 02:58:22,898 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:00:21,736 [MainThread] [INFO ]  Server train time: 118.83778405189514
+2023-04-23 03:00:21,737 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:00:26,760 [MainThread] [INFO ]  Test time 5.02s, Test loss: 1.36, Test accuracy: 25.42%
+2023-04-23 03:00:26,760 [MainThread] [INFO ]  
+-------- round 11 --------
+2023-04-23 03:00:26,760 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:02:24,473 [MainThread] [INFO ]  Server train time: 117.71248698234558
+2023-04-23 03:02:24,474 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:02:28,666 [MainThread] [INFO ]  Test time 4.19s, Test loss: 0.62, Test accuracy: 28.86%
+2023-04-23 03:02:28,666 [MainThread] [INFO ]  
+-------- round 12 --------
+2023-04-23 03:02:28,666 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:04:26,803 [MainThread] [INFO ]  Server train time: 118.13600254058838
+2023-04-23 03:04:26,803 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:04:32,960 [MainThread] [INFO ]  Test time 6.16s, Test loss: 0.57, Test accuracy: 31.73%
+2023-04-23 03:04:32,960 [MainThread] [INFO ]  
+-------- round 13 --------
+2023-04-23 03:04:32,960 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:06:30,014 [MainThread] [INFO ]  Server train time: 117.05308389663696
+2023-04-23 03:06:30,014 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:06:36,135 [MainThread] [INFO ]  Test time 6.12s, Test loss: 1.17, Test accuracy: 27.09%
+2023-04-23 03:06:36,135 [MainThread] [INFO ]  
+-------- round 14 --------
+2023-04-23 03:06:36,135 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:08:34,925 [MainThread] [INFO ]  Server train time: 118.78868842124939
+2023-04-23 03:08:34,925 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:08:41,166 [MainThread] [INFO ]  Test time 6.24s, Test loss: 1.20, Test accuracy: 27.08%
+2023-04-23 03:08:41,167 [MainThread] [INFO ]  
+-------- round 15 --------
+2023-04-23 03:08:41,167 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:10:39,304 [MainThread] [INFO ]  Server train time: 118.13723850250244
+2023-04-23 03:10:39,305 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:10:44,342 [MainThread] [INFO ]  Test time 5.04s, Test loss: 1.02, Test accuracy: 26.70%
+2023-04-23 03:10:44,343 [MainThread] [INFO ]  
+-------- round 16 --------
+2023-04-23 03:10:44,343 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:12:41,799 [MainThread] [INFO ]  Server train time: 117.45539546012878
+2023-04-23 03:12:41,799 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:12:47,996 [MainThread] [INFO ]  Test time 6.20s, Test loss: 1.14, Test accuracy: 26.54%
+2023-04-23 03:12:47,997 [MainThread] [INFO ]  
+-------- round 17 --------
+2023-04-23 03:12:47,997 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:14:46,092 [MainThread] [INFO ]  Server train time: 118.09454917907715
+2023-04-23 03:14:46,092 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:14:51,167 [MainThread] [INFO ]  Test time 5.07s, Test loss: 0.55, Test accuracy: 34.76%
+2023-04-23 03:14:51,167 [MainThread] [INFO ]  
+-------- round 18 --------
+2023-04-23 03:14:51,167 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:16:48,722 [MainThread] [INFO ]  Server train time: 117.55477333068848
+2023-04-23 03:16:48,723 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:16:54,931 [MainThread] [INFO ]  Test time 6.21s, Test loss: 1.03, Test accuracy: 27.42%
+2023-04-23 03:16:54,931 [MainThread] [INFO ]  
+-------- round 19 --------
+2023-04-23 03:16:54,931 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:18:52,883 [MainThread] [INFO ]  Server train time: 117.95165085792542
+2023-04-23 03:18:52,884 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:18:59,093 [MainThread] [INFO ]  Test time 6.21s, Test loss: 1.24, Test accuracy: 27.62%
+2023-04-23 03:18:59,096 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_19.pth
+2023-04-23 03:18:59,097 [MainThread] [INFO ]  
+-------- round 20 --------
+2023-04-23 03:18:59,097 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:20:55,864 [MainThread] [INFO ]  Server train time: 116.76636719703674
+2023-04-23 03:20:55,864 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:21:02,089 [MainThread] [INFO ]  Test time 6.22s, Test loss: 1.33, Test accuracy: 27.81%
+2023-04-23 03:21:02,089 [MainThread] [INFO ]  
+-------- round 21 --------
+2023-04-23 03:21:02,089 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:23:00,299 [MainThread] [INFO ]  Server train time: 118.20920062065125
+2023-04-23 03:23:00,299 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:23:06,531 [MainThread] [INFO ]  Test time 6.23s, Test loss: 0.59, Test accuracy: 31.76%
+2023-04-23 03:23:06,532 [MainThread] [INFO ]  
+-------- round 22 --------
+2023-04-23 03:23:06,532 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:25:06,477 [MainThread] [INFO ]  Server train time: 119.94497513771057
+2023-04-23 03:25:06,478 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:25:12,770 [MainThread] [INFO ]  Test time 6.29s, Test loss: 0.54, Test accuracy: 34.77%
+2023-04-23 03:25:12,770 [MainThread] [INFO ]  
+-------- round 23 --------
+2023-04-23 03:25:12,771 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:27:13,100 [MainThread] [INFO ]  Server train time: 120.32907462120056
+2023-04-23 03:27:13,101 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:27:20,768 [MainThread] [INFO ]  Test time 7.67s, Test loss: 0.49, Test accuracy: 38.18%
+2023-04-23 03:27:20,769 [MainThread] [INFO ]  
+-------- round 24 --------
+2023-04-23 03:27:20,769 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:29:20,480 [MainThread] [INFO ]  Server train time: 119.71068477630615
+2023-04-23 03:29:20,480 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:29:28,221 [MainThread] [INFO ]  Test time 7.74s, Test loss: 0.50, Test accuracy: 37.95%
+2023-04-23 03:29:28,221 [MainThread] [INFO ]  
+-------- round 25 --------
+2023-04-23 03:29:28,222 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:31:29,490 [MainThread] [INFO ]  Server train time: 121.26757025718689
+2023-04-23 03:31:29,490 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:31:37,200 [MainThread] [INFO ]  Test time 7.71s, Test loss: 1.12, Test accuracy: 27.98%
+2023-04-23 03:31:37,200 [MainThread] [INFO ]  
+-------- round 26 --------
+2023-04-23 03:31:37,200 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:33:37,284 [MainThread] [INFO ]  Server train time: 120.08336925506592
+2023-04-23 03:33:37,284 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:33:43,696 [MainThread] [INFO ]  Test time 6.41s, Test loss: 1.04, Test accuracy: 27.03%
+2023-04-23 03:33:43,697 [MainThread] [INFO ]  
+-------- round 27 --------
+2023-04-23 03:33:43,697 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:35:44,246 [MainThread] [INFO ]  Server train time: 120.54823732376099
+2023-04-23 03:35:44,246 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:35:51,906 [MainThread] [INFO ]  Test time 7.66s, Test loss: 1.14, Test accuracy: 26.64%
+2023-04-23 03:35:51,906 [MainThread] [INFO ]  
+-------- round 28 --------
+2023-04-23 03:35:51,906 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:37:52,184 [MainThread] [INFO ]  Server train time: 120.27729058265686
+2023-04-23 03:37:52,184 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:37:58,406 [MainThread] [INFO ]  Test time 6.22s, Test loss: 0.53, Test accuracy: 35.83%
+2023-04-23 03:37:58,407 [MainThread] [INFO ]  
+-------- round 29 --------
+2023-04-23 03:37:58,407 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:39:59,590 [MainThread] [INFO ]  Server train time: 121.18317699432373
+2023-04-23 03:39:59,591 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:40:07,382 [MainThread] [INFO ]  Test time 7.79s, Test loss: 1.15, Test accuracy: 27.80%
+2023-04-23 03:40:07,385 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_29.pth
+2023-04-23 03:40:07,386 [MainThread] [INFO ]  
+-------- round 30 --------
+2023-04-23 03:40:07,386 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:42:07,487 [MainThread] [INFO ]  Server train time: 120.10082840919495
+2023-04-23 03:42:07,487 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:42:15,330 [MainThread] [INFO ]  Test time 7.84s, Test loss: 0.52, Test accuracy: 36.61%
+2023-04-23 03:42:15,331 [MainThread] [INFO ]  
+-------- round 31 --------
+2023-04-23 03:42:15,331 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:44:15,820 [MainThread] [INFO ]  Server train time: 120.48912215232849
+2023-04-23 03:44:15,821 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:44:23,828 [MainThread] [INFO ]  Test time 8.01s, Test loss: 0.50, Test accuracy: 38.26%
+2023-04-23 03:44:23,828 [MainThread] [INFO ]  
+-------- round 32 --------
+2023-04-23 03:44:23,828 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:46:24,825 [MainThread] [INFO ]  Server train time: 120.9965353012085
+2023-04-23 03:46:24,826 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:46:31,734 [MainThread] [INFO ]  Test time 6.91s, Test loss: 1.18, Test accuracy: 27.88%
+2023-04-23 03:46:31,734 [MainThread] [INFO ]  
+-------- round 33 --------
+2023-04-23 03:46:31,734 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:48:32,876 [MainThread] [INFO ]  Server train time: 121.14141082763672
+2023-04-23 03:48:32,877 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:48:41,258 [MainThread] [INFO ]  Test time 8.38s, Test loss: 0.52, Test accuracy: 36.41%
+2023-04-23 03:48:41,259 [MainThread] [INFO ]  
+-------- round 34 --------
+2023-04-23 03:48:41,259 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:50:41,815 [MainThread] [INFO ]  Server train time: 120.55531024932861
+2023-04-23 03:50:41,815 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:50:50,117 [MainThread] [INFO ]  Test time 8.30s, Test loss: 0.49, Test accuracy: 38.94%
+2023-04-23 03:50:50,118 [MainThread] [INFO ]  
+-------- round 35 --------
+2023-04-23 03:50:50,118 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:52:50,508 [MainThread] [INFO ]  Server train time: 120.38942098617554
+2023-04-23 03:52:50,508 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:52:57,872 [MainThread] [INFO ]  Test time 7.36s, Test loss: 1.07, Test accuracy: 28.17%
+2023-04-23 03:52:57,872 [MainThread] [INFO ]  
+-------- round 36 --------
+2023-04-23 03:52:57,873 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:54:59,290 [MainThread] [INFO ]  Server train time: 121.41698670387268
+2023-04-23 03:54:59,290 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:55:06,215 [MainThread] [INFO ]  Test time 6.92s, Test loss: 1.08, Test accuracy: 28.14%
+2023-04-23 03:55:06,216 [MainThread] [INFO ]  
+-------- round 37 --------
+2023-04-23 03:55:06,216 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:57:06,278 [MainThread] [INFO ]  Server train time: 120.06226801872253
+2023-04-23 03:57:06,279 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:57:14,244 [MainThread] [INFO ]  Test time 7.96s, Test loss: 0.52, Test accuracy: 37.60%
+2023-04-23 03:57:14,244 [MainThread] [INFO ]  
+-------- round 38 --------
+2023-04-23 03:57:14,244 [MainThread] [INFO ]  --- start training ---
+2023-04-23 03:59:14,438 [MainThread] [INFO ]  Server train time: 120.19276404380798
+2023-04-23 03:59:14,438 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 03:59:22,266 [MainThread] [INFO ]  Test time 7.83s, Test loss: 1.09, Test accuracy: 28.09%
+2023-04-23 03:59:22,266 [MainThread] [INFO ]  
+-------- round 39 --------
+2023-04-23 03:59:22,266 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:01:22,575 [MainThread] [INFO ]  Server train time: 120.3079788684845
+2023-04-23 04:01:22,575 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:01:28,859 [MainThread] [INFO ]  Test time 6.28s, Test loss: 0.49, Test accuracy: 38.90%
+2023-04-23 04:01:28,862 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_39.pth
+2023-04-23 04:01:28,862 [MainThread] [INFO ]  
+-------- round 40 --------
+2023-04-23 04:01:28,862 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:03:30,652 [MainThread] [INFO ]  Server train time: 121.78997349739075
+2023-04-23 04:03:30,653 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:03:38,253 [MainThread] [INFO ]  Test time 7.60s, Test loss: 0.49, Test accuracy: 39.07%
+2023-04-23 04:03:38,254 [MainThread] [INFO ]  
+-------- round 41 --------
+2023-04-23 04:03:38,254 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:05:37,929 [MainThread] [INFO ]  Server train time: 119.67478227615356
+2023-04-23 04:05:37,929 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:05:44,245 [MainThread] [INFO ]  Test time 6.32s, Test loss: 0.48, Test accuracy: 40.03%
+2023-04-23 04:05:44,246 [MainThread] [INFO ]  
+-------- round 42 --------
+2023-04-23 04:05:44,246 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:07:44,816 [MainThread] [INFO ]  Server train time: 120.57013487815857
+2023-04-23 04:07:44,817 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:07:52,380 [MainThread] [INFO ]  Test time 7.56s, Test loss: 0.48, Test accuracy: 40.12%
+2023-04-23 04:07:52,380 [MainThread] [INFO ]  
+-------- round 43 --------
+2023-04-23 04:07:52,380 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:09:53,510 [MainThread] [INFO ]  Server train time: 121.12973856925964
+2023-04-23 04:09:53,511 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:09:59,685 [MainThread] [INFO ]  Test time 6.17s, Test loss: 1.14, Test accuracy: 28.29%
+2023-04-23 04:09:59,685 [MainThread] [INFO ]  
+-------- round 44 --------
+2023-04-23 04:09:59,685 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:12:01,573 [MainThread] [INFO ]  Server train time: 121.8872606754303
+2023-04-23 04:12:01,573 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:12:09,223 [MainThread] [INFO ]  Test time 7.65s, Test loss: 0.50, Test accuracy: 38.80%
+2023-04-23 04:12:09,224 [MainThread] [INFO ]  
+-------- round 45 --------
+2023-04-23 04:12:09,224 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:14:08,890 [MainThread] [INFO ]  Server train time: 119.66604828834534
+2023-04-23 04:14:08,891 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:14:15,126 [MainThread] [INFO ]  Test time 6.24s, Test loss: 1.12, Test accuracy: 27.52%
+2023-04-23 04:14:15,127 [MainThread] [INFO ]  
+-------- round 46 --------
+2023-04-23 04:14:15,127 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:16:14,910 [MainThread] [INFO ]  Server train time: 119.78293943405151
+2023-04-23 04:16:14,911 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:16:22,615 [MainThread] [INFO ]  Test time 7.70s, Test loss: 0.50, Test accuracy: 37.71%
+2023-04-23 04:16:22,616 [MainThread] [INFO ]  
+-------- round 47 --------
+2023-04-23 04:16:22,616 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:18:23,498 [MainThread] [INFO ]  Server train time: 120.88192486763
+2023-04-23 04:18:23,498 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:18:28,661 [MainThread] [INFO ]  Test time 5.16s, Test loss: 0.49, Test accuracy: 39.42%
+2023-04-23 04:18:28,661 [MainThread] [INFO ]  
+-------- round 48 --------
+2023-04-23 04:18:28,661 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:20:30,017 [MainThread] [INFO ]  Server train time: 121.35551357269287
+2023-04-23 04:20:30,018 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:20:37,698 [MainThread] [INFO ]  Test time 7.68s, Test loss: 1.08, Test accuracy: 29.16%
+2023-04-23 04:20:37,699 [MainThread] [INFO ]  
+-------- round 49 --------
+2023-04-23 04:20:37,699 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:22:38,021 [MainThread] [INFO ]  Server train time: 120.32175874710083
+2023-04-23 04:22:38,021 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:22:45,605 [MainThread] [INFO ]  Test time 7.58s, Test loss: 0.50, Test accuracy: 39.14%
+2023-04-23 04:22:45,608 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_49.pth
+2023-04-23 04:22:45,608 [MainThread] [INFO ]  
+-------- round 50 --------
+2023-04-23 04:22:45,608 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:24:45,229 [MainThread] [INFO ]  Server train time: 119.61970019340515
+2023-04-23 04:24:45,229 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:24:52,937 [MainThread] [INFO ]  Test time 7.71s, Test loss: 0.48, Test accuracy: 40.47%
+2023-04-23 04:24:52,937 [MainThread] [INFO ]  
+-------- round 51 --------
+2023-04-23 04:24:52,937 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:26:54,209 [MainThread] [INFO ]  Server train time: 121.27165007591248
+2023-04-23 04:26:54,210 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:26:59,754 [MainThread] [INFO ]  Test time 5.54s, Test loss: 0.49, Test accuracy: 39.09%
+2023-04-23 04:26:59,755 [MainThread] [INFO ]  
+-------- round 52 --------
+2023-04-23 04:26:59,755 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:29:00,126 [MainThread] [INFO ]  Server train time: 120.37081933021545
+2023-04-23 04:29:00,126 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:29:07,811 [MainThread] [INFO ]  Test time 7.68s, Test loss: 1.09, Test accuracy: 29.06%
+2023-04-23 04:29:07,811 [MainThread] [INFO ]  
+-------- round 53 --------
+2023-04-23 04:29:07,811 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:31:07,795 [MainThread] [INFO ]  Server train time: 119.98374724388123
+2023-04-23 04:31:07,796 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:31:15,490 [MainThread] [INFO ]  Test time 7.69s, Test loss: 0.53, Test accuracy: 36.56%
+2023-04-23 04:31:15,490 [MainThread] [INFO ]  
+-------- round 54 --------
+2023-04-23 04:31:15,490 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:33:15,937 [MainThread] [INFO ]  Server train time: 120.44649505615234
+2023-04-23 04:33:15,938 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:33:23,653 [MainThread] [INFO ]  Test time 7.72s, Test loss: 1.12, Test accuracy: 27.66%
+2023-04-23 04:33:23,654 [MainThread] [INFO ]  
+-------- round 55 --------
+2023-04-23 04:33:23,654 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:35:25,180 [MainThread] [INFO ]  Server train time: 121.5256929397583
+2023-04-23 04:35:25,181 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:35:32,464 [MainThread] [INFO ]  Test time 7.28s, Test loss: 1.18, Test accuracy: 27.85%
+2023-04-23 04:35:32,464 [MainThread] [INFO ]  
+-------- round 56 --------
+2023-04-23 04:35:32,464 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:37:32,521 [MainThread] [INFO ]  Server train time: 120.05589413642883
+2023-04-23 04:37:32,521 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:37:38,665 [MainThread] [INFO ]  Test time 6.14s, Test loss: 0.52, Test accuracy: 36.91%
+2023-04-23 04:37:38,665 [MainThread] [INFO ]  
+-------- round 57 --------
+2023-04-23 04:37:38,665 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:39:38,349 [MainThread] [INFO ]  Server train time: 119.68279099464417
+2023-04-23 04:39:38,349 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:39:46,014 [MainThread] [INFO ]  Test time 7.67s, Test loss: 0.48, Test accuracy: 39.57%
+2023-04-23 04:39:46,015 [MainThread] [INFO ]  
+-------- round 58 --------
+2023-04-23 04:39:46,015 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:41:45,591 [MainThread] [INFO ]  Server train time: 119.57620644569397
+2023-04-23 04:41:45,592 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:41:53,182 [MainThread] [INFO ]  Test time 7.59s, Test loss: 1.15, Test accuracy: 28.27%
+2023-04-23 04:41:53,183 [MainThread] [INFO ]  
+-------- round 59 --------
+2023-04-23 04:41:53,183 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:43:55,150 [MainThread] [INFO ]  Server train time: 121.96660876274109
+2023-04-23 04:43:55,150 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:44:02,820 [MainThread] [INFO ]  Test time 7.67s, Test loss: 1.16, Test accuracy: 28.52%
+2023-04-23 04:44:02,823 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_59.pth
+2023-04-23 04:44:02,823 [MainThread] [INFO ]  
+-------- round 60 --------
+2023-04-23 04:44:02,823 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:46:03,103 [MainThread] [INFO ]  Server train time: 120.27911615371704
+2023-04-23 04:46:03,103 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:46:10,352 [MainThread] [INFO ]  Test time 7.25s, Test loss: 0.54, Test accuracy: 35.32%
+2023-04-23 04:46:10,352 [MainThread] [INFO ]  
+-------- round 61 --------
+2023-04-23 04:46:10,352 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:48:10,229 [MainThread] [INFO ]  Server train time: 119.87569832801819
+2023-04-23 04:48:10,229 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:48:17,891 [MainThread] [INFO ]  Test time 7.66s, Test loss: 1.20, Test accuracy: 28.39%
+2023-04-23 04:48:17,891 [MainThread] [INFO ]  
+-------- round 62 --------
+2023-04-23 04:48:17,891 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:50:17,445 [MainThread] [INFO ]  Server train time: 119.55276131629944
+2023-04-23 04:50:17,445 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:50:24,223 [MainThread] [INFO ]  Test time 6.78s, Test loss: 1.22, Test accuracy: 27.97%
+2023-04-23 04:50:24,223 [MainThread] [INFO ]  
+-------- round 63 --------
+2023-04-23 04:50:24,223 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:52:26,184 [MainThread] [INFO ]  Server train time: 121.9608736038208
+2023-04-23 04:52:26,185 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:52:33,791 [MainThread] [INFO ]  Test time 7.61s, Test loss: 1.07, Test accuracy: 28.68%
+2023-04-23 04:52:33,791 [MainThread] [INFO ]  
+-------- round 64 --------
+2023-04-23 04:52:33,791 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:54:34,281 [MainThread] [INFO ]  Server train time: 120.48919153213501
+2023-04-23 04:54:34,281 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:54:41,943 [MainThread] [INFO ]  Test time 7.66s, Test loss: 1.08, Test accuracy: 28.47%
+2023-04-23 04:54:41,944 [MainThread] [INFO ]  
+-------- round 65 --------
+2023-04-23 04:54:41,944 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:56:42,011 [MainThread] [INFO ]  Server train time: 120.06658625602722
+2023-04-23 04:56:42,011 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:56:49,680 [MainThread] [INFO ]  Test time 7.67s, Test loss: 0.51, Test accuracy: 38.94%
+2023-04-23 04:56:49,681 [MainThread] [INFO ]  
+-------- round 66 --------
+2023-04-23 04:56:49,681 [MainThread] [INFO ]  --- start training ---
+2023-04-23 04:58:50,494 [MainThread] [INFO ]  Server train time: 120.81307101249695
+2023-04-23 04:58:50,495 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 04:58:56,563 [MainThread] [INFO ]  Test time 6.07s, Test loss: 1.14, Test accuracy: 27.88%
+2023-04-23 04:58:56,563 [MainThread] [INFO ]  
+-------- round 67 --------
+2023-04-23 04:58:56,564 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:00:58,095 [MainThread] [INFO ]  Server train time: 121.53142976760864
+2023-04-23 05:00:58,096 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:01:04,455 [MainThread] [INFO ]  Test time 6.36s, Test loss: 1.20, Test accuracy: 28.29%
+2023-04-23 05:01:04,455 [MainThread] [INFO ]  
+-------- round 68 --------
+2023-04-23 05:01:04,455 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:03:04,905 [MainThread] [INFO ]  Server train time: 120.44909954071045
+2023-04-23 05:03:04,905 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:03:12,509 [MainThread] [INFO ]  Test time 7.60s, Test loss: 0.50, Test accuracy: 37.63%
+2023-04-23 05:03:12,509 [MainThread] [INFO ]  
+-------- round 69 --------
+2023-04-23 05:03:12,509 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:05:12,414 [MainThread] [INFO ]  Server train time: 119.90446019172668
+2023-04-23 05:05:12,414 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:05:20,053 [MainThread] [INFO ]  Test time 7.64s, Test loss: 0.48, Test accuracy: 40.13%
+2023-04-23 05:05:20,056 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_69.pth
+2023-04-23 05:05:20,056 [MainThread] [INFO ]  
+-------- round 70 --------
+2023-04-23 05:05:20,056 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:07:20,824 [MainThread] [INFO ]  Server train time: 120.76761770248413
+2023-04-23 05:07:20,824 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:07:27,820 [MainThread] [INFO ]  Test time 7.00s, Test loss: 0.49, Test accuracy: 39.34%
+2023-04-23 05:07:27,821 [MainThread] [INFO ]  
+-------- round 71 --------
+2023-04-23 05:07:27,821 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:09:29,229 [MainThread] [INFO ]  Server train time: 121.40782690048218
+2023-04-23 05:09:29,230 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:09:35,560 [MainThread] [INFO ]  Test time 6.33s, Test loss: 0.48, Test accuracy: 40.09%
+2023-04-23 05:09:35,561 [MainThread] [INFO ]  
+-------- round 72 --------
+2023-04-23 05:09:35,561 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:11:35,993 [MainThread] [INFO ]  Server train time: 120.4319372177124
+2023-04-23 05:11:35,993 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:11:43,684 [MainThread] [INFO ]  Test time 7.69s, Test loss: 1.12, Test accuracy: 28.15%
+2023-04-23 05:11:43,684 [MainThread] [INFO ]  
+-------- round 73 --------
+2023-04-23 05:11:43,684 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:13:43,668 [MainThread] [INFO ]  Server train time: 119.98348665237427
+2023-04-23 05:13:43,669 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:13:51,294 [MainThread] [INFO ]  Test time 7.63s, Test loss: 0.52, Test accuracy: 37.58%
+2023-04-23 05:13:51,295 [MainThread] [INFO ]  
+-------- round 74 --------
+2023-04-23 05:13:51,295 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:15:51,132 [MainThread] [INFO ]  Server train time: 119.83635568618774
+2023-04-23 05:15:51,132 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:15:58,664 [MainThread] [INFO ]  Test time 7.53s, Test loss: 0.49, Test accuracy: 39.92%
+2023-04-23 05:15:58,665 [MainThread] [INFO ]  
+-------- round 75 --------
+2023-04-23 05:15:58,665 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:18:00,624 [MainThread] [INFO ]  Server train time: 121.95890402793884
+2023-04-23 05:18:00,625 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:18:08,198 [MainThread] [INFO ]  Test time 7.57s, Test loss: 1.13, Test accuracy: 28.50%
+2023-04-23 05:18:08,199 [MainThread] [INFO ]  
+-------- round 76 --------
+2023-04-23 05:18:08,199 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:20:07,611 [MainThread] [INFO ]  Server train time: 119.4119348526001
+2023-04-23 05:20:07,612 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:20:15,138 [MainThread] [INFO ]  Test time 7.53s, Test loss: 0.51, Test accuracy: 37.91%
+2023-04-23 05:20:15,139 [MainThread] [INFO ]  
+-------- round 77 --------
+2023-04-23 05:20:15,139 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:22:14,949 [MainThread] [INFO ]  Server train time: 119.80989170074463
+2023-04-23 05:22:14,950 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:22:22,587 [MainThread] [INFO ]  Test time 7.64s, Test loss: 0.47, Test accuracy: 40.52%
+2023-04-23 05:22:22,587 [MainThread] [INFO ]  
+-------- round 78 --------
+2023-04-23 05:22:22,588 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:24:23,925 [MainThread] [INFO ]  Server train time: 121.33749961853027
+2023-04-23 05:24:23,926 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:24:30,080 [MainThread] [INFO ]  Test time 6.15s, Test loss: 0.49, Test accuracy: 39.29%
+2023-04-23 05:24:30,080 [MainThread] [INFO ]  
+-------- round 79 --------
+2023-04-23 05:24:30,081 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:26:30,886 [MainThread] [INFO ]  Server train time: 120.80488991737366
+2023-04-23 05:26:30,886 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:26:38,490 [MainThread] [INFO ]  Test time 7.60s, Test loss: 1.14, Test accuracy: 28.97%
+2023-04-23 05:26:38,493 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_79.pth
+2023-04-23 05:26:38,493 [MainThread] [INFO ]  
+-------- round 80 --------
+2023-04-23 05:26:38,493 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:28:38,322 [MainThread] [INFO ]  Server train time: 119.82829475402832
+2023-04-23 05:28:38,322 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:28:46,005 [MainThread] [INFO ]  Test time 7.68s, Test loss: 0.49, Test accuracy: 39.11%
+2023-04-23 05:28:46,005 [MainThread] [INFO ]  
+-------- round 81 --------
+2023-04-23 05:28:46,005 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:30:45,249 [MainThread] [INFO ]  Server train time: 119.24282217025757
+2023-04-23 05:30:45,249 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:30:52,854 [MainThread] [INFO ]  Test time 7.60s, Test loss: 0.48, Test accuracy: 40.64%
+2023-04-23 05:30:52,855 [MainThread] [INFO ]  
+-------- round 82 --------
+2023-04-23 05:30:52,855 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:32:54,515 [MainThread] [INFO ]  Server train time: 121.65966010093689
+2023-04-23 05:32:54,515 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:33:02,183 [MainThread] [INFO ]  Test time 7.67s, Test loss: 0.46, Test accuracy: 41.19%
+2023-04-23 05:33:02,184 [MainThread] [INFO ]  
+-------- round 83 --------
+2023-04-23 05:33:02,184 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:35:02,720 [MainThread] [INFO ]  Server train time: 120.53609657287598
+2023-04-23 05:35:02,721 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:35:10,370 [MainThread] [INFO ]  Test time 7.65s, Test loss: 1.15, Test accuracy: 28.55%
+2023-04-23 05:35:10,370 [MainThread] [INFO ]  
+-------- round 84 --------
+2023-04-23 05:35:10,370 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:37:09,864 [MainThread] [INFO ]  Server train time: 119.49308800697327
+2023-04-23 05:37:09,864 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:37:17,457 [MainThread] [INFO ]  Test time 7.59s, Test loss: 0.49, Test accuracy: 39.33%
+2023-04-23 05:37:17,457 [MainThread] [INFO ]  
+-------- round 85 --------
+2023-04-23 05:37:17,457 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:39:18,114 [MainThread] [INFO ]  Server train time: 120.65656399726868
+2023-04-23 05:39:18,115 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:39:24,288 [MainThread] [INFO ]  Test time 6.17s, Test loss: 0.51, Test accuracy: 39.67%
+2023-04-23 05:39:24,289 [MainThread] [INFO ]  
+-------- round 86 --------
+2023-04-23 05:39:24,289 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:41:25,461 [MainThread] [INFO ]  Server train time: 121.17216396331787
+2023-04-23 05:41:25,462 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:41:33,089 [MainThread] [INFO ]  Test time 7.63s, Test loss: 1.11, Test accuracy: 28.07%
+2023-04-23 05:41:33,090 [MainThread] [INFO ]  
+-------- round 87 --------
+2023-04-23 05:41:33,090 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:43:33,693 [MainThread] [INFO ]  Server train time: 120.60310578346252
+2023-04-23 05:43:33,694 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:43:41,365 [MainThread] [INFO ]  Test time 7.67s, Test loss: 1.24, Test accuracy: 28.36%
+2023-04-23 05:43:41,365 [MainThread] [INFO ]  
+-------- round 88 --------
+2023-04-23 05:43:41,365 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:45:41,022 [MainThread] [INFO ]  Server train time: 119.65606713294983
+2023-04-23 05:45:41,022 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:45:48,800 [MainThread] [INFO ]  Test time 7.78s, Test loss: 1.05, Test accuracy: 29.29%
+2023-04-23 05:45:48,800 [MainThread] [INFO ]  
+-------- round 89 --------
+2023-04-23 05:45:48,800 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:47:50,116 [MainThread] [INFO ]  Server train time: 121.31586265563965
+2023-04-23 05:47:50,117 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:47:57,765 [MainThread] [INFO ]  Test time 7.65s, Test loss: 1.14, Test accuracy: 29.09%
+2023-04-23 05:47:57,768 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_89.pth
+2023-04-23 05:47:57,768 [MainThread] [INFO ]  
+-------- round 90 --------
+2023-04-23 05:47:57,768 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:49:58,302 [MainThread] [INFO ]  Server train time: 120.53336358070374
+2023-04-23 05:49:58,302 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:50:05,882 [MainThread] [INFO ]  Test time 7.58s, Test loss: 0.54, Test accuracy: 36.17%
+2023-04-23 05:50:05,882 [MainThread] [INFO ]  
+-------- round 91 --------
+2023-04-23 05:50:05,882 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:52:05,867 [MainThread] [INFO ]  Server train time: 119.98428344726562
+2023-04-23 05:52:05,867 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:52:13,603 [MainThread] [INFO ]  Test time 7.74s, Test loss: 0.48, Test accuracy: 40.74%
+2023-04-23 05:52:13,604 [MainThread] [INFO ]  
+-------- round 92 --------
+2023-04-23 05:52:13,604 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:54:13,192 [MainThread] [INFO ]  Server train time: 119.58762311935425
+2023-04-23 05:54:13,192 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:54:19,355 [MainThread] [INFO ]  Test time 6.16s, Test loss: 0.48, Test accuracy: 40.43%
+2023-04-23 05:54:19,356 [MainThread] [INFO ]  
+-------- round 93 --------
+2023-04-23 05:54:19,356 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:56:20,104 [MainThread] [INFO ]  Server train time: 120.74798965454102
+2023-04-23 05:56:20,105 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:56:27,817 [MainThread] [INFO ]  Test time 7.71s, Test loss: 1.10, Test accuracy: 28.60%
+2023-04-23 05:56:27,818 [MainThread] [INFO ]  
+-------- round 94 --------
+2023-04-23 05:56:27,818 [MainThread] [INFO ]  --- start training ---
+2023-04-23 05:58:28,174 [MainThread] [INFO ]  Server train time: 120.35574150085449
+2023-04-23 05:58:28,174 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 05:58:35,575 [MainThread] [INFO ]  Test time 7.40s, Test loss: 1.16, Test accuracy: 29.23%
+2023-04-23 05:58:35,576 [MainThread] [INFO ]  
+-------- round 95 --------
+2023-04-23 05:58:35,576 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:00:35,559 [MainThread] [INFO ]  Server train time: 119.9828929901123
+2023-04-23 06:00:35,559 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:00:43,250 [MainThread] [INFO ]  Test time 7.69s, Test loss: 0.50, Test accuracy: 38.80%
+2023-04-23 06:00:43,250 [MainThread] [INFO ]  
+-------- round 96 --------
+2023-04-23 06:00:43,250 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:02:44,044 [MainThread] [INFO ]  Server train time: 120.79363536834717
+2023-04-23 06:02:44,045 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:02:51,749 [MainThread] [INFO ]  Test time 7.70s, Test loss: 1.14, Test accuracy: 28.13%
+2023-04-23 06:02:51,750 [MainThread] [INFO ]  
+-------- round 97 --------
+2023-04-23 06:02:51,750 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:04:51,547 [MainThread] [INFO ]  Server train time: 119.79737424850464
+2023-04-23 06:04:51,548 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:04:59,515 [MainThread] [INFO ]  Test time 7.97s, Test loss: 1.07, Test accuracy: 28.59%
+2023-04-23 06:04:59,515 [MainThread] [INFO ]  
+-------- round 98 --------
+2023-04-23 06:04:59,516 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:06:59,601 [MainThread] [INFO ]  Server train time: 120.08506178855896
+2023-04-23 06:06:59,601 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:07:07,100 [MainThread] [INFO ]  Test time 7.50s, Test loss: 0.48, Test accuracy: 40.85%
+2023-04-23 06:07:07,100 [MainThread] [INFO ]  
+-------- round 99 --------
+2023-04-23 06:07:07,100 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:09:07,430 [MainThread] [INFO ]  Server train time: 120.32959914207458
+2023-04-23 06:09:07,430 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:09:15,422 [MainThread] [INFO ]  Test time 7.99s, Test loss: 0.48, Test accuracy: 40.30%
+2023-04-23 06:09:15,425 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_99.pth
+2023-04-23 06:09:15,425 [MainThread] [INFO ]  
+-------- round 100 --------
+2023-04-23 06:09:15,425 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:11:17,050 [MainThread] [INFO ]  Server train time: 121.62478494644165
+2023-04-23 06:11:17,051 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:11:25,189 [MainThread] [INFO ]  Test time 8.14s, Test loss: 0.47, Test accuracy: 41.50%
+2023-04-23 06:11:25,189 [MainThread] [INFO ]  
+-------- round 101 --------
+2023-04-23 06:11:25,189 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:13:24,978 [MainThread] [INFO ]  Server train time: 119.78884553909302
+2023-04-23 06:13:24,979 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:13:32,982 [MainThread] [INFO ]  Test time 8.00s, Test loss: 1.09, Test accuracy: 28.37%
+2023-04-23 06:13:32,982 [MainThread] [INFO ]  
+-------- round 102 --------
+2023-04-23 06:13:32,982 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:15:33,499 [MainThread] [INFO ]  Server train time: 120.51633906364441
+2023-04-23 06:15:33,499 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:15:40,979 [MainThread] [INFO ]  Test time 7.48s, Test loss: 0.49, Test accuracy: 39.34%
+2023-04-23 06:15:40,979 [MainThread] [INFO ]  
+-------- round 103 --------
+2023-04-23 06:15:40,979 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:17:42,595 [MainThread] [INFO ]  Server train time: 121.6158299446106
+2023-04-23 06:17:42,596 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:17:48,863 [MainThread] [INFO ]  Test time 6.27s, Test loss: 0.48, Test accuracy: 39.58%
+2023-04-23 06:17:48,864 [MainThread] [INFO ]  
+-------- round 104 --------
+2023-04-23 06:17:48,864 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:19:49,292 [MainThread] [INFO ]  Server train time: 120.42734169960022
+2023-04-23 06:19:49,292 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:19:56,913 [MainThread] [INFO ]  Test time 7.62s, Test loss: 0.49, Test accuracy: 39.74%
+2023-04-23 06:19:56,913 [MainThread] [INFO ]  
+-------- round 105 --------
+2023-04-23 06:19:56,913 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:21:56,579 [MainThread] [INFO ]  Server train time: 119.66531014442444
+2023-04-23 06:21:56,579 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:22:04,067 [MainThread] [INFO ]  Test time 7.49s, Test loss: 0.50, Test accuracy: 39.23%
+2023-04-23 06:22:04,067 [MainThread] [INFO ]  
+-------- round 106 --------
+2023-04-23 06:22:04,067 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:24:04,917 [MainThread] [INFO ]  Server train time: 120.84897708892822
+2023-04-23 06:24:04,917 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:24:11,751 [MainThread] [INFO ]  Test time 6.83s, Test loss: 0.49, Test accuracy: 39.25%
+2023-04-23 06:24:11,752 [MainThread] [INFO ]  
+-------- round 107 --------
+2023-04-23 06:24:11,752 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:26:13,498 [MainThread] [INFO ]  Server train time: 121.74601173400879
+2023-04-23 06:26:13,499 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:26:21,088 [MainThread] [INFO ]  Test time 7.59s, Test loss: 0.49, Test accuracy: 39.31%
+2023-04-23 06:26:21,089 [MainThread] [INFO ]  
+-------- round 108 --------
+2023-04-23 06:26:21,089 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:28:21,281 [MainThread] [INFO ]  Server train time: 120.19218611717224
+2023-04-23 06:28:21,282 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:28:28,943 [MainThread] [INFO ]  Test time 7.66s, Test loss: 1.13, Test accuracy: 28.28%
+2023-04-23 06:28:28,944 [MainThread] [INFO ]  
+-------- round 109 --------
+2023-04-23 06:28:28,944 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:30:28,222 [MainThread] [INFO ]  Server train time: 119.27814483642578
+2023-04-23 06:30:28,223 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:30:35,829 [MainThread] [INFO ]  Test time 7.61s, Test loss: 1.15, Test accuracy: 28.56%
+2023-04-23 06:30:35,832 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_109.pth
+2023-04-23 06:30:35,832 [MainThread] [INFO ]  
+-------- round 110 --------
+2023-04-23 06:30:35,832 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:32:37,473 [MainThread] [INFO ]  Server train time: 121.63989114761353
+2023-04-23 06:32:37,473 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:32:42,778 [MainThread] [INFO ]  Test time 5.30s, Test loss: 1.29, Test accuracy: 28.62%
+2023-04-23 06:32:42,778 [MainThread] [INFO ]  
+-------- round 111 --------
+2023-04-23 06:32:42,778 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:34:42,856 [MainThread] [INFO ]  Server train time: 120.07793140411377
+2023-04-23 06:34:42,857 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:34:50,638 [MainThread] [INFO ]  Test time 7.78s, Test loss: 0.56, Test accuracy: 35.23%
+2023-04-23 06:34:50,638 [MainThread] [INFO ]  
+-------- round 112 --------
+2023-04-23 06:34:50,638 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:36:50,241 [MainThread] [INFO ]  Server train time: 119.6022002696991
+2023-04-23 06:36:50,241 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:36:57,872 [MainThread] [INFO ]  Test time 7.63s, Test loss: 0.50, Test accuracy: 39.11%
+2023-04-23 06:36:57,873 [MainThread] [INFO ]  
+-------- round 113 --------
+2023-04-23 06:36:57,873 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:38:57,726 [MainThread] [INFO ]  Server train time: 119.85290741920471
+2023-04-23 06:38:57,727 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:39:05,365 [MainThread] [INFO ]  Test time 7.64s, Test loss: 1.10, Test accuracy: 29.12%
+2023-04-23 06:39:05,366 [MainThread] [INFO ]  
+-------- round 114 --------
+2023-04-23 06:39:05,366 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:41:07,271 [MainThread] [INFO ]  Server train time: 121.90439033508301
+2023-04-23 06:41:07,271 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:41:13,481 [MainThread] [INFO ]  Test time 6.21s, Test loss: 0.49, Test accuracy: 40.17%
+2023-04-23 06:41:13,481 [MainThread] [INFO ]  
+-------- round 115 --------
+2023-04-23 06:41:13,481 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:43:13,182 [MainThread] [INFO ]  Server train time: 119.70039987564087
+2023-04-23 06:43:13,183 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:43:20,861 [MainThread] [INFO ]  Test time 7.68s, Test loss: 0.50, Test accuracy: 38.83%
+2023-04-23 06:43:20,861 [MainThread] [INFO ]  
+-------- round 116 --------
+2023-04-23 06:43:20,861 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:45:20,493 [MainThread] [INFO ]  Server train time: 119.63133883476257
+2023-04-23 06:45:20,494 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:45:28,194 [MainThread] [INFO ]  Test time 7.70s, Test loss: 1.08, Test accuracy: 29.33%
+2023-04-23 06:45:28,195 [MainThread] [INFO ]  
+-------- round 117 --------
+2023-04-23 06:45:28,195 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:47:28,618 [MainThread] [INFO ]  Server train time: 120.42268347740173
+2023-04-23 06:47:28,618 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:47:34,918 [MainThread] [INFO ]  Test time 6.30s, Test loss: 1.21, Test accuracy: 28.66%
+2023-04-23 06:47:34,918 [MainThread] [INFO ]  
+-------- round 118 --------
+2023-04-23 06:47:34,918 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:49:36,956 [MainThread] [INFO ]  Server train time: 122.0368595123291
+2023-04-23 06:49:36,956 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:49:43,443 [MainThread] [INFO ]  Test time 6.49s, Test loss: 0.50, Test accuracy: 37.93%
+2023-04-23 06:49:43,443 [MainThread] [INFO ]  
+-------- round 119 --------
+2023-04-23 06:49:43,443 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:51:43,855 [MainThread] [INFO ]  Server train time: 120.41077780723572
+2023-04-23 06:51:43,855 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:51:51,944 [MainThread] [INFO ]  Test time 8.09s, Test loss: 1.10, Test accuracy: 29.06%
+2023-04-23 06:51:51,946 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_119.pth
+2023-04-23 06:51:51,947 [MainThread] [INFO ]  
+-------- round 120 --------
+2023-04-23 06:51:51,947 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:53:52,528 [MainThread] [INFO ]  Server train time: 120.58097100257874
+2023-04-23 06:53:52,528 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:54:00,584 [MainThread] [INFO ]  Test time 8.06s, Test loss: 1.17, Test accuracy: 29.78%
+2023-04-23 06:54:00,584 [MainThread] [INFO ]  
+-------- round 121 --------
+2023-04-23 06:54:00,584 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:56:01,438 [MainThread] [INFO ]  Server train time: 120.85363698005676
+2023-04-23 06:56:01,439 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:56:09,545 [MainThread] [INFO ]  Test time 8.11s, Test loss: 0.53, Test accuracy: 37.07%
+2023-04-23 06:56:09,545 [MainThread] [INFO ]  
+-------- round 122 --------
+2023-04-23 06:56:09,545 [MainThread] [INFO ]  --- start training ---
+2023-04-23 06:58:10,071 [MainThread] [INFO ]  Server train time: 120.52537488937378
+2023-04-23 06:58:10,071 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 06:58:16,625 [MainThread] [INFO ]  Test time 6.55s, Test loss: 0.50, Test accuracy: 38.99%
+2023-04-23 06:58:16,626 [MainThread] [INFO ]  
+-------- round 123 --------
+2023-04-23 06:58:16,626 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:00:16,956 [MainThread] [INFO ]  Server train time: 120.32959485054016
+2023-04-23 07:00:16,957 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:00:24,986 [MainThread] [INFO ]  Test time 8.03s, Test loss: 1.07, Test accuracy: 29.26%
+2023-04-23 07:00:24,987 [MainThread] [INFO ]  
+-------- round 124 --------
+2023-04-23 07:00:24,987 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:02:25,518 [MainThread] [INFO ]  Server train time: 120.53113532066345
+2023-04-23 07:02:25,519 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:02:33,129 [MainThread] [INFO ]  Test time 7.61s, Test loss: 1.14, Test accuracy: 28.43%
+2023-04-23 07:02:33,130 [MainThread] [INFO ]  
+-------- round 125 --------
+2023-04-23 07:02:33,130 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:04:33,956 [MainThread] [INFO ]  Server train time: 120.82567930221558
+2023-04-23 07:04:33,956 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:04:41,580 [MainThread] [INFO ]  Test time 7.62s, Test loss: 1.06, Test accuracy: 29.06%
+2023-04-23 07:04:41,581 [MainThread] [INFO ]  
+-------- round 126 --------
+2023-04-23 07:04:41,581 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:06:42,648 [MainThread] [INFO ]  Server train time: 121.06669497489929
+2023-04-23 07:06:42,648 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:06:48,927 [MainThread] [INFO ]  Test time 6.28s, Test loss: 1.12, Test accuracy: 28.83%
+2023-04-23 07:06:48,928 [MainThread] [INFO ]  
+-------- round 127 --------
+2023-04-23 07:06:48,928 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:08:49,127 [MainThread] [INFO ]  Server train time: 120.1989893913269
+2023-04-23 07:08:49,128 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:08:56,703 [MainThread] [INFO ]  Test time 7.57s, Test loss: 1.07, Test accuracy: 28.66%
+2023-04-23 07:08:56,703 [MainThread] [INFO ]  
+-------- round 128 --------
+2023-04-23 07:08:56,703 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:10:57,645 [MainThread] [INFO ]  Server train time: 120.94154357910156
+2023-04-23 07:10:57,646 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:11:03,691 [MainThread] [INFO ]  Test time 6.05s, Test loss: 1.16, Test accuracy: 27.62%
+2023-04-23 07:11:03,692 [MainThread] [INFO ]  
+-------- round 129 --------
+2023-04-23 07:11:03,692 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:13:03,381 [MainThread] [INFO ]  Server train time: 119.68917560577393
+2023-04-23 07:13:03,382 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:13:10,983 [MainThread] [INFO ]  Test time 7.60s, Test loss: 0.51, Test accuracy: 38.38%
+2023-04-23 07:13:10,986 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_129.pth
+2023-04-23 07:13:10,986 [MainThread] [INFO ]  
+-------- round 130 --------
+2023-04-23 07:13:10,986 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:15:11,532 [MainThread] [INFO ]  Server train time: 120.54581618309021
+2023-04-23 07:15:11,532 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:15:17,689 [MainThread] [INFO ]  Test time 6.16s, Test loss: 1.20, Test accuracy: 28.07%
+2023-04-23 07:15:17,689 [MainThread] [INFO ]  
+-------- round 131 --------
+2023-04-23 07:15:17,689 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:17:17,365 [MainThread] [INFO ]  Server train time: 119.67581081390381
+2023-04-23 07:17:17,366 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:17:24,996 [MainThread] [INFO ]  Test time 7.63s, Test loss: 0.50, Test accuracy: 38.79%
+2023-04-23 07:17:24,997 [MainThread] [INFO ]  
+-------- round 132 --------
+2023-04-23 07:17:24,997 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:19:25,824 [MainThread] [INFO ]  Server train time: 120.82690191268921
+2023-04-23 07:19:25,824 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:19:33,464 [MainThread] [INFO ]  Test time 7.64s, Test loss: 1.12, Test accuracy: 28.23%
+2023-04-23 07:19:33,464 [MainThread] [INFO ]  
+-------- round 133 --------
+2023-04-23 07:19:33,465 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:21:32,793 [MainThread] [INFO ]  Server train time: 119.32764887809753
+2023-04-23 07:21:32,793 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:21:40,467 [MainThread] [INFO ]  Test time 7.67s, Test loss: 0.51, Test accuracy: 37.86%
+2023-04-23 07:21:40,467 [MainThread] [INFO ]  
+-------- round 134 --------
+2023-04-23 07:21:40,467 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:23:41,047 [MainThread] [INFO ]  Server train time: 120.57921171188354
+2023-04-23 07:23:41,047 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:23:47,527 [MainThread] [INFO ]  Test time 6.48s, Test loss: 1.02, Test accuracy: 29.28%
+2023-04-23 07:23:47,527 [MainThread] [INFO ]  
+-------- round 135 --------
+2023-04-23 07:23:47,527 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:25:48,239 [MainThread] [INFO ]  Server train time: 120.71140146255493
+2023-04-23 07:25:48,239 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:25:54,440 [MainThread] [INFO ]  Test time 6.20s, Test loss: 1.23, Test accuracy: 29.06%
+2023-04-23 07:25:54,441 [MainThread] [INFO ]  
+-------- round 136 --------
+2023-04-23 07:25:54,441 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:27:53,973 [MainThread] [INFO ]  Server train time: 119.53139185905457
+2023-04-23 07:27:53,973 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:28:01,557 [MainThread] [INFO ]  Test time 7.58s, Test loss: 0.53, Test accuracy: 37.07%
+2023-04-23 07:28:01,558 [MainThread] [INFO ]  
+-------- round 137 --------
+2023-04-23 07:28:01,558 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:30:01,429 [MainThread] [INFO ]  Server train time: 119.87099170684814
+2023-04-23 07:30:01,430 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:30:08,593 [MainThread] [INFO ]  Test time 7.16s, Test loss: 0.52, Test accuracy: 38.33%
+2023-04-23 07:30:08,594 [MainThread] [INFO ]  
+-------- round 138 --------
+2023-04-23 07:30:08,594 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:32:09,025 [MainThread] [INFO ]  Server train time: 120.43084144592285
+2023-04-23 07:32:09,025 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:32:16,140 [MainThread] [INFO ]  Test time 7.11s, Test loss: 0.50, Test accuracy: 39.64%
+2023-04-23 07:32:16,140 [MainThread] [INFO ]  
+-------- round 139 --------
+2023-04-23 07:32:16,140 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:34:16,651 [MainThread] [INFO ]  Server train time: 120.51007437705994
+2023-04-23 07:34:16,651 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:34:24,584 [MainThread] [INFO ]  Test time 7.93s, Test loss: 1.07, Test accuracy: 28.85%
+2023-04-23 07:34:24,587 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_139.pth
+2023-04-23 07:34:24,587 [MainThread] [INFO ]  
+-------- round 140 --------
+2023-04-23 07:34:24,587 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:36:23,274 [MainThread] [INFO ]  Server train time: 118.68651914596558
+2023-04-23 07:36:23,275 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:36:31,147 [MainThread] [INFO ]  Test time 7.87s, Test loss: 0.50, Test accuracy: 38.69%
+2023-04-23 07:36:31,148 [MainThread] [INFO ]  
+-------- round 141 --------
+2023-04-23 07:36:31,148 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:38:30,320 [MainThread] [INFO ]  Server train time: 119.17176413536072
+2023-04-23 07:38:30,320 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:38:37,579 [MainThread] [INFO ]  Test time 7.26s, Test loss: 1.08, Test accuracy: 29.52%
+2023-04-23 07:38:37,579 [MainThread] [INFO ]  
+-------- round 142 --------
+2023-04-23 07:38:37,579 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:40:39,178 [MainThread] [INFO ]  Server train time: 121.59855842590332
+2023-04-23 07:40:39,179 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:40:45,418 [MainThread] [INFO ]  Test time 6.24s, Test loss: 1.04, Test accuracy: 28.84%
+2023-04-23 07:40:45,418 [MainThread] [INFO ]  
+-------- round 143 --------
+2023-04-23 07:40:45,418 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:42:45,363 [MainThread] [INFO ]  Server train time: 119.9445424079895
+2023-04-23 07:42:45,364 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:42:53,296 [MainThread] [INFO ]  Test time 7.93s, Test loss: 0.47, Test accuracy: 40.82%
+2023-04-23 07:42:53,296 [MainThread] [INFO ]  
+-------- round 144 --------
+2023-04-23 07:42:53,296 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:44:52,175 [MainThread] [INFO ]  Server train time: 118.87774515151978
+2023-04-23 07:44:52,175 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:45:00,160 [MainThread] [INFO ]  Test time 7.98s, Test loss: 1.08, Test accuracy: 29.36%
+2023-04-23 07:45:00,160 [MainThread] [INFO ]  
+-------- round 145 --------
+2023-04-23 07:45:00,160 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:46:59,680 [MainThread] [INFO ]  Server train time: 119.51892876625061
+2023-04-23 07:46:59,680 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:47:07,170 [MainThread] [INFO ]  Test time 7.49s, Test loss: 1.05, Test accuracy: 29.26%
+2023-04-23 07:47:07,170 [MainThread] [INFO ]  
+-------- round 146 --------
+2023-04-23 07:47:07,170 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:49:08,211 [MainThread] [INFO ]  Server train time: 121.04069876670837
+2023-04-23 07:49:08,212 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:49:16,437 [MainThread] [INFO ]  Test time 8.23s, Test loss: 1.05, Test accuracy: 29.38%
+2023-04-23 07:49:16,437 [MainThread] [INFO ]  
+-------- round 147 --------
+2023-04-23 07:49:16,438 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:51:14,433 [MainThread] [INFO ]  Server train time: 117.99535918235779
+2023-04-23 07:51:14,434 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:51:22,644 [MainThread] [INFO ]  Test time 8.21s, Test loss: 1.00, Test accuracy: 28.83%
+2023-04-23 07:51:22,644 [MainThread] [INFO ]  
+-------- round 148 --------
+2023-04-23 07:51:22,644 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:53:21,529 [MainThread] [INFO ]  Server train time: 118.88480162620544
+2023-04-23 07:53:21,530 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:53:29,854 [MainThread] [INFO ]  Test time 8.32s, Test loss: 0.48, Test accuracy: 40.83%
+2023-04-23 07:53:29,855 [MainThread] [INFO ]  
+-------- round 149 --------
+2023-04-23 07:53:29,855 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:55:29,846 [MainThread] [INFO ]  Server train time: 119.99048781394958
+2023-04-23 07:55:29,846 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:55:35,973 [MainThread] [INFO ]  Test time 6.13s, Test loss: 0.48, Test accuracy: 41.23%
+2023-04-23 07:55:35,975 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_149.pth
+2023-04-23 07:55:35,976 [MainThread] [INFO ]  
+-------- round 150 --------
+2023-04-23 07:55:35,976 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:57:38,589 [MainThread] [INFO ]  Server train time: 122.61239671707153
+2023-04-23 07:57:38,589 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:57:46,827 [MainThread] [INFO ]  Test time 8.24s, Test loss: 0.48, Test accuracy: 40.42%
+2023-04-23 07:57:46,827 [MainThread] [INFO ]  
+-------- round 151 --------
+2023-04-23 07:57:46,827 [MainThread] [INFO ]  --- start training ---
+2023-04-23 07:59:46,636 [MainThread] [INFO ]  Server train time: 119.80826616287231
+2023-04-23 07:59:46,636 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 07:59:54,896 [MainThread] [INFO ]  Test time 8.26s, Test loss: 1.09, Test accuracy: 29.93%
+2023-04-23 07:59:54,897 [MainThread] [INFO ]  
+-------- round 152 --------
+2023-04-23 07:59:54,897 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:01:53,934 [MainThread] [INFO ]  Server train time: 119.03710627555847
+2023-04-23 08:01:53,935 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:02:01,940 [MainThread] [INFO ]  Test time 8.01s, Test loss: 1.02, Test accuracy: 28.30%
+2023-04-23 08:02:01,941 [MainThread] [INFO ]  
+-------- round 153 --------
+2023-04-23 08:02:01,941 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:04:02,334 [MainThread] [INFO ]  Server train time: 120.39271283149719
+2023-04-23 08:04:02,335 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:04:10,309 [MainThread] [INFO ]  Test time 7.97s, Test loss: 1.08, Test accuracy: 29.41%
+2023-04-23 08:04:10,309 [MainThread] [INFO ]  
+-------- round 154 --------
+2023-04-23 08:04:10,309 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:06:11,204 [MainThread] [INFO ]  Server train time: 120.89372682571411
+2023-04-23 08:06:11,204 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:06:19,061 [MainThread] [INFO ]  Test time 7.86s, Test loss: 1.04, Test accuracy: 28.76%
+2023-04-23 08:06:19,061 [MainThread] [INFO ]  
+-------- round 155 --------
+2023-04-23 08:06:19,061 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:08:18,407 [MainThread] [INFO ]  Server train time: 119.34513187408447
+2023-04-23 08:08:18,407 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:08:26,217 [MainThread] [INFO ]  Test time 7.81s, Test loss: 1.11, Test accuracy: 28.73%
+2023-04-23 08:08:26,217 [MainThread] [INFO ]  
+-------- round 156 --------
+2023-04-23 08:08:26,217 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:10:26,048 [MainThread] [INFO ]  Server train time: 119.83036708831787
+2023-04-23 08:10:26,049 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:10:32,609 [MainThread] [INFO ]  Test time 6.56s, Test loss: 1.17, Test accuracy: 28.67%
+2023-04-23 08:10:32,609 [MainThread] [INFO ]  
+-------- round 157 --------
+2023-04-23 08:10:32,609 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:12:33,168 [MainThread] [INFO ]  Server train time: 120.55848360061646
+2023-04-23 08:12:33,169 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:12:40,742 [MainThread] [INFO ]  Test time 7.57s, Test loss: 0.54, Test accuracy: 36.91%
+2023-04-23 08:12:40,742 [MainThread] [INFO ]  
+-------- round 158 --------
+2023-04-23 08:12:40,742 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:14:41,735 [MainThread] [INFO ]  Server train time: 120.99268794059753
+2023-04-23 08:14:41,736 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:14:49,337 [MainThread] [INFO ]  Test time 7.60s, Test loss: 1.11, Test accuracy: 29.12%
+2023-04-23 08:14:49,337 [MainThread] [INFO ]  
+-------- round 159 --------
+2023-04-23 08:14:49,337 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:16:48,390 [MainThread] [INFO ]  Server train time: 119.0525336265564
+2023-04-23 08:16:48,391 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:16:55,960 [MainThread] [INFO ]  Test time 7.57s, Test loss: 1.19, Test accuracy: 29.13%
+2023-04-23 08:16:55,963 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_159.pth
+2023-04-23 08:16:55,963 [MainThread] [INFO ]  
+-------- round 160 --------
+2023-04-23 08:16:55,963 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:18:57,548 [MainThread] [INFO ]  Server train time: 121.58456873893738
+2023-04-23 08:18:57,549 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:19:04,891 [MainThread] [INFO ]  Test time 7.34s, Test loss: 0.52, Test accuracy: 37.48%
+2023-04-23 08:19:04,891 [MainThread] [INFO ]  
+-------- round 161 --------
+2023-04-23 08:19:04,891 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:21:04,763 [MainThread] [INFO ]  Server train time: 119.87090945243835
+2023-04-23 08:21:04,763 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:21:12,313 [MainThread] [INFO ]  Test time 7.55s, Test loss: 1.04, Test accuracy: 28.55%
+2023-04-23 08:21:12,314 [MainThread] [INFO ]  
+-------- round 162 --------
+2023-04-23 08:21:12,314 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:23:13,171 [MainThread] [INFO ]  Server train time: 120.85664439201355
+2023-04-23 08:23:13,171 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:23:20,747 [MainThread] [INFO ]  Test time 7.58s, Test loss: 1.11, Test accuracy: 28.52%
+2023-04-23 08:23:20,747 [MainThread] [INFO ]  
+-------- round 163 --------
+2023-04-23 08:23:20,747 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:25:20,440 [MainThread] [INFO ]  Server train time: 119.69209671020508
+2023-04-23 08:25:20,440 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:25:27,861 [MainThread] [INFO ]  Test time 7.42s, Test loss: 1.08, Test accuracy: 29.18%
+2023-04-23 08:25:27,861 [MainThread] [INFO ]  
+-------- round 164 --------
+2023-04-23 08:25:27,861 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:27:29,103 [MainThread] [INFO ]  Server train time: 121.24135780334473
+2023-04-23 08:27:29,104 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:27:36,893 [MainThread] [INFO ]  Test time 7.79s, Test loss: 0.51, Test accuracy: 38.85%
+2023-04-23 08:27:36,893 [MainThread] [INFO ]  
+-------- round 165 --------
+2023-04-23 08:27:36,893 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:29:36,062 [MainThread] [INFO ]  Server train time: 119.16820478439331
+2023-04-23 08:29:36,062 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:29:43,989 [MainThread] [INFO ]  Test time 7.93s, Test loss: 0.50, Test accuracy: 40.23%
+2023-04-23 08:29:43,990 [MainThread] [INFO ]  
+-------- round 166 --------
+2023-04-23 08:29:43,990 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:31:44,523 [MainThread] [INFO ]  Server train time: 120.53329181671143
+2023-04-23 08:31:44,524 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:31:52,504 [MainThread] [INFO ]  Test time 7.98s, Test loss: 0.48, Test accuracy: 41.00%
+2023-04-23 08:31:52,504 [MainThread] [INFO ]  
+-------- round 167 --------
+2023-04-23 08:31:52,504 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:33:54,011 [MainThread] [INFO ]  Server train time: 121.50588178634644
+2023-04-23 08:33:54,011 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:34:00,719 [MainThread] [INFO ]  Test time 6.71s, Test loss: 1.06, Test accuracy: 28.60%
+2023-04-23 08:34:00,719 [MainThread] [INFO ]  
+-------- round 168 --------
+2023-04-23 08:34:00,719 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:36:01,270 [MainThread] [INFO ]  Server train time: 120.55004024505615
+2023-04-23 08:36:01,270 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:36:09,394 [MainThread] [INFO ]  Test time 8.12s, Test loss: 0.48, Test accuracy: 40.16%
+2023-04-23 08:36:09,394 [MainThread] [INFO ]  
+-------- round 169 --------
+2023-04-23 08:36:09,394 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:38:09,150 [MainThread] [INFO ]  Server train time: 119.75495648384094
+2023-04-23 08:38:09,150 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:38:17,123 [MainThread] [INFO ]  Test time 7.97s, Test loss: 1.09, Test accuracy: 28.61%
+2023-04-23 08:38:17,125 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_169.pth
+2023-04-23 08:38:17,125 [MainThread] [INFO ]  
+-------- round 170 --------
+2023-04-23 08:38:17,125 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:40:18,101 [MainThread] [INFO ]  Server train time: 120.97510719299316
+2023-04-23 08:40:18,101 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:40:25,876 [MainThread] [INFO ]  Test time 7.77s, Test loss: 0.49, Test accuracy: 39.80%
+2023-04-23 08:40:25,876 [MainThread] [INFO ]  
+-------- round 171 --------
+2023-04-23 08:40:25,877 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:42:27,448 [MainThread] [INFO ]  Server train time: 121.57136750221252
+2023-04-23 08:42:27,449 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:42:35,090 [MainThread] [INFO ]  Test time 7.64s, Test loss: 0.48, Test accuracy: 40.22%
+2023-04-23 08:42:35,090 [MainThread] [INFO ]  
+-------- round 172 --------
+2023-04-23 08:42:35,090 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:44:35,239 [MainThread] [INFO ]  Server train time: 120.1485025882721
+2023-04-23 08:44:35,239 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:44:42,820 [MainThread] [INFO ]  Test time 7.58s, Test loss: 0.46, Test accuracy: 41.45%
+2023-04-23 08:44:42,820 [MainThread] [INFO ]  
+-------- round 173 --------
+2023-04-23 08:44:42,820 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:46:41,485 [MainThread] [INFO ]  Server train time: 118.66383028030396
+2023-04-23 08:46:41,485 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:46:49,109 [MainThread] [INFO ]  Test time 7.62s, Test loss: 1.13, Test accuracy: 28.64%
+2023-04-23 08:46:49,110 [MainThread] [INFO ]  
+-------- round 174 --------
+2023-04-23 08:46:49,110 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:48:51,247 [MainThread] [INFO ]  Server train time: 122.13683652877808
+2023-04-23 08:48:51,247 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:48:57,375 [MainThread] [INFO ]  Test time 6.13s, Test loss: 1.04, Test accuracy: 29.51%
+2023-04-23 08:48:57,375 [MainThread] [INFO ]  
+-------- round 175 --------
+2023-04-23 08:48:57,376 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:50:58,508 [MainThread] [INFO ]  Server train time: 121.13255047798157
+2023-04-23 08:50:58,509 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:51:06,141 [MainThread] [INFO ]  Test time 7.63s, Test loss: 0.48, Test accuracy: 40.89%
+2023-04-23 08:51:06,141 [MainThread] [INFO ]  
+-------- round 176 --------
+2023-04-23 08:51:06,141 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:53:05,197 [MainThread] [INFO ]  Server train time: 119.05551338195801
+2023-04-23 08:53:05,197 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:53:12,898 [MainThread] [INFO ]  Test time 7.70s, Test loss: 0.48, Test accuracy: 40.71%
+2023-04-23 08:53:12,899 [MainThread] [INFO ]  
+-------- round 177 --------
+2023-04-23 08:53:12,899 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:55:12,615 [MainThread] [INFO ]  Server train time: 119.7163336277008
+2023-04-23 08:55:12,616 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:55:20,265 [MainThread] [INFO ]  Test time 7.65s, Test loss: 1.15, Test accuracy: 28.72%
+2023-04-23 08:55:20,265 [MainThread] [INFO ]  
+-------- round 178 --------
+2023-04-23 08:55:20,265 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:57:22,864 [MainThread] [INFO ]  Server train time: 122.59805178642273
+2023-04-23 08:57:22,864 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:57:29,953 [MainThread] [INFO ]  Test time 7.09s, Test loss: 0.47, Test accuracy: 41.23%
+2023-04-23 08:57:29,953 [MainThread] [INFO ]  
+-------- round 179 --------
+2023-04-23 08:57:29,953 [MainThread] [INFO ]  --- start training ---
+2023-04-23 08:59:29,810 [MainThread] [INFO ]  Server train time: 119.85662269592285
+2023-04-23 08:59:29,811 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 08:59:37,329 [MainThread] [INFO ]  Test time 7.52s, Test loss: 0.48, Test accuracy: 40.55%
+2023-04-23 08:59:37,332 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_179.pth
+2023-04-23 08:59:37,332 [MainThread] [INFO ]  
+-------- round 180 --------
+2023-04-23 08:59:37,332 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:01:37,337 [MainThread] [INFO ]  Server train time: 120.00468301773071
+2023-04-23 09:01:37,338 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:01:44,952 [MainThread] [INFO ]  Test time 7.61s, Test loss: 1.17, Test accuracy: 28.57%
+2023-04-23 09:01:44,952 [MainThread] [INFO ]  
+-------- round 181 --------
+2023-04-23 09:01:44,952 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:03:45,512 [MainThread] [INFO ]  Server train time: 120.55954456329346
+2023-04-23 09:03:45,512 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:03:51,623 [MainThread] [INFO ]  Test time 6.11s, Test loss: 1.23, Test accuracy: 28.25%
+2023-04-23 09:03:51,623 [MainThread] [INFO ]  
+-------- round 182 --------
+2023-04-23 09:03:51,623 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:05:54,468 [MainThread] [INFO ]  Server train time: 122.84502077102661
+2023-04-23 09:05:54,469 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:06:01,378 [MainThread] [INFO ]  Test time 6.91s, Test loss: 0.54, Test accuracy: 36.44%
+2023-04-23 09:06:01,379 [MainThread] [INFO ]  
+-------- round 183 --------
+2023-04-23 09:06:01,379 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:08:01,393 [MainThread] [INFO ]  Server train time: 120.01383972167969
+2023-04-23 09:08:01,393 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:08:09,489 [MainThread] [INFO ]  Test time 8.10s, Test loss: 0.49, Test accuracy: 40.47%
+2023-04-23 09:08:09,490 [MainThread] [INFO ]  
+-------- round 184 --------
+2023-04-23 09:08:09,490 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:10:09,236 [MainThread] [INFO ]  Server train time: 119.74629163742065
+2023-04-23 09:10:09,237 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:10:17,444 [MainThread] [INFO ]  Test time 8.21s, Test loss: 0.47, Test accuracy: 41.13%
+2023-04-23 09:10:17,444 [MainThread] [INFO ]  
+-------- round 185 --------
+2023-04-23 09:10:17,444 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:12:17,967 [MainThread] [INFO ]  Server train time: 120.52186059951782
+2023-04-23 09:12:17,967 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:12:25,971 [MainThread] [INFO ]  Test time 8.00s, Test loss: 0.49, Test accuracy: 40.44%
+2023-04-23 09:12:25,972 [MainThread] [INFO ]  
+-------- round 186 --------
+2023-04-23 09:12:25,972 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:14:27,514 [MainThread] [INFO ]  Server train time: 121.54118061065674
+2023-04-23 09:14:27,514 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:14:33,942 [MainThread] [INFO ]  Test time 6.43s, Test loss: 1.15, Test accuracy: 28.25%
+2023-04-23 09:14:33,942 [MainThread] [INFO ]  
+-------- round 187 --------
+2023-04-23 09:14:33,942 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:16:33,715 [MainThread] [INFO ]  Server train time: 119.77228903770447
+2023-04-23 09:16:33,716 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:16:41,452 [MainThread] [INFO ]  Test time 7.74s, Test loss: 0.50, Test accuracy: 39.68%
+2023-04-23 09:16:41,453 [MainThread] [INFO ]  
+-------- round 188 --------
+2023-04-23 09:16:41,453 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:18:41,246 [MainThread] [INFO ]  Server train time: 119.79241824150085
+2023-04-23 09:18:41,246 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:18:48,848 [MainThread] [INFO ]  Test time 7.60s, Test loss: 0.49, Test accuracy: 39.24%
+2023-04-23 09:18:48,849 [MainThread] [INFO ]  
+-------- round 189 --------
+2023-04-23 09:18:48,849 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:20:50,435 [MainThread] [INFO ]  Server train time: 121.58582735061646
+2023-04-23 09:20:50,435 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:20:58,081 [MainThread] [INFO ]  Test time 7.65s, Test loss: 0.49, Test accuracy: 40.03%
+2023-04-23 09:20:58,083 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_189.pth
+2023-04-23 09:20:58,084 [MainThread] [INFO ]  
+-------- round 190 --------
+2023-04-23 09:20:58,084 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:22:59,153 [MainThread] [INFO ]  Server train time: 121.06854224205017
+2023-04-23 09:22:59,153 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:23:05,373 [MainThread] [INFO ]  Test time 6.22s, Test loss: 1.11, Test accuracy: 28.43%
+2023-04-23 09:23:05,374 [MainThread] [INFO ]  
+-------- round 191 --------
+2023-04-23 09:23:05,374 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:25:05,617 [MainThread] [INFO ]  Server train time: 120.24277424812317
+2023-04-23 09:25:05,617 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:25:13,234 [MainThread] [INFO ]  Test time 7.62s, Test loss: 0.49, Test accuracy: 39.11%
+2023-04-23 09:25:13,235 [MainThread] [INFO ]  
+-------- round 192 --------
+2023-04-23 09:25:13,235 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:27:14,824 [MainThread] [INFO ]  Server train time: 121.58871459960938
+2023-04-23 09:27:14,824 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:27:20,940 [MainThread] [INFO ]  Test time 6.12s, Test loss: 0.48, Test accuracy: 40.12%
+2023-04-23 09:27:20,941 [MainThread] [INFO ]  
+-------- round 193 --------
+2023-04-23 09:27:20,941 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:29:21,679 [MainThread] [INFO ]  Server train time: 120.73774743080139
+2023-04-23 09:29:21,679 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:29:29,266 [MainThread] [INFO ]  Test time 7.59s, Test loss: 1.14, Test accuracy: 29.14%
+2023-04-23 09:29:29,266 [MainThread] [INFO ]  
+-------- round 194 --------
+2023-04-23 09:29:29,266 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:31:30,390 [MainThread] [INFO ]  Server train time: 121.12339496612549
+2023-04-23 09:31:30,391 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:31:36,545 [MainThread] [INFO ]  Test time 6.15s, Test loss: 1.01, Test accuracy: 29.22%
+2023-04-23 09:31:36,545 [MainThread] [INFO ]  
+-------- round 195 --------
+2023-04-23 09:31:36,545 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:33:36,437 [MainThread] [INFO ]  Server train time: 119.89082288742065
+2023-04-23 09:33:36,437 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:33:44,138 [MainThread] [INFO ]  Test time 7.70s, Test loss: 1.13, Test accuracy: 28.44%
+2023-04-23 09:33:44,138 [MainThread] [INFO ]  
+-------- round 196 --------
+2023-04-23 09:33:44,138 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:35:45,781 [MainThread] [INFO ]  Server train time: 121.6426134109497
+2023-04-23 09:35:45,782 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:35:53,327 [MainThread] [INFO ]  Test time 7.55s, Test loss: 0.52, Test accuracy: 38.17%
+2023-04-23 09:35:53,328 [MainThread] [INFO ]  
+-------- round 197 --------
+2023-04-23 09:35:53,328 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:37:53,427 [MainThread] [INFO ]  Server train time: 120.0991883277893
+2023-04-23 09:37:53,428 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:38:01,049 [MainThread] [INFO ]  Test time 7.62s, Test loss: 0.47, Test accuracy: 41.78%
+2023-04-23 09:38:01,049 [MainThread] [INFO ]  
+-------- round 198 --------
+2023-04-23 09:38:01,049 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:40:02,211 [MainThread] [INFO ]  Server train time: 121.16145277023315
+2023-04-23 09:40:02,212 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:40:08,325 [MainThread] [INFO ]  Test time 6.11s, Test loss: 1.06, Test accuracy: 29.61%
+2023-04-23 09:40:08,325 [MainThread] [INFO ]  
+-------- round 199 --------
+2023-04-23 09:40:08,325 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:42:10,351 [MainThread] [INFO ]  Server train time: 122.02501177787781
+2023-04-23 09:42:10,351 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:42:16,440 [MainThread] [INFO ]  Test time 6.09s, Test loss: 0.50, Test accuracy: 39.85%
+2023-04-23 09:42:16,442 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_199.pth
+2023-04-23 09:42:16,442 [MainThread] [INFO ]  
+-------- round 200 --------
+2023-04-23 09:42:16,442 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:44:16,998 [MainThread] [INFO ]  Server train time: 120.55584359169006
+2023-04-23 09:44:16,999 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:44:24,513 [MainThread] [INFO ]  Test time 7.51s, Test loss: 0.50, Test accuracy: 39.98%
+2023-04-23 09:44:24,514 [MainThread] [INFO ]  
+-------- round 201 --------
+2023-04-23 09:44:24,514 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:46:24,510 [MainThread] [INFO ]  Server train time: 119.9960446357727
+2023-04-23 09:46:24,511 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:46:32,147 [MainThread] [INFO ]  Test time 7.64s, Test loss: 1.08, Test accuracy: 29.41%
+2023-04-23 09:46:32,148 [MainThread] [INFO ]  
+-------- round 202 --------
+2023-04-23 09:46:32,148 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:48:32,854 [MainThread] [INFO ]  Server train time: 120.70592617988586
+2023-04-23 09:48:32,855 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:48:38,719 [MainThread] [INFO ]  Test time 5.86s, Test loss: 1.07, Test accuracy: 29.08%
+2023-04-23 09:48:38,720 [MainThread] [INFO ]  
+-------- round 203 --------
+2023-04-23 09:48:38,720 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:50:41,011 [MainThread] [INFO ]  Server train time: 122.29097080230713
+2023-04-23 09:50:41,012 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:50:48,757 [MainThread] [INFO ]  Test time 7.75s, Test loss: 0.49, Test accuracy: 40.60%
+2023-04-23 09:50:48,757 [MainThread] [INFO ]  
+-------- round 204 --------
+2023-04-23 09:50:48,758 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:52:48,354 [MainThread] [INFO ]  Server train time: 119.59605884552002
+2023-04-23 09:52:48,354 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:52:55,916 [MainThread] [INFO ]  Test time 7.56s, Test loss: 0.47, Test accuracy: 41.48%
+2023-04-23 09:52:55,916 [MainThread] [INFO ]  
+-------- round 205 --------
+2023-04-23 09:52:55,917 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:54:55,776 [MainThread] [INFO ]  Server train time: 119.85922074317932
+2023-04-23 09:54:55,777 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:55:03,271 [MainThread] [INFO ]  Test time 7.49s, Test loss: 1.13, Test accuracy: 28.94%
+2023-04-23 09:55:03,272 [MainThread] [INFO ]  
+-------- round 206 --------
+2023-04-23 09:55:03,272 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:57:05,019 [MainThread] [INFO ]  Server train time: 121.74687457084656
+2023-04-23 09:57:05,019 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:57:09,708 [MainThread] [INFO ]  Test time 4.69s, Test loss: 1.21, Test accuracy: 28.83%
+2023-04-23 09:57:09,709 [MainThread] [INFO ]  
+-------- round 207 --------
+2023-04-23 09:57:09,709 [MainThread] [INFO ]  --- start training ---
+2023-04-23 09:59:11,627 [MainThread] [INFO ]  Server train time: 121.91809129714966
+2023-04-23 09:59:11,629 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 09:59:19,258 [MainThread] [INFO ]  Test time 7.63s, Test loss: 1.39, Test accuracy: 28.66%
+2023-04-23 09:59:19,258 [MainThread] [INFO ]  
+-------- round 208 --------
+2023-04-23 09:59:19,258 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:01:19,741 [MainThread] [INFO ]  Server train time: 120.4826500415802
+2023-04-23 10:01:19,742 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:01:27,381 [MainThread] [INFO ]  Test time 7.64s, Test loss: 1.39, Test accuracy: 29.21%
+2023-04-23 10:01:27,381 [MainThread] [INFO ]  
+-------- round 209 --------
+2023-04-23 10:01:27,381 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:03:26,971 [MainThread] [INFO ]  Server train time: 119.58936190605164
+2023-04-23 10:03:26,971 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:03:34,594 [MainThread] [INFO ]  Test time 7.62s, Test loss: 1.37, Test accuracy: 28.92%
+2023-04-23 10:03:34,596 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_209.pth
+2023-04-23 10:03:34,596 [MainThread] [INFO ]  
+-------- round 210 --------
+2023-04-23 10:03:34,596 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:05:36,461 [MainThread] [INFO ]  Server train time: 121.86453676223755
+2023-04-23 10:05:36,462 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:05:42,781 [MainThread] [INFO ]  Test time 6.32s, Test loss: 0.64, Test accuracy: 31.42%
+2023-04-23 10:05:42,781 [MainThread] [INFO ]  
+-------- round 211 --------
+2023-04-23 10:05:42,781 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:07:42,995 [MainThread] [INFO ]  Server train time: 120.21315336227417
+2023-04-23 10:07:42,995 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:07:50,689 [MainThread] [INFO ]  Test time 7.69s, Test loss: 1.16, Test accuracy: 29.17%
+2023-04-23 10:07:50,689 [MainThread] [INFO ]  
+-------- round 212 --------
+2023-04-23 10:07:50,689 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:09:49,769 [MainThread] [INFO ]  Server train time: 119.0798807144165
+2023-04-23 10:09:49,770 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:09:57,539 [MainThread] [INFO ]  Test time 7.77s, Test loss: 1.31, Test accuracy: 29.35%
+2023-04-23 10:09:57,540 [MainThread] [INFO ]  
+-------- round 213 --------
+2023-04-23 10:09:57,540 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:11:57,603 [MainThread] [INFO ]  Server train time: 120.06285238265991
+2023-04-23 10:11:57,604 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:12:03,728 [MainThread] [INFO ]  Test time 6.12s, Test loss: 0.59, Test accuracy: 33.46%
+2023-04-23 10:12:03,729 [MainThread] [INFO ]  
+-------- round 214 --------
+2023-04-23 10:12:03,729 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:14:05,015 [MainThread] [INFO ]  Server train time: 121.28574323654175
+2023-04-23 10:14:05,015 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:14:11,435 [MainThread] [INFO ]  Test time 6.42s, Test loss: 1.16, Test accuracy: 29.48%
+2023-04-23 10:14:11,436 [MainThread] [INFO ]  
+-------- round 215 --------
+2023-04-23 10:14:11,436 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:16:11,827 [MainThread] [INFO ]  Server train time: 120.39097356796265
+2023-04-23 10:16:11,827 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:16:19,511 [MainThread] [INFO ]  Test time 7.68s, Test loss: 0.55, Test accuracy: 35.55%
+2023-04-23 10:16:19,511 [MainThread] [INFO ]  
+-------- round 216 --------
+2023-04-23 10:16:19,511 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:18:18,104 [MainThread] [INFO ]  Server train time: 118.592524766922
+2023-04-23 10:18:18,104 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:18:25,554 [MainThread] [INFO ]  Test time 7.45s, Test loss: 0.49, Test accuracy: 39.90%
+2023-04-23 10:18:25,554 [MainThread] [INFO ]  
+-------- round 217 --------
+2023-04-23 10:18:25,554 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:20:27,046 [MainThread] [INFO ]  Server train time: 121.49186515808105
+2023-04-23 10:20:27,047 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:20:34,585 [MainThread] [INFO ]  Test time 7.54s, Test loss: 0.50, Test accuracy: 39.50%
+2023-04-23 10:20:34,586 [MainThread] [INFO ]  
+-------- round 218 --------
+2023-04-23 10:20:34,586 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:22:35,081 [MainThread] [INFO ]  Server train time: 120.49464416503906
+2023-04-23 10:22:35,081 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:22:41,722 [MainThread] [INFO ]  Test time 6.64s, Test loss: 1.07, Test accuracy: 28.82%
+2023-04-23 10:22:41,723 [MainThread] [INFO ]  
+-------- round 219 --------
+2023-04-23 10:22:41,723 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:24:41,918 [MainThread] [INFO ]  Server train time: 120.19442224502563
+2023-04-23 10:24:41,918 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:24:49,472 [MainThread] [INFO ]  Test time 7.55s, Test loss: 0.47, Test accuracy: 41.39%
+2023-04-23 10:24:49,475 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_219.pth
+2023-04-23 10:24:49,475 [MainThread] [INFO ]  
+-------- round 220 --------
+2023-04-23 10:24:49,475 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:26:49,552 [MainThread] [INFO ]  Server train time: 120.07647061347961
+2023-04-23 10:26:49,552 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:26:56,012 [MainThread] [INFO ]  Test time 6.46s, Test loss: 1.08, Test accuracy: 28.83%
+2023-04-23 10:26:56,013 [MainThread] [INFO ]  
+-------- round 221 --------
+2023-04-23 10:26:56,013 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:28:57,129 [MainThread] [INFO ]  Server train time: 121.11651611328125
+2023-04-23 10:28:57,130 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:29:04,567 [MainThread] [INFO ]  Test time 7.44s, Test loss: 0.52, Test accuracy: 38.62%
+2023-04-23 10:29:04,567 [MainThread] [INFO ]  
+-------- round 222 --------
+2023-04-23 10:29:04,567 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:31:05,532 [MainThread] [INFO ]  Server train time: 120.96433591842651
+2023-04-23 10:31:05,532 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:31:13,147 [MainThread] [INFO ]  Test time 7.61s, Test loss: 1.10, Test accuracy: 29.54%
+2023-04-23 10:31:13,148 [MainThread] [INFO ]  
+-------- round 223 --------
+2023-04-23 10:31:13,148 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:33:12,548 [MainThread] [INFO ]  Server train time: 119.3997848033905
+2023-04-23 10:33:12,548 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:33:19,978 [MainThread] [INFO ]  Test time 7.43s, Test loss: 1.12, Test accuracy: 29.71%
+2023-04-23 10:33:19,979 [MainThread] [INFO ]  
+-------- round 224 --------
+2023-04-23 10:33:19,979 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:35:20,397 [MainThread] [INFO ]  Server train time: 120.41803812980652
+2023-04-23 10:35:20,397 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:35:27,642 [MainThread] [INFO ]  Test time 7.24s, Test loss: 0.54, Test accuracy: 37.00%
+2023-04-23 10:35:27,643 [MainThread] [INFO ]  
+-------- round 225 --------
+2023-04-23 10:35:27,643 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:37:26,454 [MainThread] [INFO ]  Server train time: 118.81088066101074
+2023-04-23 10:37:26,455 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:37:33,977 [MainThread] [INFO ]  Test time 7.52s, Test loss: 1.19, Test accuracy: 29.62%
+2023-04-23 10:37:33,978 [MainThread] [INFO ]  
+-------- round 226 --------
+2023-04-23 10:37:33,978 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:39:33,512 [MainThread] [INFO ]  Server train time: 119.53327560424805
+2023-04-23 10:39:33,512 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:39:41,170 [MainThread] [INFO ]  Test time 7.66s, Test loss: 0.58, Test accuracy: 34.14%
+2023-04-23 10:39:41,170 [MainThread] [INFO ]  
+-------- round 227 --------
+2023-04-23 10:39:41,170 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:41:40,354 [MainThread] [INFO ]  Server train time: 119.18243098258972
+2023-04-23 10:41:40,354 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:41:47,782 [MainThread] [INFO ]  Test time 7.43s, Test loss: 0.51, Test accuracy: 38.50%
+2023-04-23 10:41:47,782 [MainThread] [INFO ]  
+-------- round 228 --------
+2023-04-23 10:41:47,783 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:43:47,458 [MainThread] [INFO ]  Server train time: 119.67546391487122
+2023-04-23 10:43:47,459 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:43:55,115 [MainThread] [INFO ]  Test time 7.66s, Test loss: 1.10, Test accuracy: 27.55%
+2023-04-23 10:43:55,116 [MainThread] [INFO ]  
+-------- round 229 --------
+2023-04-23 10:43:55,116 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:45:54,789 [MainThread] [INFO ]  Server train time: 119.67309594154358
+2023-04-23 10:45:54,790 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:46:00,872 [MainThread] [INFO ]  Test time 6.08s, Test loss: 1.18, Test accuracy: 28.05%
+2023-04-23 10:46:00,875 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_229.pth
+2023-04-23 10:46:00,875 [MainThread] [INFO ]  
+-------- round 230 --------
+2023-04-23 10:46:00,875 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:48:00,825 [MainThread] [INFO ]  Server train time: 119.94956040382385
+2023-04-23 10:48:00,825 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:48:08,396 [MainThread] [INFO ]  Test time 7.57s, Test loss: 0.49, Test accuracy: 39.21%
+2023-04-23 10:48:08,396 [MainThread] [INFO ]  
+-------- round 231 --------
+2023-04-23 10:48:08,396 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:50:09,517 [MainThread] [INFO ]  Server train time: 121.12065577507019
+2023-04-23 10:50:09,518 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:50:15,531 [MainThread] [INFO ]  Test time 6.01s, Test loss: 0.49, Test accuracy: 40.31%
+2023-04-23 10:50:15,531 [MainThread] [INFO ]  
+-------- round 232 --------
+2023-04-23 10:50:15,531 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:52:14,738 [MainThread] [INFO ]  Server train time: 119.20604801177979
+2023-04-23 10:52:14,738 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:52:22,331 [MainThread] [INFO ]  Test time 7.59s, Test loss: 0.47, Test accuracy: 41.54%
+2023-04-23 10:52:22,332 [MainThread] [INFO ]  
+-------- round 233 --------
+2023-04-23 10:52:22,332 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:54:23,144 [MainThread] [INFO ]  Server train time: 120.81177282333374
+2023-04-23 10:54:23,144 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:54:29,999 [MainThread] [INFO ]  Test time 6.85s, Test loss: 1.09, Test accuracy: 28.60%
+2023-04-23 10:54:30,000 [MainThread] [INFO ]  
+-------- round 234 --------
+2023-04-23 10:54:30,000 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:56:29,087 [MainThread] [INFO ]  Server train time: 119.0868992805481
+2023-04-23 10:56:29,088 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:56:36,420 [MainThread] [INFO ]  Test time 7.33s, Test loss: 0.48, Test accuracy: 40.92%
+2023-04-23 10:56:36,421 [MainThread] [INFO ]  
+-------- round 235 --------
+2023-04-23 10:56:36,421 [MainThread] [INFO ]  --- start training ---
+2023-04-23 10:58:37,540 [MainThread] [INFO ]  Server train time: 121.11947393417358
+2023-04-23 10:58:37,541 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 10:58:45,072 [MainThread] [INFO ]  Test time 7.53s, Test loss: 0.48, Test accuracy: 41.02%
+2023-04-23 10:58:45,073 [MainThread] [INFO ]  
+-------- round 236 --------
+2023-04-23 10:58:45,073 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:00:44,092 [MainThread] [INFO ]  Server train time: 119.01861810684204
+2023-04-23 11:00:44,092 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:00:51,717 [MainThread] [INFO ]  Test time 7.62s, Test loss: 0.48, Test accuracy: 40.80%
+2023-04-23 11:00:51,718 [MainThread] [INFO ]  
+-------- round 237 --------
+2023-04-23 11:00:51,718 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:02:52,158 [MainThread] [INFO ]  Server train time: 120.43975186347961
+2023-04-23 11:02:52,158 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:02:59,618 [MainThread] [INFO ]  Test time 7.46s, Test loss: 0.46, Test accuracy: 42.05%
+2023-04-23 11:02:59,618 [MainThread] [INFO ]  
+-------- round 238 --------
+2023-04-23 11:02:59,618 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:05:00,039 [MainThread] [INFO ]  Server train time: 120.42095255851746
+2023-04-23 11:05:00,040 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:05:06,071 [MainThread] [INFO ]  Test time 6.03s, Test loss: 1.08, Test accuracy: 28.94%
+2023-04-23 11:05:06,072 [MainThread] [INFO ]  
+-------- round 239 --------
+2023-04-23 11:05:06,072 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:07:06,473 [MainThread] [INFO ]  Server train time: 120.4009952545166
+2023-04-23 11:07:06,474 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:07:14,015 [MainThread] [INFO ]  Test time 7.54s, Test loss: 0.48, Test accuracy: 40.33%
+2023-04-23 11:07:14,017 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_239.pth
+2023-04-23 11:07:14,017 [MainThread] [INFO ]  
+-------- round 240 --------
+2023-04-23 11:07:14,018 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:09:13,087 [MainThread] [INFO ]  Server train time: 119.06914043426514
+2023-04-23 11:09:13,087 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:09:19,456 [MainThread] [INFO ]  Test time 6.37s, Test loss: 1.16, Test accuracy: 29.09%
+2023-04-23 11:09:19,456 [MainThread] [INFO ]  
+-------- round 241 --------
+2023-04-23 11:09:19,456 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:11:19,775 [MainThread] [INFO ]  Server train time: 120.31881380081177
+2023-04-23 11:11:19,776 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:11:27,438 [MainThread] [INFO ]  Test time 7.66s, Test loss: 1.01, Test accuracy: 29.27%
+2023-04-23 11:11:27,439 [MainThread] [INFO ]  
+-------- round 242 --------
+2023-04-23 11:11:27,439 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:13:28,340 [MainThread] [INFO ]  Server train time: 120.90107893943787
+2023-04-23 11:13:28,340 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:13:35,541 [MainThread] [INFO ]  Test time 7.20s, Test loss: 0.52, Test accuracy: 38.50%
+2023-04-23 11:13:35,541 [MainThread] [INFO ]  
+-------- round 243 --------
+2023-04-23 11:13:35,541 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:15:35,552 [MainThread] [INFO ]  Server train time: 120.01039242744446
+2023-04-23 11:15:35,552 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:15:43,127 [MainThread] [INFO ]  Test time 7.57s, Test loss: 1.11, Test accuracy: 29.28%
+2023-04-23 11:15:43,128 [MainThread] [INFO ]  
+-------- round 244 --------
+2023-04-23 11:15:43,128 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:17:43,274 [MainThread] [INFO ]  Server train time: 120.1464273929596
+2023-04-23 11:17:43,275 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:17:49,433 [MainThread] [INFO ]  Test time 6.16s, Test loss: 0.51, Test accuracy: 38.67%
+2023-04-23 11:17:49,434 [MainThread] [INFO ]  
+-------- round 245 --------
+2023-04-23 11:17:49,434 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:19:50,398 [MainThread] [INFO ]  Server train time: 120.96365809440613
+2023-04-23 11:19:50,398 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:19:56,510 [MainThread] [INFO ]  Test time 6.11s, Test loss: 1.02, Test accuracy: 28.59%
+2023-04-23 11:19:56,510 [MainThread] [INFO ]  
+-------- round 246 --------
+2023-04-23 11:19:56,510 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:21:53,247 [MainThread] [INFO ]  Server train time: 116.73635745048523
+2023-04-23 11:21:53,248 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:21:59,499 [MainThread] [INFO ]  Test time 6.25s, Test loss: 0.48, Test accuracy: 40.88%
+2023-04-23 11:21:59,500 [MainThread] [INFO ]  
+-------- round 247 --------
+2023-04-23 11:21:59,500 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:23:58,746 [MainThread] [INFO ]  Server train time: 119.24620866775513
+2023-04-23 11:23:58,747 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:24:06,448 [MainThread] [INFO ]  Test time 7.70s, Test loss: 0.47, Test accuracy: 41.45%
+2023-04-23 11:24:06,448 [MainThread] [INFO ]  
+-------- round 248 --------
+2023-04-23 11:24:06,449 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:26:06,704 [MainThread] [INFO ]  Server train time: 120.25515985488892
+2023-04-23 11:26:06,705 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:26:14,338 [MainThread] [INFO ]  Test time 7.63s, Test loss: 0.49, Test accuracy: 39.41%
+2023-04-23 11:26:14,338 [MainThread] [INFO ]  
+-------- round 249 --------
+2023-04-23 11:26:14,338 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:28:14,244 [MainThread] [INFO ]  Server train time: 119.90570282936096
+2023-04-23 11:28:14,245 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:28:21,707 [MainThread] [INFO ]  Test time 7.46s, Test loss: 0.49, Test accuracy: 40.09%
+2023-04-23 11:28:21,709 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_249.pth
+2023-04-23 11:28:21,710 [MainThread] [INFO ]  
+-------- round 250 --------
+2023-04-23 11:28:21,710 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:30:20,750 [MainThread] [INFO ]  Server train time: 119.04006552696228
+2023-04-23 11:30:20,751 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:30:26,904 [MainThread] [INFO ]  Test time 6.15s, Test loss: 1.09, Test accuracy: 28.38%
+2023-04-23 11:30:26,904 [MainThread] [INFO ]  
+-------- round 251 --------
+2023-04-23 11:30:26,905 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:32:26,797 [MainThread] [INFO ]  Server train time: 119.89182448387146
+2023-04-23 11:32:26,797 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:32:34,180 [MainThread] [INFO ]  Test time 7.38s, Test loss: 1.14, Test accuracy: 28.69%
+2023-04-23 11:32:34,181 [MainThread] [INFO ]  
+-------- round 252 --------
+2023-04-23 11:32:34,181 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:34:35,275 [MainThread] [INFO ]  Server train time: 121.09396958351135
+2023-04-23 11:34:35,276 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:34:41,427 [MainThread] [INFO ]  Test time 6.15s, Test loss: 1.27, Test accuracy: 27.64%
+2023-04-23 11:34:41,428 [MainThread] [INFO ]  
+-------- round 253 --------
+2023-04-23 11:34:41,428 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:36:41,918 [MainThread] [INFO ]  Server train time: 120.49003314971924
+2023-04-23 11:36:41,919 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:36:49,840 [MainThread] [INFO ]  Test time 7.92s, Test loss: 0.53, Test accuracy: 36.19%
+2023-04-23 11:36:49,840 [MainThread] [INFO ]  
+-------- round 254 --------
+2023-04-23 11:36:49,840 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:38:48,569 [MainThread] [INFO ]  Server train time: 118.72814869880676
+2023-04-23 11:38:48,569 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:38:54,940 [MainThread] [INFO ]  Test time 6.37s, Test loss: 1.14, Test accuracy: 29.02%
+2023-04-23 11:38:54,941 [MainThread] [INFO ]  
+-------- round 255 --------
+2023-04-23 11:38:54,941 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:40:55,285 [MainThread] [INFO ]  Server train time: 120.34436678886414
+2023-04-23 11:40:55,286 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:41:01,701 [MainThread] [INFO ]  Test time 6.41s, Test loss: 0.51, Test accuracy: 38.74%
+2023-04-23 11:41:01,701 [MainThread] [INFO ]  
+-------- round 256 --------
+2023-04-23 11:41:01,701 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:43:02,873 [MainThread] [INFO ]  Server train time: 121.17118334770203
+2023-04-23 11:43:02,873 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:43:11,048 [MainThread] [INFO ]  Test time 8.17s, Test loss: 0.47, Test accuracy: 41.24%
+2023-04-23 11:43:11,048 [MainThread] [INFO ]  
+-------- round 257 --------
+2023-04-23 11:43:11,048 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:45:09,278 [MainThread] [INFO ]  Server train time: 118.22893476486206
+2023-04-23 11:45:09,278 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:45:17,631 [MainThread] [INFO ]  Test time 8.35s, Test loss: 1.07, Test accuracy: 28.76%
+2023-04-23 11:45:17,631 [MainThread] [INFO ]  
+-------- round 258 --------
+2023-04-23 11:45:17,631 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:47:16,966 [MainThread] [INFO ]  Server train time: 119.33450245857239
+2023-04-23 11:47:16,966 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:47:23,951 [MainThread] [INFO ]  Test time 6.98s, Test loss: 0.50, Test accuracy: 39.53%
+2023-04-23 11:47:23,951 [MainThread] [INFO ]  
+-------- round 259 --------
+2023-04-23 11:47:23,951 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:49:25,569 [MainThread] [INFO ]  Server train time: 121.61738967895508
+2023-04-23 11:49:25,570 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:49:32,450 [MainThread] [INFO ]  Test time 6.88s, Test loss: 0.47, Test accuracy: 40.95%
+2023-04-23 11:49:32,452 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_259.pth
+2023-04-23 11:49:32,453 [MainThread] [INFO ]  
+-------- round 260 --------
+2023-04-23 11:49:32,453 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:51:33,123 [MainThread] [INFO ]  Server train time: 120.67008757591248
+2023-04-23 11:51:33,124 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:51:41,387 [MainThread] [INFO ]  Test time 8.26s, Test loss: 0.46, Test accuracy: 42.29%
+2023-04-23 11:51:41,387 [MainThread] [INFO ]  
+-------- round 261 --------
+2023-04-23 11:51:41,387 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:53:40,238 [MainThread] [INFO ]  Server train time: 118.85012412071228
+2023-04-23 11:53:40,238 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:53:48,382 [MainThread] [INFO ]  Test time 8.14s, Test loss: 0.48, Test accuracy: 40.73%
+2023-04-23 11:53:48,383 [MainThread] [INFO ]  
+-------- round 262 --------
+2023-04-23 11:53:48,383 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:55:47,683 [MainThread] [INFO ]  Server train time: 119.2996711730957
+2023-04-23 11:55:47,683 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:55:54,229 [MainThread] [INFO ]  Test time 6.55s, Test loss: 0.48, Test accuracy: 40.44%
+2023-04-23 11:55:54,230 [MainThread] [INFO ]  
+-------- round 263 --------
+2023-04-23 11:55:54,230 [MainThread] [INFO ]  --- start training ---
+2023-04-23 11:57:56,774 [MainThread] [INFO ]  Server train time: 122.54375576972961
+2023-04-23 11:57:56,774 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 11:58:04,648 [MainThread] [INFO ]  Test time 7.87s, Test loss: 1.07, Test accuracy: 28.64%
+2023-04-23 11:58:04,649 [MainThread] [INFO ]  
+-------- round 264 --------
+2023-04-23 11:58:04,649 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:00:03,420 [MainThread] [INFO ]  Server train time: 118.77141308784485
+2023-04-23 12:00:03,421 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:00:11,210 [MainThread] [INFO ]  Test time 7.79s, Test loss: 0.49, Test accuracy: 39.97%
+2023-04-23 12:00:11,210 [MainThread] [INFO ]  
+-------- round 265 --------
+2023-04-23 12:00:11,210 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:02:10,566 [MainThread] [INFO ]  Server train time: 119.35561466217041
+2023-04-23 12:02:10,567 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:02:18,252 [MainThread] [INFO ]  Test time 7.69s, Test loss: 0.49, Test accuracy: 40.47%
+2023-04-23 12:02:18,253 [MainThread] [INFO ]  
+-------- round 266 --------
+2023-04-23 12:02:18,253 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:04:19,094 [MainThread] [INFO ]  Server train time: 120.84067583084106
+2023-04-23 12:04:19,094 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:04:23,444 [MainThread] [INFO ]  Test time 4.35s, Test loss: 1.07, Test accuracy: 28.89%
+2023-04-23 12:04:23,444 [MainThread] [INFO ]  
+-------- round 267 --------
+2023-04-23 12:04:23,445 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:06:25,980 [MainThread] [INFO ]  Server train time: 122.53534388542175
+2023-04-23 12:06:25,981 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:06:33,658 [MainThread] [INFO ]  Test time 7.68s, Test loss: 1.00, Test accuracy: 28.92%
+2023-04-23 12:06:33,658 [MainThread] [INFO ]  
+-------- round 268 --------
+2023-04-23 12:06:33,658 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:08:32,864 [MainThread] [INFO ]  Server train time: 119.20580697059631
+2023-04-23 12:08:32,865 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:08:40,236 [MainThread] [INFO ]  Test time 7.37s, Test loss: 0.99, Test accuracy: 29.70%
+2023-04-23 12:08:40,236 [MainThread] [INFO ]  
+-------- round 269 --------
+2023-04-23 12:08:40,236 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:10:39,285 [MainThread] [INFO ]  Server train time: 119.04826378822327
+2023-04-23 12:10:39,285 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:10:46,964 [MainThread] [INFO ]  Test time 7.68s, Test loss: 1.18, Test accuracy: 28.74%
+2023-04-23 12:10:46,967 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_269.pth
+2023-04-23 12:10:46,967 [MainThread] [INFO ]  
+-------- round 270 --------
+2023-04-23 12:10:46,967 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:12:49,342 [MainThread] [INFO ]  Server train time: 122.37373280525208
+2023-04-23 12:12:49,342 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:12:54,371 [MainThread] [INFO ]  Test time 5.03s, Test loss: 0.54, Test accuracy: 37.22%
+2023-04-23 12:12:54,371 [MainThread] [INFO ]  
+-------- round 271 --------
+2023-04-23 12:12:54,372 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:14:54,269 [MainThread] [INFO ]  Server train time: 119.89708065986633
+2023-04-23 12:14:54,269 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:15:01,782 [MainThread] [INFO ]  Test time 7.51s, Test loss: 1.03, Test accuracy: 28.98%
+2023-04-23 12:15:01,783 [MainThread] [INFO ]  
+-------- round 272 --------
+2023-04-23 12:15:01,783 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:17:01,216 [MainThread] [INFO ]  Server train time: 119.43307375907898
+2023-04-23 12:17:01,217 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:17:08,771 [MainThread] [INFO ]  Test time 7.55s, Test loss: 1.09, Test accuracy: 29.82%
+2023-04-23 12:17:08,771 [MainThread] [INFO ]  
+-------- round 273 --------
+2023-04-23 12:17:08,771 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:19:08,234 [MainThread] [INFO ]  Server train time: 119.46245956420898
+2023-04-23 12:19:08,234 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:19:15,301 [MainThread] [INFO ]  Test time 7.07s, Test loss: 0.51, Test accuracy: 38.79%
+2023-04-23 12:19:15,301 [MainThread] [INFO ]  
+-------- round 274 --------
+2023-04-23 12:19:15,301 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:21:18,000 [MainThread] [INFO ]  Server train time: 122.69783329963684
+2023-04-23 12:21:18,000 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:21:24,762 [MainThread] [INFO ]  Test time 6.76s, Test loss: 1.01, Test accuracy: 28.56%
+2023-04-23 12:21:24,762 [MainThread] [INFO ]  
+-------- round 275 --------
+2023-04-23 12:21:24,762 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:23:23,148 [MainThread] [INFO ]  Server train time: 118.38501214981079
+2023-04-23 12:23:23,148 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:23:30,721 [MainThread] [INFO ]  Test time 7.57s, Test loss: 0.46, Test accuracy: 41.97%
+2023-04-23 12:23:30,721 [MainThread] [INFO ]  
+-------- round 276 --------
+2023-04-23 12:23:30,721 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:25:28,506 [MainThread] [INFO ]  Server train time: 117.78456521034241
+2023-04-23 12:25:28,507 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:25:36,207 [MainThread] [INFO ]  Test time 7.70s, Test loss: 0.47, Test accuracy: 42.05%
+2023-04-23 12:25:36,207 [MainThread] [INFO ]  
+-------- round 277 --------
+2023-04-23 12:25:36,207 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:27:34,621 [MainThread] [INFO ]  Server train time: 118.41342425346375
+2023-04-23 12:27:34,621 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:27:41,322 [MainThread] [INFO ]  Test time 6.70s, Test loss: 0.45, Test accuracy: 42.45%
+2023-04-23 12:27:41,322 [MainThread] [INFO ]  
+-------- round 278 --------
+2023-04-23 12:27:41,323 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:29:42,434 [MainThread] [INFO ]  Server train time: 121.11098456382751
+2023-04-23 12:29:42,434 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:29:50,135 [MainThread] [INFO ]  Test time 7.70s, Test loss: 0.48, Test accuracy: 41.64%
+2023-04-23 12:29:50,136 [MainThread] [INFO ]  
+-------- round 279 --------
+2023-04-23 12:29:50,136 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:31:47,697 [MainThread] [INFO ]  Server train time: 117.56121945381165
+2023-04-23 12:31:47,698 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:31:55,677 [MainThread] [INFO ]  Test time 7.98s, Test loss: 1.00, Test accuracy: 29.00%
+2023-04-23 12:31:55,679 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/cifar100/saved_models/_global_model_r_279.pth
+2023-04-23 12:31:55,680 [MainThread] [INFO ]  
+-------- round 280 --------
+2023-04-23 12:31:55,680 [MainThread] [INFO ]  --- start training ---
+2023-04-23 12:33:53,812 [MainThread] [INFO ]  Server train time: 118.1322693824768
+2023-04-23 12:33:53,813 [MainThread] [INFO ]  --- start testing ---
+2023-04-23 12:34:01,987 [MainThread] [INFO ]  Test time 8.17s, Test loss: 0.47, Test accuracy: 41.27%
+2023-04-23 12:34:01,988 [MainThread] [INFO ]  
+-------- round 281 --------
+2023-04-23 12:34:01,988 [MainThread] [INFO ]  --- start training ---

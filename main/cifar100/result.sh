@@ -1,0 +1,1 @@
+class=50 && python compare.py 300 baseline_${class}_2.log kt_${class}.log

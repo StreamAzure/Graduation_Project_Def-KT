@@ -12,17 +12,17 @@ from simple_cnn import Model
 from easyfl.tracking import metric
 from easyfl.tracking.evaluation import model_size
 
-DML_lr = 0.015 # DML训练的学习率
+DML_lr = 0.018 # DML训练的学习率
 
 local_batch_size = 64 # B_1
 DML_batch_size = 16 # B_2
 # 论文里区分了两个阶段的batch size为B_1和B_2
 
-local_epoch = 1 # M
-DML_epoch = 25 # E
+local_epoch = 5 # M
+DML_epoch = 15 # E
 
-alpha = 1 # KL散度的权重
-beta = 1 # 交叉熵的权重
+alpha = 0.1 # KL散度的权重
+beta = 0.9 # 交叉熵的权重
 
 class CustomizedClient(BaseClient):
     def __init__(self, cid, conf, train_data, test_data, device, **kwargs):

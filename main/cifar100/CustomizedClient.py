@@ -13,7 +13,7 @@ from easyfl.tracking.evaluation import model_size
 
 DML_lr = 0.015 # DML训练的学习率
 
-local_batch_size = 1024 # B_1
+local_batch_size = 64 # B_1
 DML_batch_size = 16 # B_2
 # 论文里区分了两个阶段的batch size为B_1和B_2
 

@@ -1,0 +1,2065 @@
+2023-04-22 08:56:03,454 [MainThread] [INFO ]  Configurations: {'task_id': '', 'data': {'root': '../data/', 'dataset': 'femnist', 'split_type': 'niid', 'min_size': 10, 'data_amount': 0.05, 'iid_fraction': 0.1, 'user': False, 'train_test_split': 0.9, 'class_per_client': 1, 'num_of_clients': 100, 'alpha': 0.2, 'weights': None}, 'model': 'simple_cnn', 'test_mode': 'test_in_client', 'test_method': 'average', 'server': {'track': False, 'rounds': 5000, 'clients_per_round': 20, 'test_every': 1, 'save_model_every': 10, 'save_model_path': '', 'batch_size': 64, 'test_all': True, 'random_selection': True, 'aggregation_stragtegy': 'FedAvg', 'aggregation_content': 'all'}, 'client': {'track': False, 'batch_size': 16, 'test_batch_size': 5, 'local_epoch': 20, 'optimizer': {'type': 'SGD', 'lr': 0.01, 'momentum': 0.5, 'weight_decay': 0.0005, 'nesterov': True}, 'seed': 0, 'local_test': True}, 'gpu': 1, 'distributed': {'backend': 'nccl', 'init_method': '', 'world_size': 0, 'rank': 0, 'local_rank': 0}, 'tracking': {'database': '', 'log_file': '', 'log_level': 'INFO', 'metric_file': '', 'save_every': 1}, 'resource_heterogeneous': {'simulate': False, 'hetero_type': 'real', 'level': 3, 'sleep_group_num': 1000, 'total_time': 1000, 'fraction': 1, 'grouping_strategy': 'greedy', 'initial_default_time': 5, 'default_time_momentum': 0.2}, 'seed': 0, 'is_distributed': False, 'device': 0}
+2023-04-22 08:56:08,447 [MainThread] [INFO ]  Total training data amount: 35507
+2023-04-22 08:56:08,447 [MainThread] [INFO ]  Total testing data amount: 4045
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+local_batch_size: 64, DML_batch_size: 16, local_epoch: 5, DML_epoch: 15, alpha: 1, beta: 1, DML_lr: 0.015
+2023-04-22 08:56:08,698 [MainThread] [INFO ]  Clients in total: 186
+2023-04-22 08:56:08,735 [MainThread] [INFO ]  
+-------- round 0 --------
+2023-04-22 08:56:08,736 [MainThread] [INFO ]  --- start training ---
+/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/dataset.py:161: UserWarning: you are shuffling a 'Tensor' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  np.random.shuffle(data_x)
+/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/datasets/dataset.py:163: UserWarning: you are shuffling a 'Tensor' object which is not a subclass of 'Sequence'; `shuffle` is not guaranteed to behave correctly. E.g., non-numpy array/tensor objects with view semantics may contain duplicates after shuffling.
+  np.random.shuffle(data_y)
+client: f2178_93
+--- local_update_loss : 4.14
+client: f0885_39
+--- local_update_loss : 4.10
+client: f3616_07
+--- local_update_loss : 4.06
+client: f1369_36
+--- local_update_loss : 4.12
+client: f3251_33
+--- local_update_loss : 4.10
+client: f1431_47
+--- local_update_loss : 4.13
+client: f0337_24
+--- local_update_loss : 4.07
+client: f2238_86
+--- local_update_loss : 4.12
+client: f3350_11
+--- local_update_loss : 4.11
+client: f0190_12
+--- local_update_loss : 4.12
+client: f0180_29
+--- local_update_loss : 4.08
+client: f3675_24
+--- local_update_loss : 4.12
+client: f3519_18
+--- local_update_loss : 4.11
+client: f3938_46
+--- local_update_loss : 4.11
+client: f2337_71
+--- local_update_loss : 4.11
+client: f1929_04
+--- local_update_loss : 4.13
+client: f0733_34
+--- local_update_loss : 4.09
+client: f1779_01
+--- local_update_loss : 4.11
+client: f3219_49
+--- local_update_loss : 4.12
+client: f2506_77
+--- local_update_loss : 4.13
+--- DML_update_loss(A model) with Client:f0238_02: 3.51
+--- DML_update_loss(A model) with Client:f3776_05: 3.56
+--- DML_update_loss(A model) with Client:f3935_48: 3.58
+--- DML_update_loss(A model) with Client:f0432_28: 3.71
+--- DML_update_loss(A model) with Client:f1540_20: 3.92
+--- DML_update_loss(A model) with Client:f1538_15: 3.64
+--- DML_update_loss(A model) with Client:f3189_40: 3.58
+--- DML_update_loss(A model) with Client:f0773_10: 3.41
+--- DML_update_loss(A model) with Client:f2500_50: 3.86
+--- DML_update_loss(A model) with Client:f0491_35: 3.45
+--- DML_update_loss(A model) with Client:f3841_01: 3.12
+--- DML_update_loss(A model) with Client:f0474_10: 3.47
+--- DML_update_loss(A model) with Client:f1771_46: 3.30
+--- DML_update_loss(A model) with Client:f3529_11: 3.50
+--- DML_update_loss(A model) with Client:f2013_19: 3.87
+--- DML_update_loss(A model) with Client:f3953_28: 2.86
+--- DML_update_loss(A model) with Client:f0132_17: 3.60
+--- DML_update_loss(A model) with Client:f0279_03: 3.30
+--- DML_update_loss(A model) with Client:f3826_07: 3.84
+--- DML_update_loss(A model) with Client:f3627_46: 3.53
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 3.0303030303030303, 3.4482758620689653, 0.0, 0.0, 0.0, 9.67741935483871, 2.2222222222222223, 2.5, 0.0, 0.0, 4.545454545454546, 0.0, 0.0, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 0.0, 0.0, 0.0, 9.375, 0.0, 0.0, 0.0, 0.0, 0.0, 2.7777777777777777, 0.0, 10.81081081081081, 2.4390243902439024, 3.3333333333333335, 0.0, 3.225806451612903, 0.0, 0.0, 0.0, 3.0303030303030303, 2.7027027027027026, 0.0, 0.0, 4.0, 3.8461538461538463, 0.0, 0.0, 0.0, 0.0, 0.0, 5.0, 0.0, 0.0, 6.25, 0.0, 0.0, 10.344827586206897, 9.30232558139535, 0.0, 0.0, 0.0, 0.0, 3.125, 3.0303030303030303, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 7.6923076923076925, 0.0, 0.0, 5.555555555555555, 6.25, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.2631578947368425, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 16.666666666666668, 0.0, 5.555555555555555, 0.0, 0.0, 5.882352941176471, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 5.555555555555555, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 5.555555555555555, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 18.181818181818183, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.15
+--- All clients' test acc: 1.69%
+2023-04-22 08:56:46,831 [MainThread] [INFO ]  Server train time: 38.094595432281494
+2023-04-22 08:56:46,832 [MainThread] [INFO ]  
+-------- round 1 --------
+2023-04-22 08:56:46,832 [MainThread] [INFO ]  --- start training ---
+client: f0312_43
+--- local_update_loss : 4.07
+client: f4031_33
+--- local_update_loss : 4.12
+client: f1431_47
+--- local_update_loss : 4.08
+client: f0781_31
+--- local_update_loss : 4.11
+client: f3776_05
+--- local_update_loss : 3.23
+client: f3817_22
+--- local_update_loss : 4.12
+client: f1929_04
+--- local_update_loss : 4.07
+client: f2589_78
+--- local_update_loss : 4.11
+client: f0676_08
+--- local_update_loss : 4.03
+client: f1129_22
+--- local_update_loss : 4.06
+client: f2322_80
+--- local_update_loss : 4.11
+client: f1157_43
+--- local_update_loss : 4.08
+client: f0132_17
+--- local_update_loss : 2.81
+client: f2455_72
+--- local_update_loss : 4.14
+client: f1675_40
+--- local_update_loss : 4.10
+client: f0567_25
+--- local_update_loss : 4.11
+client: f0928_42
+--- local_update_loss : 4.10
+client: f2517_63
+--- local_update_loss : 4.09
+client: f2178_93
+--- local_update_loss : 4.12
+client: f2170_68
+--- local_update_loss : 4.13
+--- DML_update_loss(A model) with Client:f1231_36: 3.69
+--- DML_update_loss(A model) with Client:f0628_05: 3.34
+--- DML_update_loss(A model) with Client:f3399_09: 2.80
+--- DML_update_loss(A model) with Client:f1136_31: 3.56
+--- DML_update_loss(A model) with Client:f4000_40: 3.41
+--- DML_update_loss(A model) with Client:f0120_29: 3.38
+--- DML_update_loss(A model) with Client:f0690_26: 3.62
+--- DML_update_loss(A model) with Client:f3581_23: 3.20
+--- DML_update_loss(A model) with Client:f3618_26: 3.54
+--- DML_update_loss(A model) with Client:f3935_48: 3.51
+--- DML_update_loss(A model) with Client:f0613_28: 3.34
+--- DML_update_loss(A model) with Client:f2396_91: 2.88
+--- DML_update_loss(A model) with Client:f3350_11: 3.64
+--- DML_update_loss(A model) with Client:f3804_08: 3.56
+--- DML_update_loss(A model) with Client:f4040_28: 2.91
+--- DML_update_loss(A model) with Client:f0238_02: 3.46
+--- DML_update_loss(A model) with Client:f1844_38: 2.85
+--- DML_update_loss(A model) with Client:f3566_36: 3.43
+--- DML_update_loss(A model) with Client:f1392_44: 3.33
+--- DML_update_loss(A model) with Client:f2277_92: 3.64
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 6.451612903225806, 0.0, 0.0, 0.0, 0.0, 3.0303030303030303, 3.4482758620689653, 0.0, 0.0, 0.0, 9.67741935483871, 2.2222222222222223, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 0.0, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 0.0, 0.0, 0.0, 9.375, 0.0, 6.0606060606060606, 7.142857142857143, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 2.4390243902439024, 3.3333333333333335, 0.0, 3.225806451612903, 0.0, 0.0, 0.0, 3.0303030303030303, 2.7027027027027026, 2.5641025641025643, 0.0, 4.0, 3.8461538461538463, 0.0, 0.0, 0.0, 3.3333333333333335, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 0.0, 10.344827586206897, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 3.0303030303030303, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 7.6923076923076925, 0.0, 0.0, 5.555555555555555, 6.25, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 10.526315789473685, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 16.666666666666668, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 5.555555555555555, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 5.555555555555555, 0.0, 11.11111111111111, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.13
+--- All clients' test acc: 2.11%
+2023-04-22 08:57:28,207 [MainThread] [INFO ]  Server train time: 41.37457299232483
+2023-04-22 08:57:28,208 [MainThread] [INFO ]  
+-------- round 2 --------
+2023-04-22 08:57:28,208 [MainThread] [INFO ]  --- start training ---
+client: f0966_44
+--- local_update_loss : 4.12
+client: f1649_03
+--- local_update_loss : 4.13
+client: f1089_04
+--- local_update_loss : 4.12
+client: f0279_03
+--- local_update_loss : 3.11
+client: f2277_92
+--- local_update_loss : 2.91
+client: f0448_39
+--- local_update_loss : 4.10
+client: f1392_44
+--- local_update_loss : 3.08
+client: f1737_09
+--- local_update_loss : 4.16
+client: f1170_00
+--- local_update_loss : 4.13
+client: f0186_14
+--- local_update_loss : 4.11
+client: f0676_08
+--- local_update_loss : 3.64
+client: f0491_35
+--- local_update_loss : 3.22
+client: f0523_42
+--- local_update_loss : 4.10
+client: f3566_36
+--- local_update_loss : 2.86
+client: f0120_29
+--- local_update_loss : 3.16
+client: f0803_40
+--- local_update_loss : 4.11
+client: f2396_91
+--- local_update_loss : 2.41
+client: f3541_02
+--- local_update_loss : 4.13
+client: f3297_22
+--- local_update_loss : 4.09
+client: f3935_48
+--- local_update_loss : 3.22
+--- DML_update_loss(A model) with Client:f0257_46: 3.50
+--- DML_update_loss(A model) with Client:f2271_86: 3.85
+--- DML_update_loss(A model) with Client:f0831_15: 3.36
+--- DML_update_loss(A model) with Client:f0329_34: 3.22
+--- DML_update_loss(A model) with Client:f3310_44: 3.59
+--- DML_update_loss(A model) with Client:f0312_43: 3.40
+--- DML_update_loss(A model) with Client:f1063_36: 3.61
+--- DML_update_loss(A model) with Client:f2466_76: 3.92
+--- DML_update_loss(A model) with Client:f0474_10: 3.39
+--- DML_update_loss(A model) with Client:f3368_37: 3.92
+--- DML_update_loss(A model) with Client:f1313_04: 3.26
+--- DML_update_loss(A model) with Client:f1301_47: 3.66
+--- DML_update_loss(A model) with Client:f2071_28: 2.81
+--- DML_update_loss(A model) with Client:f1565_04: 3.47
+--- DML_update_loss(A model) with Client:f0995_43: 3.65
+--- DML_update_loss(A model) with Client:f3251_33: 3.79
+--- DML_update_loss(A model) with Client:f0869_20: 3.87
+--- DML_update_loss(A model) with Client:f2561_89: 3.62
+--- DML_update_loss(A model) with Client:f3458_26: 3.57
+--- DML_update_loss(A model) with Client:f2503_57: 3.08
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 6.451612903225806, 0.0, 0.0, 0.0, 0.0, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 0.0, 0.0, 9.67741935483871, 2.2222222222222223, 2.5, 9.523809523809524, 2.7027027027027026, 4.545454545454546, 0.0, 0.0, 2.5641025641025643, 3.125, 0.0, 4.166666666666667, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 6.0606060606060606, 7.142857142857143, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 2.4390243902439024, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 0.0, 0.0, 3.0303030303030303, 2.7027027027027026, 2.5641025641025643, 3.0303030303030303, 4.0, 3.8461538461538463, 0.0, 2.6315789473684212, 4.0, 3.3333333333333335, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 0.0, 0.0, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 3.0303030303030303, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 7.6923076923076925, 0.0, 0.0, 5.555555555555555, 6.25, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 10.526315789473685, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 18.75, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 5.555555555555555, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 0.0, 0.0, 5.2631578947368425, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 5.882352941176471, 10.526315789473685, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 5.555555555555555, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 5.555555555555555, 0.0, 11.11111111111111, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.13
+--- All clients' test acc: 2.39%
+2023-04-22 08:58:09,931 [MainThread] [INFO ]  Server train time: 41.72222399711609
+2023-04-22 08:58:09,933 [MainThread] [INFO ]  
+-------- round 3 --------
+2023-04-22 08:58:09,933 [MainThread] [INFO ]  --- start training ---
+client: f0491_35
+--- local_update_loss : 3.19
+client: f0120_29
+--- local_update_loss : 3.16
+client: f1538_15
+--- local_update_loss : 3.16
+client: f3826_07
+--- local_update_loss : 3.48
+client: f0928_42
+--- local_update_loss : 3.64
+client: f2263_79
+--- local_update_loss : 4.11
+client: f0186_14
+--- local_update_loss : 3.94
+client: f3369_37
+--- local_update_loss : 4.13
+client: f1677_01
+--- local_update_loss : 4.13
+client: f1392_44
+--- local_update_loss : 3.14
+client: f2071_28
+--- local_update_loss : 2.34
+client: f3458_26
+--- local_update_loss : 3.28
+client: f0745_35
+--- local_update_loss : 4.04
+client: f2561_89
+--- local_update_loss : 3.31
+client: f0132_17
+--- local_update_loss : 2.72
+client: f0898_29
+--- local_update_loss : 4.08
+client: f4000_40
+--- local_update_loss : 2.87
+client: f1618_39
+--- local_update_loss : 4.12
+client: f2405_90
+--- local_update_loss : 4.14
+client: f1776_35
+--- local_update_loss : 4.12
+--- DML_update_loss(A model) with Client:f1136_31: 3.52
+--- DML_update_loss(A model) with Client:f3817_22: 3.40
+--- DML_update_loss(A model) with Client:f3581_23: 3.11
+--- DML_update_loss(A model) with Client:f1696_08: 3.91
+--- DML_update_loss(A model) with Client:f0277_33: 3.72
+--- DML_update_loss(A model) with Client:f0869_20: 3.65
+--- DML_update_loss(A model) with Client:f3290_01: 3.51
+--- DML_update_loss(A model) with Client:f1869_07: 3.61
+--- DML_update_loss(A model) with Client:f0619_33: 3.68
+--- DML_update_loss(A model) with Client:f3541_02: 3.59
+--- DML_update_loss(A model) with Client:f0257_46: 3.40
+--- DML_update_loss(A model) with Client:f1231_36: 3.64
+--- DML_update_loss(A model) with Client:f1701_10: 2.92
+--- DML_update_loss(A model) with Client:f3935_48: 3.50
+--- DML_update_loss(A model) with Client:f1129_22: 3.65
+--- DML_update_loss(A model) with Client:f0292_16: 3.54
+--- DML_update_loss(A model) with Client:f0676_08: 3.56
+--- DML_update_loss(A model) with Client:f2506_77: 3.81
+--- DML_update_loss(A model) with Client:f3193_08: 3.55
+--- DML_update_loss(A model) with Client:f3366_32: 4.01
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 6.451612903225806, 0.0, 0.0, 11.11111111111111, 0.0, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 0.0, 9.67741935483871, 4.444444444444445, 2.5, 9.523809523809524, 2.7027027027027026, 4.545454545454546, 0.0, 0.0, 2.5641025641025643, 3.125, 0.0, 4.166666666666667, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 6.0606060606060606, 7.142857142857143, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 2.4390243902439024, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 0.0, 50.0, 3.0303030303030303, 2.7027027027027026, 2.5641025641025643, 3.0303030303030303, 4.0, 3.8461538461538463, 0.0, 2.6315789473684212, 4.0, 10.0, 0.0, 0.0, 0.0, 11.764705882352942, 6.25, 0.0, 0.0, 0.0, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 3.0303030303030303, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 0.0, 0.0, 0.0, 0.0, 7.6923076923076925, 0.0, 0.0, 5.555555555555555, 6.25, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 10.526315789473685, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 18.75, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 5.555555555555555, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 5.555555555555555, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 5.555555555555555, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.14
+--- All clients' test acc: 2.89%
+2023-04-22 08:58:51,586 [MainThread] [INFO ]  Server train time: 41.65212273597717
+2023-04-22 08:58:51,587 [MainThread] [INFO ]  
+-------- round 4 --------
+2023-04-22 08:58:51,587 [MainThread] [INFO ]  --- start training ---
+client: f3310_44
+--- local_update_loss : 3.23
+client: f0885_39
+--- local_update_loss : 3.86
+client: f3300_25
+--- local_update_loss : 4.04
+client: f3891_31
+--- local_update_loss : 4.12
+client: f0628_05
+--- local_update_loss : 3.11
+client: f0277_33
+--- local_update_loss : 3.54
+client: f0062_25
+--- local_update_loss : 4.11
+client: f1677_01
+--- local_update_loss : 3.96
+client: f1616_04
+--- local_update_loss : 4.09
+client: f1997_00
+--- local_update_loss : 4.08
+client: f3948_41
+--- local_update_loss : 4.11
+client: f3315_23
+--- local_update_loss : 4.04
+client: f0619_33
+--- local_update_loss : 3.35
+client: f3566_36
+--- local_update_loss : 2.77
+client: f3841_01
+--- local_update_loss : 2.36
+client: f3935_48
+--- local_update_loss : 3.24
+client: f3701_44
+--- local_update_loss : 4.01
+client: f1679_05
+--- local_update_loss : 4.11
+client: f1737_09
+--- local_update_loss : 4.11
+client: f0928_42
+--- local_update_loss : 3.22
+--- DML_update_loss(A model) with Client:f1435_38: 3.38
+--- DML_update_loss(A model) with Client:f1771_46: 3.17
+--- DML_update_loss(A model) with Client:f0132_17: 3.32
+--- DML_update_loss(A model) with Client:f0359_05: 3.37
+--- DML_update_loss(A model) with Client:f1231_36: 3.64
+--- DML_update_loss(A model) with Client:f0745_35: 3.34
+--- DML_update_loss(A model) with Client:f3776_05: 3.48
+--- DML_update_loss(A model) with Client:f3435_24: 3.52
+--- DML_update_loss(A model) with Client:f3350_11: 3.70
+--- DML_update_loss(A model) with Client:f1089_04: 3.74
+--- DML_update_loss(A model) with Client:f1701_10: 2.73
+--- DML_update_loss(A model) with Client:f1663_13: 3.58
+--- DML_update_loss(A model) with Client:f0966_44: 3.70
+--- DML_update_loss(A model) with Client:f1519_36: 3.55
+--- DML_update_loss(A model) with Client:f3627_46: 3.45
+--- DML_update_loss(A model) with Client:f3795_00: 2.88
+--- DML_update_loss(A model) with Client:f1792_12: 3.50
+--- DML_update_loss(A model) with Client:f2405_90: 3.53
+--- DML_update_loss(A model) with Client:f1649_03: 3.95
+--- DML_update_loss(A model) with Client:f1301_47: 3.36
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 6.451612903225806, 0.0, 0.0, 11.11111111111111, 0.0, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 0.0, 9.67741935483871, 4.444444444444445, 2.5, 9.523809523809524, 2.7027027027027026, 4.545454545454546, 0.0, 2.4390243902439024, 2.5641025641025643, 3.125, 0.0, 4.166666666666667, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 6.0606060606060606, 7.142857142857143, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 0.0, 50.0, 0.0, 2.7027027027027026, 2.5641025641025643, 6.0606060606060606, 4.0, 3.8461538461538463, 0.0, 2.6315789473684212, 0.0, 10.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 33.333333333333336, 0.0, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 3.0303030303030303, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 10.526315789473685, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 18.75, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 10.526315789473685, 5.882352941176471, 5.555555555555555, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.13
+--- All clients' test acc: 3.22%
+2023-04-22 08:59:32,058 [MainThread] [INFO ]  Server train time: 40.47002339363098
+2023-04-22 08:59:32,059 [MainThread] [INFO ]  
+-------- round 5 --------
+2023-04-22 08:59:32,059 [MainThread] [INFO ]  --- start training ---
+client: f0491_35
+--- local_update_loss : 3.20
+client: f0186_14
+--- local_update_loss : 3.20
+client: f3435_24
+--- local_update_loss : 3.21
+client: f2071_28
+--- local_update_loss : 2.34
+client: f2069_42
+--- local_update_loss : 4.12
+client: f2466_76
+--- local_update_loss : 3.72
+client: f1313_04
+--- local_update_loss : 3.02
+client: f0994_46
+--- local_update_loss : 4.09
+client: f3315_23
+--- local_update_loss : 3.21
+client: f0120_29
+--- local_update_loss : 3.15
+client: f3627_46
+--- local_update_loss : 3.18
+client: f3350_11
+--- local_update_loss : 3.29
+client: f0522_38
+--- local_update_loss : 4.13
+client: f0773_10
+--- local_update_loss : 3.19
+client: f1715_20
+--- local_update_loss : 4.05
+client: f1089_04
+--- local_update_loss : 3.57
+client: f2455_72
+--- local_update_loss : 4.12
+client: f0496_09
+--- local_update_loss : 4.13
+client: f0385_18
+--- local_update_loss : 4.02
+client: f0329_34
+--- local_update_loss : 3.01
+--- DML_update_loss(A model) with Client:f3701_44: 3.04
+--- DML_update_loss(A model) with Client:f2564_59: 3.93
+--- DML_update_loss(A model) with Client:f1401_36: 3.26
+--- DML_update_loss(A model) with Client:f0803_40: 3.59
+--- DML_update_loss(A model) with Client:f3458_26: 3.52
+--- DML_update_loss(A model) with Client:f1779_01: 3.52
+--- DML_update_loss(A model) with Client:f1392_44: 3.27
+--- DML_update_loss(A model) with Client:f2275_90: 2.88
+--- DML_update_loss(A model) with Client:f1844_38: 2.67
+--- DML_update_loss(A model) with Client:f0690_26: 3.59
+--- DML_update_loss(A model) with Client:f3362_03: 3.41
+--- DML_update_loss(A model) with Client:f0448_39: 3.62
+--- DML_update_loss(A model) with Client:f3953_28: 2.77
+--- DML_update_loss(A model) with Client:f0745_35: 3.33
+--- DML_update_loss(A model) with Client:f3901_45: 3.54
+--- DML_update_loss(A model) with Client:f0867_28: 3.73
+--- DML_update_loss(A model) with Client:f4033_05: 3.63
+--- DML_update_loss(A model) with Client:f1556_19: 3.45
+--- DML_update_loss(A model) with Client:f1170_00: 3.37
+--- DML_update_loss(A model) with Client:f0676_08: 3.55
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 6.451612903225806, 0.0, 0.0, 22.22222222222222, 0.0, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 0.0, 9.67741935483871, 4.444444444444445, 2.5, 9.523809523809524, 0.0, 4.545454545454546, 0.0, 2.4390243902439024, 5.128205128205129, 3.125, 0.0, 4.166666666666667, 0.0, 2.7777777777777777, 0.0, 5.405405405405405, 0.0, 0.0, 6.0606060606060606, 7.142857142857143, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 50.0, 0.0, 2.7027027027027026, 2.5641025641025643, 6.0606060606060606, 4.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 0.0, 0.0, 13.157894736842104, 0.0, 6.25, 0.0, 33.333333333333336, 0.0, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 3.0303030303030303, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 10.526315789473685, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 18.75, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 5.882352941176471, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 11.764705882352942, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 10.526315789473685, 5.882352941176471, 5.555555555555555, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.13
+--- All clients' test acc: 3.53%
+2023-04-22 09:00:17,670 [MainThread] [INFO ]  Server train time: 45.610129594802856
+2023-04-22 09:00:17,671 [MainThread] [INFO ]  
+-------- round 6 --------
+2023-04-22 09:00:17,671 [MainThread] [INFO ]  --- start training ---
+client: f0350_03
+--- local_update_loss : 4.04
+client: f3315_23
+--- local_update_loss : 2.51
+client: f1776_35
+--- local_update_loss : 4.07
+client: f3675_24
+--- local_update_loss : 4.09
+client: f1695_12
+--- local_update_loss : 4.12
+client: f1263_18
+--- local_update_loss : 4.12
+client: f0277_33
+--- local_update_loss : 3.53
+client: f0132_17
+--- local_update_loss : 2.71
+client: f1089_04
+--- local_update_loss : 3.56
+client: f0288_48
+--- local_update_loss : 4.10
+client: f1737_09
+--- local_update_loss : 4.06
+client: f1679_05
+--- local_update_loss : 4.09
+client: f0279_03
+--- local_update_loss : 3.10
+client: f1929_04
+--- local_update_loss : 3.92
+client: f1392_44
+--- local_update_loss : 3.13
+client: f4092_24
+--- local_update_loss : 4.12
+client: f3388_36
+--- local_update_loss : 4.12
+client: f2252_75
+--- local_update_loss : 4.10
+client: f0977_37
+--- local_update_loss : 4.10
+client: f1758_36
+--- local_update_loss : 4.10
+--- DML_update_loss(A model) with Client:f1936_06: 3.94
+--- DML_update_loss(A model) with Client:f0690_26: 3.59
+--- DML_update_loss(A model) with Client:f0496_09: 3.59
+--- DML_update_loss(A model) with Client:f2263_79: 3.57
+--- DML_update_loss(A model) with Client:f0448_39: 3.58
+--- DML_update_loss(A model) with Client:f1480_24: 3.51
+--- DML_update_loss(A model) with Client:f3193_08: 3.52
+--- DML_update_loss(A model) with Client:f3953_28: 2.73
+--- DML_update_loss(A model) with Client:f4040_28: 2.73
+--- DML_update_loss(A model) with Client:f1170_00: 3.34
+--- DML_update_loss(A model) with Client:f3938_46: 3.46
+--- DML_update_loss(A model) with Client:f0995_43: 3.56
+--- DML_update_loss(A model) with Client:f1401_36: 3.19
+--- DML_update_loss(A model) with Client:f0312_43: 3.38
+--- DML_update_loss(A model) with Client:f1675_40: 3.65
+--- DML_update_loss(A model) with Client:f2076_31: 3.55
+--- DML_update_loss(A model) with Client:f2238_86: 3.31
+--- DML_update_loss(A model) with Client:f3490_39: 3.73
+--- DML_update_loss(A model) with Client:f1565_04: 3.40
+--- DML_update_loss(A model) with Client:f0773_10: 3.37
+----------- acc -----------
+[2.272727272727273, 2.5, 0.0, 6.451612903225806, 0.0, 0.0, 22.22222222222222, 0.0, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 2.4390243902439024, 5.128205128205129, 3.125, 0.0, 4.166666666666667, 0.0, 0.0, 0.0, 5.405405405405405, 0.0, 0.0, 6.0606060606060606, 7.142857142857143, 0.0, 5.555555555555555, 2.7777777777777777, 4.878048780487805, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 50.0, 0.0, 2.7027027027027026, 2.5641025641025643, 6.0606060606060606, 8.0, 3.8461538461538463, 3.8461538461538463, 2.6315789473684212, 8.0, 10.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 33.333333333333336, 0.0, 9.30232558139535, 2.7777777777777777, 12.0, 0.0, 0.0, 3.125, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 9.090909090909092, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 10.526315789473685, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 5.555555555555555, 18.75, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 5.882352941176471, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 23.529411764705884, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 10.526315789473685, 5.882352941176471, 5.555555555555555, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.13
+--- All clients' test acc: 3.60%
+2023-04-22 09:01:02,409 [MainThread] [INFO ]  Server train time: 44.73700928688049
+2023-04-22 09:01:02,409 [MainThread] [INFO ]  
+-------- round 7 --------
+2023-04-22 09:01:02,410 [MainThread] [INFO ]  --- start training ---
+client: f2561_89
+--- local_update_loss : 3.28
+client: f3310_44
+--- local_update_loss : 3.22
+client: f1618_39
+--- local_update_loss : 4.08
+client: f2178_93
+--- local_update_loss : 4.10
+client: f3193_08
+--- local_update_loss : 3.20
+client: f0432_28
+--- local_update_loss : 3.55
+client: f1401_36
+--- local_update_loss : 3.00
+client: f0474_10
+--- local_update_loss : 3.16
+client: f4033_05
+--- local_update_loss : 3.26
+client: f1540_20
+--- local_update_loss : 3.67
+client: f0613_28
+--- local_update_loss : 3.13
+client: f3350_11
+--- local_update_loss : 3.25
+client: f1792_12
+--- local_update_loss : 3.17
+client: f2238_86
+--- local_update_loss : 2.94
+client: f2071_28
+--- local_update_loss : 2.34
+client: f2503_57
+--- local_update_loss : 2.34
+client: f3388_36
+--- local_update_loss : 4.01
+client: f2506_77
+--- local_update_loss : 3.55
+client: f2412_86
+--- local_update_loss : 4.11
+client: f3366_32
+--- local_update_loss : 3.77
+--- DML_update_loss(A model) with Client:f1695_12: 3.61
+--- DML_update_loss(A model) with Client:f0062_25: 3.53
+--- DML_update_loss(A model) with Client:f3367_07: 3.54
+--- DML_update_loss(A model) with Client:f1301_47: 3.46
+--- DML_update_loss(A model) with Client:f1089_04: 3.71
+--- DML_update_loss(A model) with Client:f3826_07: 3.78
+--- DML_update_loss(A model) with Client:f3675_24: 3.52
+--- DML_update_loss(A model) with Client:f1170_00: 3.32
+--- DML_update_loss(A model) with Client:f1663_13: 3.50
+--- DML_update_loss(A model) with Client:f2275_90: 2.77
+--- DML_update_loss(A model) with Client:f0928_42: 3.30
+--- DML_update_loss(A model) with Client:f1499_12: 3.02
+--- DML_update_loss(A model) with Client:f0212_24: 3.48
+--- DML_update_loss(A model) with Client:f0359_05: 3.33
+--- DML_update_loss(A model) with Client:f3372_23: 3.94
+--- DML_update_loss(A model) with Client:f1715_20: 3.03
+--- DML_update_loss(A model) with Client:f1435_38: 3.34
+--- DML_update_loss(A model) with Client:f0522_38: 3.53
+--- DML_update_loss(A model) with Client:f1736_04: 3.67
+--- DML_update_loss(A model) with Client:f1649_03: 3.87
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 0.0, 22.22222222222222, 0.0, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 0.0, 5.128205128205129, 3.125, 0.0, 0.0, 0.0, 0.0, 0.0, 2.7027027027027026, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 4.878048780487805, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 50.0, 0.0, 2.7027027027027026, 0.0, 6.0606060606060606, 8.0, 3.8461538461538463, 3.8461538461538463, 2.6315789473684212, 8.0, 10.0, 0.0, 0.0, 13.157894736842104, 0.0, 6.25, 0.0, 0.0, 0.0, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 0.0, 17.647058823529413, 6.25, 0.0, 11.11111111111111, 13.333333333333334, 0.0, 0.0, 0.0, 9.090909090909092, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 13.333333333333334, 0.0, 0.0, 7.142857142857143, 5.882352941176471, 0.0, 0.0, 5.555555555555555, 18.75, 0.0, 0.0, 0.0, 5.555555555555555, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 5.555555555555555, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 10.526315789473685, 5.882352941176471, 5.555555555555555, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.15
+--- All clients' test acc: 3.56%
+2023-04-22 09:01:46,963 [MainThread] [INFO ]  Server train time: 44.55290865898132
+2023-04-22 09:01:46,964 [MainThread] [INFO ]  
+-------- round 8 --------
+2023-04-22 09:01:46,964 [MainThread] [INFO ]  --- start training ---
+client: f3817_22
+--- local_update_loss : 3.06
+client: f3618_26
+--- local_update_loss : 3.22
+client: f3627_46
+--- local_update_loss : 3.14
+client: f2561_89
+--- local_update_loss : 3.28
+client: f0062_25
+--- local_update_loss : 3.36
+client: f3826_07
+--- local_update_loss : 3.47
+client: f0491_35
+--- local_update_loss : 3.24
+client: f0496_09
+--- local_update_loss : 3.42
+client: f2076_31
+--- local_update_loss : 2.72
+client: f3675_24
+--- local_update_loss : 3.21
+client: f1776_35
+--- local_update_loss : 3.94
+client: f0448_39
+--- local_update_loss : 3.46
+client: f1737_09
+--- local_update_loss : 3.95
+client: f3891_31
+--- local_update_loss : 4.11
+client: f0994_46
+--- local_update_loss : 3.90
+client: f2517_63
+--- local_update_loss : 3.91
+client: f3751_39
+--- local_update_loss : 4.13
+client: f1869_07
+--- local_update_loss : 3.18
+client: f2589_78
+--- local_update_loss : 4.05
+client: f0120_29
+--- local_update_loss : 3.15
+--- DML_update_loss(A model) with Client:f2241_88: 3.89
+--- DML_update_loss(A model) with Client:f0132_17: 3.43
+--- DML_update_loss(A model) with Client:f1089_04: 3.71
+--- DML_update_loss(A model) with Client:f1679_05: 3.87
+--- DML_update_loss(A model) with Client:f1291_26: 3.59
+--- DML_update_loss(A model) with Client:f3953_28: 2.76
+--- DML_update_loss(A model) with Client:f3666_48: 3.50
+--- DML_update_loss(A model) with Client:f0350_03: 3.37
+--- DML_update_loss(A model) with Client:f3458_26: 3.55
+--- DML_update_loss(A model) with Client:f0773_10: 3.37
+--- DML_update_loss(A model) with Client:f2322_80: 2.87
+--- DML_update_loss(A model) with Client:f2271_86: 3.78
+--- DML_update_loss(A model) with Client:f1758_36: 3.37
+--- DML_update_loss(A model) with Client:f1263_18: 3.66
+--- DML_update_loss(A model) with Client:f0928_42: 3.28
+--- DML_update_loss(A model) with Client:f3300_25: 3.00
+--- DML_update_loss(A model) with Client:f1618_39: 3.51
+--- DML_update_loss(A model) with Client:f1519_36: 3.51
+--- DML_update_loss(A model) with Client:f3901_45: 3.29
+--- DML_update_loss(A model) with Client:f0190_12: 3.61
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 0.0, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 2.9411764705882355, 0.0, 5.128205128205129, 3.125, 3.225806451612903, 0.0, 12.5, 2.7777777777777777, 0.0, 2.7027027027027026, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 4.878048780487805, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 50.0, 0.0, 2.7027027027027026, 7.6923076923076925, 6.0606060606060606, 8.0, 3.8461538461538463, 3.8461538461538463, 2.6315789473684212, 8.0, 10.0, 0.0, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 0.0, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 17.647058823529413, 6.25, 0.0, 11.11111111111111, 13.333333333333334, 0.0, 0.0, 0.0, 9.090909090909092, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 0.0, 13.333333333333334, 0.0, 0.0, 7.142857142857143, 5.882352941176471, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 5.555555555555555, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 21.05263157894737, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.15
+--- All clients' test acc: 3.73%
+2023-04-22 09:02:27,254 [MainThread] [INFO ]  Server train time: 40.28906464576721
+2023-04-22 09:02:27,255 [MainThread] [INFO ]  
+-------- round 9 --------
+2023-04-22 09:02:27,255 [MainThread] [INFO ]  --- start training ---
+client: f1538_15
+--- local_update_loss : 3.13
+client: f0359_05
+--- local_update_loss : 3.19
+client: f0521_14
+--- local_update_loss : 4.11
+client: f3368_37
+--- local_update_loss : 3.34
+client: f0547_28
+--- local_update_loss : 4.13
+client: f3938_46
+--- local_update_loss : 3.13
+client: f3776_05
+--- local_update_loss : 3.25
+client: f2455_72
+--- local_update_loss : 4.11
+client: f1089_04
+--- local_update_loss : 3.56
+client: f1618_39
+--- local_update_loss : 2.98
+client: f3541_02
+--- local_update_loss : 3.29
+client: f0773_10
+--- local_update_loss : 3.21
+client: f0329_34
+--- local_update_loss : 3.02
+client: f0928_42
+--- local_update_loss : 3.12
+client: f3953_28
+--- local_update_loss : 2.39
+client: f4064_46
+--- local_update_loss : 4.08
+client: f3105_03
+--- local_update_loss : 4.08
+client: f1136_31
+--- local_update_loss : 3.18
+client: f0288_48
+--- local_update_loss : 3.99
+client: f3616_07
+--- local_update_loss : 3.74
+--- DML_update_loss(A model) with Client:f2561_89: 3.56
+--- DML_update_loss(A model) with Client:f3490_39: 3.67
+--- DML_update_loss(A model) with Client:f2241_88: 3.85
+--- DML_update_loss(A model) with Client:f3399_09: 2.70
+--- DML_update_loss(A model) with Client:f3362_03: 3.31
+--- DML_update_loss(A model) with Client:f2263_79: 3.52
+--- DML_update_loss(A model) with Client:f0432_28: 3.68
+--- DML_update_loss(A model) with Client:f3367_07: 3.44
+--- DML_update_loss(A model) with Client:f0292_16: 3.51
+--- DML_update_loss(A model) with Client:f0869_20: 3.58
+--- DML_update_loss(A model) with Client:f3366_32: 3.91
+--- DML_update_loss(A model) with Client:f0613_28: 3.28
+--- DML_update_loss(A model) with Client:f2170_68: 3.61
+--- DML_update_loss(A model) with Client:f3841_01: 2.67
+--- DML_update_loss(A model) with Client:f0385_18: 3.40
+--- DML_update_loss(A model) with Client:f0212_24: 3.44
+--- DML_update_loss(A model) with Client:f0063_38: 3.39
+--- DML_update_loss(A model) with Client:f1313_04: 3.20
+--- DML_update_loss(A model) with Client:f1936_06: 3.86
+--- DML_update_loss(A model) with Client:f1431_47: 3.39
+----------- acc -----------
+[2.272727272727273, 0.0, 14.285714285714286, 6.451612903225806, 0.0, 0.0, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 2.380952380952381, 2.7027027027027026, 4.545454545454546, 2.9411764705882355, 0.0, 2.5641025641025643, 3.125, 3.225806451612903, 0.0, 12.5, 2.7777777777777777, 0.0, 2.7027027027027026, 0.0, 2.380952380952381, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 4.878048780487805, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 0.0, 2.7027027027027026, 10.256410256410257, 6.0606060606060606, 8.0, 3.8461538461538463, 3.8461538461538463, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 17.647058823529413, 6.25, 0.0, 11.11111111111111, 13.333333333333334, 0.0, 0.0, 0.0, 9.090909090909092, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 0.0, 0.0, 0.0, 0.0, 7.142857142857143, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 21.05263157894737, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.15
+--- All clients' test acc: 3.73%
+2023-04-22 09:03:07,452 [MainThread] [INFO ]  Server train time: 40.19601559638977
+2023-04-22 09:03:07,455 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/saved_models/_global_model_r_9.pth
+2023-04-22 09:03:07,455 [MainThread] [INFO ]  
+-------- round 10 --------
+2023-04-22 09:03:07,455 [MainThread] [INFO ]  --- start training ---
+client: f1301_47
+--- local_update_loss : 2.10
+client: f2312_87
+--- local_update_loss : 4.03
+client: f0180_29
+--- local_update_loss : 3.66
+client: f2071_28
+--- local_update_loss : 2.34
+client: f1519_36
+--- local_update_loss : 3.21
+client: f1369_36
+--- local_update_loss : 4.01
+client: f0257_46
+--- local_update_loss : 3.21
+client: f2238_86
+--- local_update_loss : 2.92
+client: f0063_38
+--- local_update_loss : 2.20
+client: f1136_31
+--- local_update_loss : 3.22
+client: f2412_86
+--- local_update_loss : 4.08
+client: f3826_07
+--- local_update_loss : 3.47
+client: f0898_29
+--- local_update_loss : 3.91
+client: f1556_19
+--- local_update_loss : 2.41
+client: f1715_20
+--- local_update_loss : 2.40
+client: f0350_03
+--- local_update_loss : 3.13
+client: f1771_46
+--- local_update_loss : 2.82
+client: f2517_63
+--- local_update_loss : 3.48
+client: f0359_05
+--- local_update_loss : 3.18
+client: f2564_59
+--- local_update_loss : 3.66
+--- DML_update_loss(A model) with Client:f3193_08: 3.46
+--- DML_update_loss(A model) with Client:f0781_31: 3.60
+--- DML_update_loss(A model) with Client:f0523_42: 3.58
+--- DML_update_loss(A model) with Client:f0474_10: 3.39
+--- DML_update_loss(A model) with Client:f3490_39: 3.66
+--- DML_update_loss(A model) with Client:f1231_36: 3.64
+--- DML_update_loss(A model) with Client:f2133_68: 3.43
+--- DML_update_loss(A model) with Client:f4000_40: 3.28
+--- DML_update_loss(A model) with Client:f3616_07: 2.94
+--- DML_update_loss(A model) with Client:f3935_48: 3.51
+--- DML_update_loss(A model) with Client:f3948_41: 3.87
+--- DML_update_loss(A model) with Client:f1089_04: 3.70
+--- DML_update_loss(A model) with Client:f1480_24: 3.45
+--- DML_update_loss(A model) with Client:f3701_44: 2.75
+--- DML_update_loss(A model) with Client:f2013_19: 3.80
+--- DML_update_loss(A model) with Client:f1263_18: 3.61
+--- DML_update_loss(A model) with Client:f4043_08: 3.46
+--- DML_update_loss(A model) with Client:f4064_46: 3.50
+--- DML_update_loss(A model) with Client:f0312_43: 3.38
+--- DML_update_loss(A model) with Client:f2322_80: 2.76
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 2.380952380952381, 2.7027027027027026, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 12.5, 2.7777777777777777, 0.0, 2.7027027027027026, 0.0, 2.380952380952381, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 4.878048780487805, 10.81081081081081, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 0.0, 5.405405405405405, 10.256410256410257, 6.0606060606060606, 8.0, 3.8461538461538463, 3.8461538461538463, 2.6315789473684212, 4.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 17.647058823529413, 6.25, 0.0, 11.11111111111111, 13.333333333333334, 0.0, 0.0, 7.6923076923076925, 9.090909090909092, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.764705882352942, 5.555555555555555, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 21.05263157894737, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.15
+--- All clients' test acc: 3.83%
+2023-04-22 09:03:49,607 [MainThread] [INFO ]  Server train time: 42.15098023414612
+2023-04-22 09:03:49,608 [MainThread] [INFO ]  
+-------- round 11 --------
+2023-04-22 09:03:49,608 [MainThread] [INFO ]  --- start training ---
+client: f0046_20
+--- local_update_loss : 4.10
+client: f2412_86
+--- local_update_loss : 4.03
+client: f2455_72
+--- local_update_loss : 4.08
+client: f2071_28
+--- local_update_loss : 2.34
+client: f1538_15
+--- local_update_loss : 3.13
+client: f1129_22
+--- local_update_loss : 3.50
+client: f0831_15
+--- local_update_loss : 3.19
+client: f4064_46
+--- local_update_loss : 2.91
+client: f4031_33
+--- local_update_loss : 3.89
+client: f3458_26
+--- local_update_loss : 3.27
+client: f0312_43
+--- local_update_loss : 3.26
+client: f1431_47
+--- local_update_loss : 2.56
+client: f0120_29
+--- local_update_loss : 3.15
+client: f1736_04
+--- local_update_loss : 3.31
+client: f3251_33
+--- local_update_loss : 3.56
+client: f1779_01
+--- local_update_loss : 3.17
+client: f0690_26
+--- local_update_loss : 3.44
+client: f2506_77
+--- local_update_loss : 3.50
+client: f1136_31
+--- local_update_loss : 3.32
+client: f0496_09
+--- local_update_loss : 3.35
+--- DML_update_loss(A model) with Client:f2396_91: 2.73
+--- DML_update_loss(A model) with Client:f1677_01: 3.01
+--- DML_update_loss(A model) with Client:f0337_24: 3.46
+--- DML_update_loss(A model) with Client:f0491_35: 3.39
+--- DML_update_loss(A model) with Client:f3953_28: 2.75
+--- DML_update_loss(A model) with Client:f1758_36: 3.33
+--- DML_update_loss(A model) with Client:f3529_11: 3.58
+--- DML_update_loss(A model) with Client:f1301_47: 3.93
+--- DML_update_loss(A model) with Client:f0359_05: 3.33
+--- DML_update_loss(A model) with Client:f0773_10: 3.36
+--- DML_update_loss(A model) with Client:f0745_35: 3.35
+--- DML_update_loss(A model) with Client:f0977_37: 3.31
+--- DML_update_loss(A model) with Client:f1695_12: 3.53
+--- DML_update_loss(A model) with Client:f3490_39: 3.67
+--- DML_update_loss(A model) with Client:f1519_36: 3.47
+--- DML_update_loss(A model) with Client:f1435_38: 3.33
+--- DML_update_loss(A model) with Client:f3219_49: 3.46
+--- DML_update_loss(A model) with Client:f3817_22: 3.30
+--- DML_update_loss(A model) with Client:f3189_40: 3.52
+--- DML_update_loss(A model) with Client:f1063_36: 3.59
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 2.380952380952381, 2.7027027027027026, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 0.0, 0.0, 0.0, 2.7027027027027026, 0.0, 2.380952380952381, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 0.0, 5.405405405405405, 10.256410256410257, 6.0606060606060606, 20.0, 3.8461538461538463, 3.8461538461538463, 0.0, 4.0, 0.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 7.6923076923076925, 9.090909090909092, 0.0, 11.11111111111111, 6.25, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.764705882352942, 11.11111111111111, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 11.11111111111111, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.15
+--- All clients' test acc: 3.56%
+2023-04-22 09:04:36,160 [MainThread] [INFO ]  Server train time: 46.55155944824219
+2023-04-22 09:04:36,161 [MainThread] [INFO ]  
+-------- round 12 --------
+2023-04-22 09:04:36,161 [MainThread] [INFO ]  --- start training ---
+client: f0995_43
+--- local_update_loss : 3.40
+client: f0781_31
+--- local_update_loss : 3.42
+client: f2455_72
+--- local_update_loss : 4.04
+client: f3826_07
+--- local_update_loss : 3.49
+client: f1675_40
+--- local_update_loss : 3.16
+client: f3795_00
+--- local_update_loss : 2.40
+client: f1301_47
+--- local_update_loss : 3.02
+client: f0190_12
+--- local_update_loss : 3.39
+client: f1701_10
+--- local_update_loss : 2.33
+client: f0994_46
+--- local_update_loss : 3.39
+client: f1844_38
+--- local_update_loss : 2.35
+client: f2500_50
+--- local_update_loss : 3.56
+client: f0885_39
+--- local_update_loss : 3.42
+client: f0448_39
+--- local_update_loss : 3.42
+client: f0385_18
+--- local_update_loss : 3.26
+client: f1758_36
+--- local_update_loss : 3.06
+client: f3529_11
+--- local_update_loss : 3.20
+client: f3372_23
+--- local_update_loss : 3.71
+client: f3841_01
+--- local_update_loss : 2.35
+client: f0062_25
+--- local_update_loss : 3.34
+--- DML_update_loss(A model) with Client:f4040_28: 2.71
+--- DML_update_loss(A model) with Client:f2232_76: 3.48
+--- DML_update_loss(A model) with Client:f3297_22: 2.80
+--- DML_update_loss(A model) with Client:f0521_14: 3.30
+--- DML_update_loss(A model) with Client:f1313_04: 3.19
+--- DML_update_loss(A model) with Client:f0474_10: 3.39
+--- DML_update_loss(A model) with Client:f3541_02: 3.52
+--- DML_update_loss(A model) with Client:f0337_24: 3.44
+--- DML_update_loss(A model) with Client:f0690_26: 3.59
+--- DML_update_loss(A model) with Client:f1231_36: 3.64
+--- DML_update_loss(A model) with Client:f2271_86: 3.78
+--- DML_update_loss(A model) with Client:f1677_01: 2.72
+--- DML_update_loss(A model) with Client:f1618_39: 3.41
+--- DML_update_loss(A model) with Client:f1439_27: 3.63
+--- DML_update_loss(A model) with Client:f3368_37: 3.63
+--- DML_update_loss(A model) with Client:f3189_40: 3.49
+--- DML_update_loss(A model) with Client:f0547_28: 3.68
+--- DML_update_loss(A model) with Client:f0869_20: 3.47
+--- DML_update_loss(A model) with Client:f3362_03: 3.31
+--- DML_update_loss(A model) with Client:f3193_08: 3.45
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 2.380952380952381, 2.7027027027027026, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 0.0, 0.0, 0.0, 2.7027027027027026, 0.0, 4.761904761904762, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 25.0, 3.0303030303030303, 5.405405405405405, 10.256410256410257, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 0.0, 4.0, 0.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 6.896551724137931, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 12.5, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 7.6923076923076925, 9.090909090909092, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.764705882352942, 11.11111111111111, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 11.764705882352942, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.16
+--- All clients' test acc: 3.82%
+2023-04-22 09:05:20,605 [MainThread] [INFO ]  Server train time: 44.44319033622742
+2023-04-22 09:05:20,606 [MainThread] [INFO ]  
+-------- round 13 --------
+2023-04-22 09:05:20,606 [MainThread] [INFO ]  --- start training ---
+client: f2218_51
+--- local_update_loss : 4.12
+client: f2013_19
+--- local_update_loss : 3.62
+client: f1663_13
+--- local_update_loss : 3.28
+client: f2170_68
+--- local_update_loss : 3.26
+client: f1737_09
+--- local_update_loss : 3.53
+client: f3758_19
+--- local_update_loss : 4.16
+client: f1779_01
+--- local_update_loss : 3.15
+client: f2133_68
+--- local_update_loss : 3.09
+client: f0190_12
+--- local_update_loss : 3.40
+client: f1392_44
+--- local_update_loss : 3.09
+client: f2241_88
+--- local_update_loss : 3.66
+client: f1439_27
+--- local_update_loss : 3.43
+client: f0869_20
+--- local_update_loss : 2.48
+client: f0257_46
+--- local_update_loss : 3.22
+client: f4031_33
+--- local_update_loss : 3.15
+client: f0898_29
+--- local_update_loss : 3.48
+client: f3953_28
+--- local_update_loss : 2.42
+client: f0448_39
+--- local_update_loss : 3.43
+client: f0619_33
+--- local_update_loss : 3.35
+client: f0296_20
+--- local_update_loss : 4.11
+--- DML_update_loss(A model) with Client:f1736_04: 3.58
+--- DML_update_loss(A model) with Client:f0547_28: 3.65
+--- DML_update_loss(A model) with Client:f1701_10: 2.70
+--- DML_update_loss(A model) with Client:f1675_40: 3.55
+--- DML_update_loss(A model) with Client:f2275_90: 2.80
+--- DML_update_loss(A model) with Client:f3458_26: 3.52
+--- DML_update_loss(A model) with Client:f3290_01: 3.43
+--- DML_update_loss(A model) with Client:f0522_38: 3.48
+--- DML_update_loss(A model) with Client:f0521_14: 3.28
+--- DML_update_loss(A model) with Client:f1170_00: 3.34
+--- DML_update_loss(A model) with Client:f0977_37: 3.25
+--- DML_update_loss(A model) with Client:f3817_22: 3.30
+--- DML_update_loss(A model) with Client:f2252_75: 2.91
+--- DML_update_loss(A model) with Client:f0288_48: 3.32
+--- DML_update_loss(A model) with Client:f0329_34: 3.19
+--- DML_update_loss(A model) with Client:f1401_36: 3.18
+--- DML_update_loss(A model) with Client:f1565_04: 3.40
+--- DML_update_loss(A model) with Client:f2271_86: 3.79
+--- DML_update_loss(A model) with Client:f2071_28: 2.66
+--- DML_update_loss(A model) with Client:f1869_07: 3.52
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 0.0, 0.0, 2.5641025641025643, 5.405405405405405, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 50.0, 3.0303030303030303, 0.0, 10.256410256410257, 6.0606060606060606, 8.0, 3.8461538461538463, 0.0, 0.0, 4.0, 0.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 6.896551724137931, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 12.5, 0.0, 12.5, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 13.333333333333334, 13.333333333333334, 0.0, 7.6923076923076925, 9.090909090909092, 0.0, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 13.333333333333334, 0.0, 13.333333333333334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.764705882352942, 11.11111111111111, 11.764705882352942, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 5.2631578947368425, 5.555555555555555, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 10.526315789473685, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 0.0, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.14
+--- All clients' test acc: 4.30%
+2023-04-22 09:06:07,666 [MainThread] [INFO ]  Server train time: 47.05937170982361
+2023-04-22 09:06:07,667 [MainThread] [INFO ]  
+-------- round 14 --------
+2023-04-22 09:06:07,667 [MainThread] [INFO ]  --- start training ---
+client: f0186_14
+--- local_update_loss : 2.44
+client: f1491_42
+--- local_update_loss : 4.08
+client: f1089_04
+--- local_update_loss : 3.56
+client: f2312_87
+--- local_update_loss : 3.02
+client: f0474_10
+--- local_update_loss : 3.18
+client: f0180_29
+--- local_update_loss : 3.22
+client: f4064_46
+--- local_update_loss : 2.83
+client: f0296_20
+--- local_update_loss : 3.94
+client: f1715_20
+--- local_update_loss : 2.40
+client: f2277_92
+--- local_update_loss : 2.58
+client: f0312_43
+--- local_update_loss : 3.25
+client: f0928_42
+--- local_update_loss : 3.12
+client: f3616_07
+--- local_update_loss : 2.37
+client: f0869_20
+--- local_update_loss : 2.08
+client: f1129_22
+--- local_update_loss : 3.45
+client: f3297_22
+--- local_update_loss : 2.43
+client: f2564_59
+--- local_update_loss : 3.63
+client: f1779_01
+--- local_update_loss : 3.16
+client: f1936_06
+--- local_update_loss : 3.61
+client: f1231_36
+--- local_update_loss : 3.51
+--- DML_update_loss(A model) with Client:f1679_05: 3.82
+--- DML_update_loss(A model) with Client:f3529_11: 3.55
+--- DML_update_loss(A model) with Client:f1649_03: 3.86
+--- DML_update_loss(A model) with Client:f2263_79: 3.51
+--- DML_update_loss(A model) with Client:f4043_08: 3.00
+--- DML_update_loss(A model) with Client:f1556_19: 3.67
+--- DML_update_loss(A model) with Client:f3367_07: 3.44
+--- DML_update_loss(A model) with Client:f3675_24: 3.47
+--- DML_update_loss(A model) with Client:f2405_90: 3.47
+--- DML_update_loss(A model) with Client:f3435_24: 3.44
+--- DML_update_loss(A model) with Client:f3566_36: 3.48
+--- DML_update_loss(A model) with Client:f3581_23: 3.11
+--- DML_update_loss(A model) with Client:f0277_33: 3.69
+--- DML_update_loss(A model) with Client:f3841_01: 2.67
+--- DML_update_loss(A model) with Client:f1792_12: 3.41
+--- DML_update_loss(A model) with Client:f1737_09: 2.93
+--- DML_update_loss(A model) with Client:f1736_04: 3.58
+--- DML_update_loss(A model) with Client:f1369_36: 3.49
+--- DML_update_loss(A model) with Client:f3627_46: 3.46
+--- DML_update_loss(A model) with Client:f2013_19: 3.80
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 15.0, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 4.166666666666667, 0.0, 0.0, 2.5641025641025643, 5.405405405405405, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 0.0, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 0.0, 7.6923076923076925, 6.0606060606060606, 8.0, 3.8461538461538463, 0.0, 0.0, 8.0, 0.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 6.896551724137931, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 12.5, 0.0, 12.5, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 7.6923076923076925, 9.090909090909092, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 13.333333333333334, 0.0, 13.333333333333334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 6.25, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 11.11111111111111, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 0.0, 10.526315789473685, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 7.6923076923076925, 5.882352941176471, 11.764705882352942, 5.555555555555555, 10.526315789473685, 0.0, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 12.5, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.14
+--- All clients' test acc: 4.06%
+2023-04-22 09:06:45,451 [MainThread] [INFO ]  Server train time: 37.78300333023071
+2023-04-22 09:06:45,452 [MainThread] [INFO ]  
+-------- round 15 --------
+2023-04-22 09:06:45,452 [MainThread] [INFO ]  --- start training ---
+client: f3795_00
+--- local_update_loss : 2.38
+client: f3519_18
+--- local_update_loss : 4.07
+client: f0928_42
+--- local_update_loss : 3.11
+client: f0690_26
+--- local_update_loss : 3.45
+client: f1540_20
+--- local_update_loss : 3.68
+client: f2466_76
+--- local_update_loss : 3.70
+client: f1439_27
+--- local_update_loss : 3.43
+client: f2412_86
+--- local_update_loss : 3.96
+client: f0279_03
+--- local_update_loss : 3.11
+client: f2500_50
+--- local_update_loss : 3.57
+client: f3310_44
+--- local_update_loss : 3.22
+client: f1401_36
+--- local_update_loss : 2.98
+client: f0496_09
+--- local_update_loss : 3.43
+client: f0238_02
+--- local_update_loss : 3.30
+client: f0385_18
+--- local_update_loss : 3.25
+client: f3297_22
+--- local_update_loss : 2.40
+client: f3435_24
+--- local_update_loss : 3.16
+client: f0781_31
+--- local_update_loss : 3.42
+client: f1701_10
+--- local_update_loss : 2.30
+client: f4040_28
+--- local_update_loss : 2.41
+--- DML_update_loss(A model) with Client:f1649_03: 3.88
+--- DML_update_loss(A model) with Client:f3193_08: 3.47
+--- DML_update_loss(A model) with Client:f3666_48: 3.45
+--- DML_update_loss(A model) with Client:f0474_10: 3.38
+--- DML_update_loss(A model) with Client:f0337_24: 3.44
+--- DML_update_loss(A model) with Client:f0547_28: 3.66
+--- DML_update_loss(A model) with Client:f3804_08: 2.85
+--- DML_update_loss(A model) with Client:f3541_02: 3.53
+--- DML_update_loss(A model) with Client:f1129_22: 3.62
+--- DML_update_loss(A model) with Client:f1618_39: 3.43
+--- DML_update_loss(A model) with Client:f3369_37: 3.85
+--- DML_update_loss(A model) with Client:f1313_04: 3.20
+--- DML_update_loss(A model) with Client:f0521_14: 3.30
+--- DML_update_loss(A model) with Client:f4043_08: 3.17
+--- DML_update_loss(A model) with Client:f1556_19: 3.36
+--- DML_update_loss(A model) with Client:f2013_19: 3.80
+--- DML_update_loss(A model) with Client:f2076_31: 3.89
+--- DML_update_loss(A model) with Client:f3935_48: 3.50
+--- DML_update_loss(A model) with Client:f1776_35: 3.29
+--- DML_update_loss(A model) with Client:f0180_29: 3.29
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 0.0, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 15.0, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 0.0, 2.7777777777777777, 0.0, 5.405405405405405, 0.0, 4.761904761904762, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 0.0, 7.6923076923076925, 6.0606060606060606, 8.0, 3.8461538461538463, 0.0, 0.0, 8.0, 3.3333333333333335, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 6.896551724137931, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 12.5, 0.0, 12.5, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 7.6923076923076925, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 13.333333333333334, 0.0, 13.333333333333334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 6.25, 0.0, 5.882352941176471, 5.882352941176471, 10.526315789473685, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 11.11111111111111, 0.0, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 5.882352941176471, 10.526315789473685, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 7.6923076923076925, 5.882352941176471, 11.764705882352942, 5.555555555555555, 10.526315789473685, 5.882352941176471, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.17
+--- All clients' test acc: 4.07%
+2023-04-22 09:07:26,310 [MainThread] [INFO ]  Server train time: 40.856966733932495
+2023-04-22 09:07:26,310 [MainThread] [INFO ]  
+-------- round 16 --------
+2023-04-22 09:07:26,310 [MainThread] [INFO ]  --- start training ---
+client: f4033_05
+--- local_update_loss : 3.25
+client: f2271_86
+--- local_update_loss : 3.55
+client: f4092_24
+--- local_update_loss : 4.10
+client: f3490_39
+--- local_update_loss : 3.42
+client: f2589_78
+--- local_update_loss : 3.93
+client: f1715_20
+--- local_update_loss : 2.41
+client: f3366_32
+--- local_update_loss : 3.62
+client: f0966_44
+--- local_update_loss : 3.51
+client: f0885_39
+--- local_update_loss : 3.35
+client: f1063_36
+--- local_update_loss : 3.48
+client: f2170_68
+--- local_update_loss : 3.33
+client: f0046_20
+--- local_update_loss : 3.74
+client: f2133_68
+--- local_update_loss : 3.05
+client: f2506_77
+--- local_update_loss : 3.45
+client: f2013_19
+--- local_update_loss : 3.65
+client: f1499_12
+--- local_update_loss : 2.51
+client: f1301_47
+--- local_update_loss : 2.68
+client: f0190_12
+--- local_update_loss : 3.40
+client: f0613_28
+--- local_update_loss : 3.12
+client: f3566_36
+--- local_update_loss : 2.84
+--- DML_update_loss(A model) with Client:f0831_15: 3.33
+--- DML_update_loss(A model) with Client:f2241_88: 3.85
+--- DML_update_loss(A model) with Client:f2561_89: 3.60
+--- DML_update_loss(A model) with Client:f1696_08: 3.83
+--- DML_update_loss(A model) with Client:f3399_09: 2.69
+--- DML_update_loss(A model) with Client:f0337_24: 3.44
+--- DML_update_loss(A model) with Client:f0132_17: 3.34
+--- DML_update_loss(A model) with Client:f4031_33: 3.31
+--- DML_update_loss(A model) with Client:f0522_38: 3.49
+--- DML_update_loss(A model) with Client:f0062_25: 3.49
+--- DML_update_loss(A model) with Client:f0928_42: 3.29
+--- DML_update_loss(A model) with Client:f1231_36: 3.64
+--- DML_update_loss(A model) with Client:f1997_00: 2.88
+--- DML_update_loss(A model) with Client:f4064_46: 3.37
+--- DML_update_loss(A model) with Client:f1779_01: 3.54
+--- DML_update_loss(A model) with Client:f3300_25: 2.70
+--- DML_update_loss(A model) with Client:f3529_11: 3.50
+--- DML_update_loss(A model) with Client:f2412_86: 3.73
+--- DML_update_loss(A model) with Client:f2455_72: 3.52
+--- DML_update_loss(A model) with Client:f3310_44: 3.48
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 0.0, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 3.225806451612903, 4.444444444444445, 15.0, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 0.0, 2.7777777777777777, 0.0, 0.0, 0.0, 4.761904761904762, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 10.81081081081081, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 0.0, 7.6923076923076925, 6.0606060606060606, 8.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 3.3333333333333335, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 6.896551724137931, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 12.5, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 7.6923076923076925, 0.0, 17.647058823529413, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 10.526315789473685, 6.25, 0.0, 5.882352941176471, 5.882352941176471, 10.526315789473685, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 5.555555555555555, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 0.0, 16.666666666666668, 5.882352941176471, 5.882352941176471, 10.526315789473685, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 10.526315789473685, 5.882352941176471, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 6.666666666666667]
+--------- test avarage ---------
+--- All clients' test loss: 4.18
+--- All clients' test acc: 4.09%
+2023-04-22 09:08:10,392 [MainThread] [INFO ]  Server train time: 44.080777168273926
+2023-04-22 09:08:10,393 [MainThread] [INFO ]  
+-------- round 17 --------
+2023-04-22 09:08:10,393 [MainThread] [INFO ]  --- start training ---
+client: f1649_03
+--- local_update_loss : 3.72
+client: f1556_19
+--- local_update_loss : 2.18
+client: f3701_44
+--- local_update_loss : 2.40
+client: f0312_43
+--- local_update_loss : 3.25
+client: f3953_28
+--- local_update_loss : 2.37
+client: f2071_28
+--- local_update_loss : 2.33
+client: f2503_57
+--- local_update_loss : 2.32
+client: f2013_19
+--- local_update_loss : 3.65
+client: f1480_24
+--- local_update_loss : 3.27
+client: f0733_34
+--- local_update_loss : 3.91
+client: f3399_09
+--- local_update_loss : 2.36
+client: f1538_15
+--- local_update_loss : 3.12
+client: f3717_48
+--- local_update_loss : 4.12
+client: f0046_20
+--- local_update_loss : 3.30
+client: f2277_92
+--- local_update_loss : 2.43
+client: f2238_86
+--- local_update_loss : 2.98
+client: f1936_06
+--- local_update_loss : 3.62
+client: f0277_33
+--- local_update_loss : 3.53
+client: f3369_37
+--- local_update_loss : 3.58
+client: f2589_78
+--- local_update_loss : 3.70
+--- DML_update_loss(A model) with Client:f2455_72: 3.48
+--- DML_update_loss(A model) with Client:f3189_40: 3.50
+--- DML_update_loss(A model) with Client:f4000_40: 3.26
+--- DML_update_loss(A model) with Client:f3388_36: 2.79
+--- DML_update_loss(A model) with Client:f1089_04: 3.71
+--- DML_update_loss(A model) with Client:f3105_03: 2.76
+--- DML_update_loss(A model) with Client:f1401_36: 3.17
+--- DML_update_loss(A model) with Client:f1679_05: 3.82
+--- DML_update_loss(A model) with Client:f0977_37: 3.25
+--- DML_update_loss(A model) with Client:f1776_35: 3.18
+--- DML_update_loss(A model) with Client:f2312_87: 2.90
+--- DML_update_loss(A model) with Client:f0994_46: 3.50
+--- DML_update_loss(A model) with Client:f0995_43: 3.56
+--- DML_update_loss(A model) with Client:f3372_23: 3.90
+--- DML_update_loss(A model) with Client:f1997_00: 2.72
+--- DML_update_loss(A model) with Client:f1792_12: 3.41
+--- DML_update_loss(A model) with Client:f1869_07: 3.52
+--- DML_update_loss(A model) with Client:f0279_03: 3.25
+--- DML_update_loss(A model) with Client:f2263_79: 3.61
+--- DML_update_loss(A model) with Client:f0898_29: 3.48
+----------- acc -----------
+[4.545454545454546, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 0.0, 7.894736842105263, 2.9411764705882355, 2.6315789473684212, 3.225806451612903, 4.444444444444445, 15.0, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 3.225806451612903, 8.333333333333334, 0.0, 2.7777777777777777, 0.0, 0.0, 0.0, 4.761904761904762, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 2.7027027027027026, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 3.3333333333333335, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 6.896551724137931, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 12.5, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 7.6923076923076925, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 5.882352941176471, 5.882352941176471, 10.526315789473685, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 5.555555555555555, 5.882352941176471, 23.529411764705884, 0.0, 0.0, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 5.882352941176471, 10.526315789473685, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 10.526315789473685, 5.882352941176471, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 6.666666666666667]
+--------- test avarage ---------
+--- All clients' test loss: 4.17
+--- All clients' test acc: 4.16%
+2023-04-22 09:08:50,749 [MainThread] [INFO ]  Server train time: 40.35565996170044
+2023-04-22 09:08:50,750 [MainThread] [INFO ]  
+-------- round 18 --------
+2023-04-22 09:08:50,750 [MainThread] [INFO ]  --- start training ---
+client: f2503_57
+--- local_update_loss : 2.33
+client: f3315_23
+--- local_update_loss : 2.45
+client: f0619_33
+--- local_update_loss : 3.34
+client: f0474_10
+--- local_update_loss : 3.14
+client: f2238_86
+--- local_update_loss : 2.95
+client: f1369_36
+--- local_update_loss : 3.34
+client: f0132_17
+--- local_update_loss : 2.64
+client: f0337_24
+--- local_update_loss : 3.29
+client: f0046_20
+--- local_update_loss : 3.21
+client: f3362_03
+--- local_update_loss : 3.09
+client: f2322_80
+--- local_update_loss : 2.42
+client: f0773_10
+--- local_update_loss : 3.21
+client: f0279_03
+--- local_update_loss : 3.10
+client: f2232_76
+--- local_update_loss : 3.05
+client: f2466_76
+--- local_update_loss : 3.69
+client: f1771_46
+--- local_update_loss : 2.79
+client: f0966_44
+--- local_update_loss : 3.49
+client: f0781_31
+--- local_update_loss : 3.43
+client: f1136_31
+--- local_update_loss : 3.23
+client: f0329_34
+--- local_update_loss : 3.04
+--- DML_update_loss(A model) with Client:f0898_29: 3.47
+--- DML_update_loss(A model) with Client:f1936_06: 3.86
+--- DML_update_loss(A model) with Client:f3297_22: 2.73
+--- DML_update_loss(A model) with Client:f0522_38: 3.48
+--- DML_update_loss(A model) with Client:f0296_20: 3.44
+--- DML_update_loss(A model) with Client:f3519_18: 3.68
+--- DML_update_loss(A model) with Client:f3701_44: 2.75
+--- DML_update_loss(A model) with Client:f0521_14: 3.33
+--- DML_update_loss(A model) with Client:f0567_25: 3.46
+--- DML_update_loss(A model) with Client:f1663_13: 3.50
+--- DML_update_loss(A model) with Client:f3891_31: 3.81
+--- DML_update_loss(A model) with Client:f1129_22: 3.63
+--- DML_update_loss(A model) with Client:f3189_40: 3.50
+--- DML_update_loss(A model) with Client:f3251_33: 3.73
+--- DML_update_loss(A model) with Client:f4092_24: 3.63
+--- DML_update_loss(A model) with Client:f3938_46: 3.40
+--- DML_update_loss(A model) with Client:f0448_39: 3.57
+--- DML_update_loss(A model) with Client:f1313_04: 3.19
+--- DML_update_loss(A model) with Client:f1063_36: 3.58
+--- DML_update_loss(A model) with Client:f2178_93: 3.83
+----------- acc -----------
+[4.545454545454546, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 0.0, 7.894736842105263, 2.9411764705882355, 2.6315789473684212, 3.225806451612903, 4.444444444444445, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 2.7777777777777777, 5.128205128205129, 2.7027027027027026, 0.0, 4.761904761904762, 6.0606060606060606, 2.380952380952381, 0.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 6.451612903225806, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 5.405405405405405, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 23.076923076923077, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 5.882352941176471, 0.0, 10.526315789473685, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 5.555555555555555, 5.882352941176471, 17.647058823529413, 0.0, 5.555555555555555, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 5.882352941176471, 10.526315789473685, 0.0, 13.333333333333334, 5.555555555555555, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 10.526315789473685, 5.882352941176471, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 13.333333333333334]
+--------- test avarage ---------
+--- All clients' test loss: 4.18
+--- All clients' test acc: 4.17%
+2023-04-22 09:09:39,126 [MainThread] [INFO ]  Server train time: 48.37447428703308
+2023-04-22 09:09:39,127 [MainThread] [INFO ]  
+-------- round 19 --------
+2023-04-22 09:09:39,127 [MainThread] [INFO ]  --- start training ---
+client: f3367_07
+--- local_update_loss : 3.21
+client: f3105_03
+--- local_update_loss : 2.33
+client: f3369_37
+--- local_update_loss : 3.59
+client: f3372_23
+--- local_update_loss : 3.70
+client: f2238_86
+--- local_update_loss : 2.97
+client: f1301_47
+--- local_update_loss : 2.54
+client: f1291_26
+--- local_update_loss : 3.34
+client: f1263_18
+--- local_update_loss : 3.46
+client: f0312_43
+--- local_update_loss : 3.25
+client: f2503_57
+--- local_update_loss : 2.32
+client: f4040_28
+--- local_update_loss : 2.41
+client: f3519_18
+--- local_update_loss : 3.20
+client: f3826_07
+--- local_update_loss : 3.47
+client: f0567_25
+--- local_update_loss : 3.10
+client: f0619_33
+--- local_update_loss : 3.35
+client: f0547_28
+--- local_update_loss : 3.51
+client: f0733_34
+--- local_update_loss : 3.46
+client: f2396_91
+--- local_update_loss : 2.41
+client: f0062_25
+--- local_update_loss : 3.33
+client: f4064_46
+--- local_update_loss : 2.87
+--- DML_update_loss(A model) with Client:f0046_20: 3.27
+--- DML_update_loss(A model) with Client:f0120_29: 3.34
+--- DML_update_loss(A model) with Client:f1063_36: 3.58
+--- DML_update_loss(A model) with Client:f1480_24: 3.45
+--- DML_update_loss(A model) with Client:f1392_44: 3.27
+--- DML_update_loss(A model) with Client:f3435_24: 3.44
+--- DML_update_loss(A model) with Client:f1157_43: 3.35
+--- DML_update_loss(A model) with Client:f3490_39: 3.67
+--- DML_update_loss(A model) with Client:f2076_31: 3.49
+--- DML_update_loss(A model) with Client:f1401_36: 3.17
+--- DML_update_loss(A model) with Client:f3566_36: 3.42
+--- DML_update_loss(A model) with Client:f1997_00: 2.72
+--- DML_update_loss(A model) with Client:f1649_03: 3.88
+--- DML_update_loss(A model) with Client:f0238_02: 3.48
+--- DML_update_loss(A model) with Client:f0186_14: 3.50
+--- DML_update_loss(A model) with Client:f0385_18: 3.40
+--- DML_update_loss(A model) with Client:f3627_46: 3.43
+--- DML_update_loss(A model) with Client:f1519_36: 3.48
+--- DML_update_loss(A model) with Client:f2412_86: 3.47
+--- DML_update_loss(A model) with Client:f3891_31: 3.85
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 2.6315789473684212, 3.225806451612903, 4.444444444444445, 2.5, 2.380952380952381, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 2.7777777777777777, 5.128205128205129, 2.7027027027027026, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 6.451612903225806, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 5.405405405405405, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 7.894736842105263, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 9.090909090909092, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 23.076923076923077, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 10.526315789473685, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 5.555555555555555, 5.882352941176471, 17.647058823529413, 0.0, 5.555555555555555, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 0.0, 10.526315789473685, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 5.882352941176471, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 13.333333333333334]
+--------- test avarage ---------
+--- All clients' test loss: 4.17
+--- All clients' test acc: 4.16%
+2023-04-22 09:10:22,715 [MainThread] [INFO ]  Server train time: 43.58748722076416
+2023-04-22 09:10:22,718 [MainThread] [INFO ]  Model saved at /home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/saved_models/_global_model_r_19.pth
+2023-04-22 09:10:22,718 [MainThread] [INFO ]  
+-------- round 20 --------
+2023-04-22 09:10:22,719 [MainThread] [INFO ]  --- start training ---
+client: f2517_63
+--- local_update_loss : 3.32
+client: f0928_42
+--- local_update_loss : 3.11
+client: f1736_04
+--- local_update_loss : 3.29
+client: f3189_40
+--- local_update_loss : 3.21
+client: f3953_28
+--- local_update_loss : 2.41
+client: f1701_10
+--- local_update_loss : 2.30
+client: f1392_44
+--- local_update_loss : 3.12
+client: f2076_31
+--- local_update_loss : 2.07
+client: f2396_91
+--- local_update_loss : 2.40
+client: f0628_05
+--- local_update_loss : 3.10
+client: f0288_48
+--- local_update_loss : 3.16
+client: f3891_31
+--- local_update_loss : 3.56
+client: f1929_04
+--- local_update_loss : 3.39
+client: f2252_75
+--- local_update_loss : 2.36
+client: f0522_38
+--- local_update_loss : 3.36
+client: f3251_33
+--- local_update_loss : 3.54
+client: f3817_22
+--- local_update_loss : 3.03
+client: f4040_28
+--- local_update_loss : 2.39
+client: f1771_46
+--- local_update_loss : 2.79
+client: f3193_08
+--- local_update_loss : 3.18
+--- DML_update_loss(A model) with Client:f3290_01: 3.44
+--- DML_update_loss(A model) with Client:f2564_59: 3.87
+--- DML_update_loss(A model) with Client:f0296_20: 3.42
+--- DML_update_loss(A model) with Client:f0312_43: 3.38
+--- DML_update_loss(A model) with Client:f1936_06: 3.86
+--- DML_update_loss(A model) with Client:f3372_23: 3.90
+--- DML_update_loss(A model) with Client:f4033_05: 3.53
+--- DML_update_loss(A model) with Client:f4043_08: 3.06
+--- DML_update_loss(A model) with Client:f0781_31: 3.58
+--- DML_update_loss(A model) with Client:f1696_08: 3.83
+--- DML_update_loss(A model) with Client:f2561_89: 3.52
+--- DML_update_loss(A model) with Client:f1369_36: 3.47
+--- DML_update_loss(A model) with Client:f0898_29: 3.46
+--- DML_update_loss(A model) with Client:f1519_36: 3.47
+--- DML_update_loss(A model) with Client:f1618_39: 3.43
+--- DML_update_loss(A model) with Client:f2263_79: 3.51
+--- DML_update_loss(A model) with Client:f4064_46: 3.49
+--- DML_update_loss(A model) with Client:f3826_07: 3.78
+--- DML_update_loss(A model) with Client:f1301_47: 3.43
+--- DML_update_loss(A model) with Client:f4092_24: 3.57
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 2.6315789473684212, 0.0, 4.444444444444445, 2.5, 4.761904761904762, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 2.7777777777777777, 5.128205128205129, 5.405405405405405, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 2.7027027027027026, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 7.894736842105263, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 4.651162790697675, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 9.090909090909092, 0.0, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 0.0, 0.0, 12.5, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 13.333333333333334, 13.333333333333334, 0.0, 15.384615384615385, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 7.142857142857143, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 11.764705882352942, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 11.11111111111111, 5.555555555555555, 5.882352941176471, 17.647058823529413, 0.0, 5.555555555555555, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 0.0, 10.526315789473685, 0.0, 0.0, 5.555555555555555, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 5.882352941176471, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.18
+--- All clients' test acc: 4.21%
+2023-04-22 09:11:03,078 [MainThread] [INFO ]  Server train time: 40.35867404937744
+2023-04-22 09:11:03,079 [MainThread] [INFO ]  
+-------- round 21 --------
+2023-04-22 09:11:03,079 [MainThread] [INFO ]  --- start training ---
+client: f0288_48
+--- local_update_loss : 3.15
+client: f0350_03
+--- local_update_loss : 3.11
+client: f3804_08
+--- local_update_loss : 2.26
+client: f3251_33
+--- local_update_loss : 3.51
+client: f1491_42
+--- local_update_loss : 3.57
+client: f0238_02
+--- local_update_loss : 3.34
+client: f3350_11
+--- local_update_loss : 3.24
+client: f2071_28
+--- local_update_loss : 2.34
+client: f1063_36
+--- local_update_loss : 3.45
+client: f0063_38
+--- local_update_loss : 2.13
+client: f2500_50
+--- local_update_loss : 3.56
+client: f3529_11
+--- local_update_loss : 3.19
+client: f1736_04
+--- local_update_loss : 3.30
+client: f0385_18
+--- local_update_loss : 3.25
+client: f2178_93
+--- local_update_loss : 3.62
+client: f3666_48
+--- local_update_loss : 3.16
+client: f2312_87
+--- local_update_loss : 2.37
+client: f0329_34
+--- local_update_loss : 2.98
+client: f0359_05
+--- local_update_loss : 3.18
+client: f0885_39
+--- local_update_loss : 3.33
+--- DML_update_loss(A model) with Client:f3953_28: 2.75
+--- DML_update_loss(A model) with Client:f0676_08: 3.55
+--- DML_update_loss(A model) with Client:f3193_08: 3.46
+--- DML_update_loss(A model) with Client:f0132_17: 3.28
+--- DML_update_loss(A model) with Client:f2241_88: 3.85
+--- DML_update_loss(A model) with Client:f1369_36: 3.48
+--- DML_update_loss(A model) with Client:f0773_10: 3.36
+--- DML_update_loss(A model) with Client:f2322_80: 2.78
+--- DML_update_loss(A model) with Client:f3458_26: 3.55
+--- DML_update_loss(A model) with Client:f1869_07: 3.52
+--- DML_update_loss(A model) with Client:f0547_28: 3.66
+--- DML_update_loss(A model) with Client:f4000_40: 3.25
+--- DML_update_loss(A model) with Client:f2337_71: 3.38
+--- DML_update_loss(A model) with Client:f3388_36: 2.72
+--- DML_update_loss(A model) with Client:f1136_31: 3.59
+--- DML_update_loss(A model) with Client:f3290_01: 3.45
+--- DML_update_loss(A model) with Client:f1696_08: 3.83
+--- DML_update_loss(A model) with Client:f3817_22: 3.30
+--- DML_update_loss(A model) with Client:f0496_09: 3.53
+--- DML_update_loss(A model) with Client:f3891_31: 3.84
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 0.0, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 2.6315789473684212, 0.0, 4.444444444444445, 2.5, 4.761904761904762, 0.0, 4.545454545454546, 0.0, 0.0, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 0.0, 5.128205128205129, 5.405405405405405, 0.0, 2.380952380952381, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 0.0, 3.0303030303030303, 2.7027027027027026, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 9.090909090909092, 6.451612903225806, 7.142857142857143, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 0.0, 0.0, 12.5, 0.0, 0.0, 12.5, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 15.384615384615385, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 11.764705882352942, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 0.0, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 5.555555555555555, 5.882352941176471, 17.647058823529413, 0.0, 5.555555555555555, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.18
+--- All clients' test acc: 4.11%
+2023-04-22 09:11:46,107 [MainThread] [INFO ]  Server train time: 43.027907848358154
+2023-04-22 09:11:46,108 [MainThread] [INFO ]  
+-------- round 22 --------
+2023-04-22 09:11:46,109 [MainThread] [INFO ]  --- start training ---
+client: f1758_36
+--- local_update_loss : 3.06
+client: f1677_01
+--- local_update_loss : 2.40
+client: f1771_46
+--- local_update_loss : 2.78
+client: f0898_29
+--- local_update_loss : 3.30
+client: f0359_05
+--- local_update_loss : 3.17
+client: f2503_57
+--- local_update_loss : 2.32
+client: f0547_28
+--- local_update_loss : 3.49
+client: f2238_86
+--- local_update_loss : 2.95
+client: f2396_91
+--- local_update_loss : 2.38
+client: f1431_47
+--- local_update_loss : 2.59
+client: f2561_89
+--- local_update_loss : 3.28
+client: f0867_28
+--- local_update_loss : 3.60
+client: f1997_00
+--- local_update_loss : 2.32
+client: f3519_18
+--- local_update_loss : 3.41
+client: f0279_03
+--- local_update_loss : 3.10
+client: f1538_15
+--- local_update_loss : 3.12
+client: f3300_25
+--- local_update_loss : 2.33
+client: f3701_44
+--- local_update_loss : 2.44
+client: f1556_19
+--- local_update_loss : 2.13
+client: f3367_07
+--- local_update_loss : 3.21
+--- DML_update_loss(A model) with Client:f0567_25: 3.31
+--- DML_update_loss(A model) with Client:f0521_14: 3.34
+--- DML_update_loss(A model) with Client:f0831_15: 3.33
+--- DML_update_loss(A model) with Client:f3399_09: 2.74
+--- DML_update_loss(A model) with Client:f1540_20: 3.86
+--- DML_update_loss(A model) with Client:f0132_17: 3.39
+--- DML_update_loss(A model) with Client:f0337_24: 3.44
+--- DML_update_loss(A model) with Client:f4033_05: 3.53
+--- DML_update_loss(A model) with Client:f1737_09: 2.88
+--- DML_update_loss(A model) with Client:f1616_04: 3.70
+--- DML_update_loss(A model) with Client:f3627_46: 3.43
+--- DML_update_loss(A model) with Client:f1369_36: 3.48
+--- DML_update_loss(A model) with Client:f3717_48: 3.42
+--- DML_update_loss(A model) with Client:f2076_31: 3.77
+--- DML_update_loss(A model) with Client:f0928_42: 3.28
+--- DML_update_loss(A model) with Client:f4092_24: 3.56
+--- DML_update_loss(A model) with Client:f2071_28: 2.68
+--- DML_update_loss(A model) with Client:f1715_20: 2.72
+--- DML_update_loss(A model) with Client:f1869_07: 3.52
+--- DML_update_loss(A model) with Client:f1499_12: 2.91
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 12.5, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 4.761904761904762, 0.0, 0.0, 0.0, 0.0, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 0.0, 2.5641025641025643, 5.405405405405405, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 0.0, 0.0, 3.0303030303030303, 2.7027027027027026, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 10.344827586206897, 9.30232558139535, 5.555555555555555, 0.0, 0.0, 0.0, 3.125, 9.090909090909092, 6.451612903225806, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 0.0, 11.11111111111111, 0.0, 13.333333333333334, 0.0, 7.6923076923076925, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 0.0, 0.0, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 11.764705882352942, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 16.666666666666668, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 0.0, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 11.11111111111111, 5.882352941176471, 17.647058823529413, 0.0, 5.555555555555555, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 5.2631578947368425, 0.0, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.19
+--- All clients' test acc: 4.01%
+2023-04-22 09:12:28,154 [MainThread] [INFO ]  Server train time: 42.044928550720215
+2023-04-22 09:12:28,155 [MainThread] [INFO ]  
+-------- round 23 --------
+2023-04-22 09:12:28,155 [MainThread] [INFO ]  --- start training ---
+client: f3841_01
+--- local_update_loss : 2.34
+client: f1231_36
+--- local_update_loss : 3.51
+client: f1695_12
+--- local_update_loss : 3.23
+client: f3435_24
+--- local_update_loss : 3.15
+client: f1392_44
+--- local_update_loss : 3.09
+client: f0928_42
+--- local_update_loss : 3.12
+client: f2322_80
+--- local_update_loss : 2.41
+client: f1616_04
+--- local_update_loss : 2.75
+client: f1519_36
+--- local_update_loss : 3.24
+client: f0898_29
+--- local_update_loss : 3.29
+client: f3618_26
+--- local_update_loss : 3.18
+client: f3938_46
+--- local_update_loss : 3.13
+client: f0995_43
+--- local_update_loss : 3.38
+client: f1435_38
+--- local_update_loss : 3.20
+client: f0869_20
+--- local_update_loss : 2.06
+client: f2271_86
+--- local_update_loss : 3.60
+client: f3362_03
+--- local_update_loss : 3.09
+client: f3627_46
+--- local_update_loss : 3.21
+client: f1063_36
+--- local_update_loss : 3.45
+client: f3717_48
+--- local_update_loss : 3.08
+--- DML_update_loss(A model) with Client:f0296_20: 3.42
+--- DML_update_loss(A model) with Client:f0432_28: 3.68
+--- DML_update_loss(A model) with Client:f2506_77: 3.78
+--- DML_update_loss(A model) with Client:f1696_08: 3.83
+--- DML_update_loss(A model) with Client:f0190_12: 3.56
+--- DML_update_loss(A model) with Client:f3189_40: 3.50
+--- DML_update_loss(A model) with Client:f2252_75: 2.65
+--- DML_update_loss(A model) with Client:f0257_46: 3.43
+--- DML_update_loss(A model) with Client:f1313_04: 3.19
+--- DML_update_loss(A model) with Client:f2455_72: 3.49
+--- DML_update_loss(A model) with Client:f2277_92: 3.71
+--- DML_update_loss(A model) with Client:f3566_36: 3.48
+--- DML_update_loss(A model) with Client:f4043_08: 2.98
+--- DML_update_loss(A model) with Client:f1170_00: 3.33
+--- DML_update_loss(A model) with Client:f0288_48: 3.32
+--- DML_update_loss(A model) with Client:f1737_09: 2.88
+--- DML_update_loss(A model) with Client:f2238_86: 3.23
+--- DML_update_loss(A model) with Client:f0359_05: 3.34
+--- DML_update_loss(A model) with Client:f0522_38: 3.49
+--- DML_update_loss(A model) with Client:f2170_68: 3.52
+----------- acc -----------
+[2.272727272727273, 0.0, 0.0, 6.451612903225806, 12.5, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 4.761904761904762, 0.0, 0.0, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 0.0, 2.5641025641025643, 0.0, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 0.0, 25.0, 3.0303030303030303, 0.0, 7.6923076923076925, 6.0606060606060606, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 0.0, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 9.090909090909092, 6.451612903225806, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 6.666666666666667, 0.0, 7.6923076923076925, 9.090909090909092, 17.647058823529413, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 6.666666666666667, 0.0, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 16.666666666666668, 0.0, 0.0, 10.526315789473685, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 0.0, 5.555555555555555, 0.0, 5.2631578947368425, 11.11111111111111, 11.11111111111111, 5.882352941176471, 17.647058823529413, 0.0, 16.666666666666668, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 16.666666666666668, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 5.555555555555555, 10.526315789473685, 0.0, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 25.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.19
+--- All clients' test acc: 4.25%
+2023-04-22 09:13:12,787 [MainThread] [INFO ]  Server train time: 44.63076949119568
+2023-04-22 09:13:12,788 [MainThread] [INFO ]  
+-------- round 24 --------
+2023-04-22 09:13:12,788 [MainThread] [INFO ]  --- start training ---
+client: f3435_24
+--- local_update_loss : 3.15
+client: f2503_57
+--- local_update_loss : 2.33
+client: f2232_76
+--- local_update_loss : 3.01
+client: f0277_33
+--- local_update_loss : 3.52
+client: f3776_05
+--- local_update_loss : 3.22
+client: f0046_20
+--- local_update_loss : 3.10
+client: f2412_86
+--- local_update_loss : 2.90
+client: f4043_08
+--- local_update_loss : 2.30
+client: f1301_47
+--- local_update_loss : 2.82
+client: f1618_39
+--- local_update_loss : 2.95
+client: f2069_42
+--- local_update_loss : 4.09
+client: f3627_46
+--- local_update_loss : 3.13
+client: f1439_27
+--- local_update_loss : 3.42
+client: f3817_22
+--- local_update_loss : 3.02
+client: f3948_41
+--- local_update_loss : 3.64
+client: f0180_29
+--- local_update_loss : 3.11
+client: f1089_04
+--- local_update_loss : 3.56
+client: f3618_26
+--- local_update_loss : 3.21
+client: f1679_05
+--- local_update_loss : 3.63
+client: f2517_63
+--- local_update_loss : 3.22
+--- DML_update_loss(A model) with Client:f1556_19: 3.58
+--- DML_update_loss(A model) with Client:f1369_36: 3.47
+--- DML_update_loss(A model) with Client:f2275_90: 2.84
+--- DML_update_loss(A model) with Client:f2561_89: 3.61
+--- DML_update_loss(A model) with Client:f3315_23: 2.91
+--- DML_update_loss(A model) with Client:f2500_50: 3.81
+--- DML_update_loss(A model) with Client:f3901_45: 3.29
+--- DML_update_loss(A model) with Client:f0966_44: 3.67
+--- DML_update_loss(A model) with Client:f0690_26: 3.59
+--- DML_update_loss(A model) with Client:f3300_25: 2.73
+--- DML_update_loss(A model) with Client:f0523_42: 3.55
+--- DML_update_loss(A model) with Client:f1792_12: 3.40
+--- DML_update_loss(A model) with Client:f2178_93: 3.79
+--- DML_update_loss(A model) with Client:f3388_36: 2.70
+--- DML_update_loss(A model) with Client:f3368_37: 3.68
+--- DML_update_loss(A model) with Client:f1263_18: 3.61
+--- DML_update_loss(A model) with Client:f3675_24: 3.47
+--- DML_update_loss(A model) with Client:f2337_71: 3.32
+--- DML_update_loss(A model) with Client:f3297_22: 2.71
+--- DML_update_loss(A model) with Client:f3490_39: 3.66
+----------- acc -----------
+[6.818181818181818, 0.0, 0.0, 6.451612903225806, 12.5, 7.894736842105263, 0.0, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 4.761904761904762, 0.0, 0.0, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 0.0, 2.5641025641025643, 0.0, 0.0, 0.0, 6.0606060606060606, 2.380952380952381, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 0.0, 25.0, 3.0303030303030303, 0.0, 7.6923076923076925, 3.0303030303030303, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 0.0, 9.30232558139535, 2.7777777777777777, 0.0, 0.0, 0.0, 6.25, 9.090909090909092, 6.451612903225806, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 12.5, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 6.25, 0.0, 11.11111111111111, 0.0, 6.666666666666667, 0.0, 7.6923076923076925, 9.090909090909092, 17.647058823529413, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 6.666666666666667, 0.0, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 0.0, 5.555555555555555, 0.0, 17.647058823529413, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 0.0, 27.77777777777778, 0.0, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 0.0, 5.555555555555555, 0.0, 5.2631578947368425, 22.22222222222222, 11.11111111111111, 5.882352941176471, 11.764705882352942, 0.0, 16.666666666666668, 33.333333333333336, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 0.0, 5.882352941176471, 5.882352941176471, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 10.526315789473685, 0.0, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.19
+--- All clients' test acc: 4.29%
+2023-04-22 09:13:52,755 [MainThread] [INFO ]  Server train time: 39.966026306152344
+2023-04-22 09:13:52,755 [MainThread] [INFO ]  
+-------- round 25 --------
+2023-04-22 09:13:52,755 [MainThread] [INFO ]  --- start training ---
+client: f3826_07
+--- local_update_loss : 3.47
+client: f2232_76
+--- local_update_loss : 3.01
+client: f0385_18
+--- local_update_loss : 3.23
+client: f3519_18
+--- local_update_loss : 3.33
+client: f3490_39
+--- local_update_loss : 3.39
+client: f3219_49
+--- local_update_loss : 3.17
+client: f3368_37
+--- local_update_loss : 2.94
+client: f3399_09
+--- local_update_loss : 2.34
+client: f2503_57
+--- local_update_loss : 2.33
+client: f0547_28
+--- local_update_loss : 3.48
+client: f1696_08
+--- local_update_loss : 3.59
+client: f0522_38
+--- local_update_loss : 3.35
+client: f2076_31
+--- local_update_loss : 2.43
+client: f1491_42
+--- local_update_loss : 3.20
+client: f1231_36
+--- local_update_loss : 3.51
+client: f0867_28
+--- local_update_loss : 3.59
+client: f1439_27
+--- local_update_loss : 3.43
+client: f1663_13
+--- local_update_loss : 3.29
+client: f0496_09
+--- local_update_loss : 3.45
+client: f1677_01
+--- local_update_loss : 2.37
+--- DML_update_loss(A model) with Client:f0337_24: 3.45
+--- DML_update_loss(A model) with Client:f0432_28: 3.68
+--- DML_update_loss(A model) with Client:f2564_59: 3.87
+--- DML_update_loss(A model) with Client:f3189_40: 3.50
+--- DML_update_loss(A model) with Client:f0186_14: 3.24
+--- DML_update_loss(A model) with Client:f2178_93: 3.78
+--- DML_update_loss(A model) with Client:f2013_19: 3.80
+--- DML_update_loss(A model) with Client:f3315_23: 2.69
+--- DML_update_loss(A model) with Client:f2561_89: 3.53
+--- DML_update_loss(A model) with Client:f1480_24: 3.45
+--- DML_update_loss(A model) with Client:f2275_90: 2.77
+--- DML_update_loss(A model) with Client:f1618_39: 3.42
+--- DML_update_loss(A model) with Client:f1771_46: 3.22
+--- DML_update_loss(A model) with Client:f0523_42: 3.55
+--- DML_update_loss(A model) with Client:f0676_08: 3.55
+--- DML_update_loss(A model) with Client:f3366_32: 3.87
+--- DML_update_loss(A model) with Client:f1369_36: 3.48
+--- DML_update_loss(A model) with Client:f0613_28: 3.28
+--- DML_update_loss(A model) with Client:f0690_26: 3.59
+--- DML_update_loss(A model) with Client:f0567_25: 3.32
+----------- acc -----------
+[6.818181818181818, 0.0, 0.0, 6.451612903225806, 12.5, 7.894736842105263, 22.22222222222222, 3.125, 3.0303030303030303, 3.4482758620689653, 7.894736842105263, 2.9411764705882355, 7.894736842105263, 0.0, 4.444444444444445, 2.5, 4.761904761904762, 0.0, 4.545454545454546, 0.0, 4.878048780487805, 2.5641025641025643, 3.125, 0.0, 8.333333333333334, 0.0, 5.555555555555555, 2.5641025641025643, 0.0, 0.0, 0.0, 6.0606060606060606, 7.142857142857143, 5.0, 5.555555555555555, 2.7777777777777777, 9.75609756097561, 0.0, 0.0, 3.3333333333333335, 3.225806451612903, 0.0, 5.128205128205129, 5.2631578947368425, 25.0, 3.0303030303030303, 0.0, 7.6923076923076925, 3.0303030303030303, 20.0, 3.8461538461538463, 0.0, 2.6315789473684212, 8.0, 10.0, 9.090909090909092, 0.0, 13.157894736842104, 0.0, 0.0, 3.8461538461538463, 0.0, 0.0, 4.651162790697675, 2.7777777777777777, 0.0, 0.0, 0.0, 3.125, 0.0, 6.451612903225806, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 25.0, 0.0, 0.0, 0.0, 0.0, 11.11111111111111, 0.0, 6.666666666666667, 0.0, 15.384615384615385, 9.090909090909092, 17.647058823529413, 11.11111111111111, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.333333333333336, 6.25, 6.666666666666667, 5.2631578947368425, 13.333333333333334, 0.0, 5.882352941176471, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 0.0, 0.0, 11.764705882352942, 11.11111111111111, 0.0, 0.0, 0.0, 5.882352941176471, 0.0, 11.11111111111111, 0.0, 27.77777777777778, 0.0, 6.25, 7.142857142857143, 11.764705882352942, 0.0, 0.0, 0.0, 0.0, 5.2631578947368425, 22.22222222222222, 11.11111111111111, 5.882352941176471, 5.882352941176471, 0.0, 16.666666666666668, 0.0, 5.555555555555555, 0.0, 0.0, 5.555555555555555, 0.0, 11.764705882352942, 5.882352941176471, 0.0, 0.0, 6.666666666666667, 0.0, 11.11111111111111, 0.0, 5.882352941176471, 11.764705882352942, 0.0, 10.526315789473685, 0.0, 11.11111111111111, 5.555555555555555, 5.555555555555555, 0.0, 0.0, 0.0, 17.647058823529413, 0.0, 5.882352941176471, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 11.764705882352942, 0.0, 5.555555555555555, 0.0, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 0.0]
+--------- test avarage ---------
+--- All clients' test loss: 4.20
+--- All clients' test acc: 4.27%
+2023-04-22 09:14:37,763 [MainThread] [INFO ]  Server train time: 45.00700664520264
+2023-04-22 09:14:37,764 [MainThread] [INFO ]  
+-------- round 26 --------
+2023-04-22 09:14:37,764 [MainThread] [INFO ]  --- start training ---
+client: f2589_78
+--- local_update_loss : 3.46
+client: f3310_44
+--- local_update_loss : 3.22
+client: f1779_01
+--- local_update_loss : 3.20
+client: f1480_24
+--- local_update_loss : 3.28
+client: f2517_63
+--- local_update_loss : 3.22
+client: f0831_15
+--- local_update_loss : 3.19
+client: f1499_12
+--- local_update_loss : 2.50
+client: f3751_39
+--- local_update_loss : 4.11
+client: f2232_76
+--- local_update_loss : 3.01
+client: f3817_22
+--- local_update_loss : 3.01
+client: f0491_35
+--- local_update_loss : 3.21
+client: f1737_09
+--- local_update_loss : 2.53
+client: f0385_18
+--- local_update_loss : 3.23
+client: f1695_12
+--- local_update_loss : 3.22
+client: f1291_26
+--- local_update_loss : 3.34
+client: f3388_36
+--- local_update_loss : 2.39
+client: f3529_11
+--- local_update_loss : 3.15
+client: f3618_26
+--- local_update_loss : 3.19
+client: f1771_46
+--- local_update_loss : 2.82
+client: f3901_45
+--- local_update_loss : 2.85
+Traceback (most recent call last):
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/main.py", line 19, in <module>
+    easyfl.run()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 390, in run
+    _global_coord.run()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/coordinator.py", line 80, in run
+    self.server.start(self.model, self.clients)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 164, in start
+    self.train()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 200, in train
+    self.distribution_to_train()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/server/base.py", line 347, in distribution_to_train
+    self.distribution_to_train_locally()
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/CustomizeServer.py", line 91, in distribution_to_train_locally
+    client.run_train(model, self.conf.client, train_local_only=False)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/CustomizedClient.py", line 154, in run_train
+    self.train(conf, self.device, train_local_only) # 只修改了这里
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/CustomizedClient.py", line 142, in train
+    self.train_DML(conf, device)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/CustomizedClient.py", line 90, in train_DML
+    out_B = model_B(data)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/easyfl/main/femnist/CustomizedCNN.py", line 23, in forward
+    x = F.relu(F.max_pool2d(self.conv2(x), 2))
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 463, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/dengzhiling/.local/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 459, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+KeyboardInterrupt
